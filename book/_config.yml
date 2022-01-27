@@ -1,0 +1,71 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Hackweek Template
+author: eScience Institute, University of Washington
+logo: logo.png
+only_build_toc_files: true
+
+parse:
+  # https://jupyterbook.org/content/content-blocks.html?highlight=myst%20substitution#define-substitutions-for-your-whole-book
+  # https://jupyterbook.org/content/content-blocks.html#using-substitutions-in-links
+  myst_substitutions:
+    hackweek: "uwhackweek"
+    dates: "October ? to ?, 2021"
+    github_org_url: "https://github.com/uwhackweek"
+    book_repo: "jupyterbook-template"
+    website_url: "https://uwhackweek.github.io/jupyterbook-template"
+    jupyterhub_url: "https://INSERT_JUPYTERHUB_URL"
+    slack_workspace_url: "https://INSERT_SLACK_URL"
+    docker_image: "https://INSERT_DOCKER_IMAGE_URL"
+    contact_email: "uwhackweek@github.com"
+    dataset: "ICESat-2"
+    anon_reporting_url: "https://INSERT_FORM_LINK"
+  myst_enable_extensions:
+    # Defaults
+    - dollarmath
+    - linkify
+    - substitution
+    - colon_fence
+    # Extras
+    - html_image
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
+  execute_notebooks: cache
+  exclude_patterns: ["*rendered*", "*skip*", "uavsar-download.ipynb"]
+  allow_errors: false
+  # Per-cell notebook execution limit (seconds)
+  timeout: 300
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Configure your Binder links, such as the URL of the BinderHub.
+launch_buttons:
+  binderhub_url: ''
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/uwhackweek/jupyterbook-template # Online location of your book
+  path_to_book: book  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Bibliography
+bibtex_bibfiles:
+  - references.bib
+sphinx:
+  config:
+    bibtex_reference_style: author_year  # or label, super, \supercite
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_edit_page_button: true
+  use_issues_button: true
+  use_repository_button: true
+  # google_analytics_id: G-XXXXXXXXX

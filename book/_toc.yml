@@ -1,0 +1,44 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+root: intro
+format: jb-book
+parts:
+- caption: Details
+  chapters:
+    - file: application
+    - title: Schedule
+      url: https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=schedule
+    - title: Team
+      url: https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=team
+    - file: mission
+    - file: CoC
+- caption: Preparation
+  chapters:
+    - file: preliminary/index
+      sections:
+        - file: preliminary/swc
+        - file: preliminary/github
+        - file: preliminary/jupyterhub
+        - file: preliminary/git
+        - file: preliminary/earthdata
+        - file: preliminary/python
+- caption: Tutorials
+  chapters:
+    - file: tutorials/index
+      sections:
+        - file: tutorials/jupyter
+        - file: tutorials/example/tutorial-notebook
+- caption: Projects
+  chapters:
+    - file: projects/index
+      sections:
+        - file: projects/project_roles
+        - file: projects/project_roadmap
+        - file: projects/project_initialization
+        - file: projects/list_of_projects
+- caption: Reference
+  chapters:
+    - file: reference/glossary
+    - file: reference/bibliography
+    - file: reference/open_science
+    - file: reference/open_source_software

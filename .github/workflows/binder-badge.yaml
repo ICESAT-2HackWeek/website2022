@@ -1,0 +1,32 @@
+name: AddBinderBadge
+on:
+  pull_request_target:
+    # since we're using nbgitpuller, only create the badge when PR opened
+    types: [opened]
+    paths:
+      - 'book/tutorials/**'
+      - '.github/workflows/binder-badge.yml'
+      - 'binder'
+jobs:
+  add-badge:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout PR
+      uses: actions/checkout@v2
+
+    - name: Comment on PR with Binder link
+      uses: actions/github-script@v3
+      env:
+        BRANCH_NAME: ${{ github.event.pull_request.head.ref }}
+        CONTENT_REPO: ${{github.event.pull_request.head.repo.full_name}}
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          var BRANCH_NAME = process.env.BRANCH_NAME;
+          var CONTENT_REPO = process.env.CONTENT_REPO;
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `[![Binder](https://img.shields.io/static/v1.svg?logo=Jupyter&label=PangeoBinderAWS&message=us-west-2&color=orange)](https://aws-uswest2-binder.pangeo.io/v2/gh/{hackweek}-hackweek/website/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252F${CONTENT_REPO}%26urlpath%3Dlab%252Ftree%252Fwebsite/book/tutorials%252F%26branch%3D${BRANCH_NAME}) :point_left: Launch a binder notebook on this branch`
+          })

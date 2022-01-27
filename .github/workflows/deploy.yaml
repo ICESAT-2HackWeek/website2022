@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    paths:
+      - 'book/**'
+      - '{{ cookiecutter.repo_directory }}/**'
+      - 'scripts/**'
+      - '.github/workflows/deploy.yaml'
+
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - uses: ./.github/actions/buildresources
+      with:
+        jb-cache: true
+        publish-to-gh: true
+        jb-save: true
+        token:  ${{ secrets.GH_PAT }}

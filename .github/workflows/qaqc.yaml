@@ -1,0 +1,56 @@
+name: QualityContol
+
+on:
+  pull_request:
+    paths:
+      - 'book/**'
+      - '{{ cookiecutter.repo_directory }}/**'
+      - 'scripts/**'
+      - '.github/workflows/qaqc.yaml'
+    branches:
+      - main
+
+jobs:
+  quality-control:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: ./.github/actions/setupconda
+
+    - name: Ensure Clean Notebooks
+      continue-on-error: true
+      run: |
+        pip install nb-clean==2.0.2
+        find book -name "*ipynb" | xargs nb-clean check --preserve-cell-metadata --remove-empty-cells
+
+    # NOTE: this isn't a comprehensive spellcheck, just common typos
+    - name: Spellcheck
+      continue-on-error: true
+      uses: codespell-project/actions-codespell@master
+      with:
+        check_filenames: true
+        check_hidden: true
+        only_warn: false
+        skip: '*.js'
+
+    # borrowed from https://github.com/ProjectPythia/pythia-foundations/blob/main/.github/workflows/link-checker.yaml
+    - name: Disable Notebook Execution
+      shell: python
+      run: |
+        import yaml
+        with open('./book/_config.yml') as f:
+          data = yaml.safe_load(f)
+          data['execute']['execute_notebooks'] = 'off'
+        with open('./book/_config.yml', 'w') as f:
+          yaml.dump(data, f)
+
+    # NOTE: create separate _config.yml to pass --config (and skip executing notebooks?)
+    - name: Check External Links
+      continue-on-error: true
+      run: |
+        jb build book --builder linkcheck

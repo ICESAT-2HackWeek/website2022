@@ -1,0 +1,28 @@
+name: 'Setup Conda'
+description: 'Create conda environment for GitHub Action Job'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Conda Cache
+      uses: actions/cache@v2
+      env:
+        # Increase this value to reset cache if environment.yml has not changed
+        CACHE_NUMBER: 0
+      with:
+        path: ~/conda_pkgs_dir
+        key:
+          ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{ hashFiles('conda/environment.yml') }}
+
+    - name: Setup Conda Environment
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        miniforge-version: latest
+        auto-update-conda: false
+        environment-file: conda/conda-${{ runner.os == 'Linux' && 'linux' || 'osx'  }}-64.lock
+        activate-environment: hackweek
+        use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
+      
+    - name: Add pip packages to environment
+      shell: bash -l {0}
+      run: pip install --no-deps jinja-markdown==1.210911

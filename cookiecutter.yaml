@@ -1,0 +1,45 @@
+repo_directory: html
+name: UW Hackweek
+about: Hackweeks are participant-driven events that strive to create welcoming spaces
+  for participants to learn new things, build community and gain hands-on experience
+  with collaboration and team science
+apply:
+  url: '#'
+  title: Application coming soon
+hackweek_mission: https://uwhackweek.github.io/hackweeks-as-a-service/mission.html
+banner:
+  title: UW Hackweek
+  description: An awesome learning event.
+  start_date: 12 Oct
+  end_date: 15 Oct
+  year: 2022
+  location: Seattle, WA
+  links:
+  - url: '#'
+    title: Event details coming soon
+    new_window: true
+  - url: intro.html
+    title: More info
+    new_window: false
+  image: https://geohackweek.github.io/assets/images/banner.jpg
+applicant_info: UW Hackweek 2022 will take place in October 2022 (virtual or in-person
+  TBD). Applications have not yet opened, but should be anticipated in September 2022.
+team:
+  !include book/team.yaml
+schedule:
+  !include book/schedule.yaml
+sponsors:
+  description: ''
+  organizations:
+  - name: eScience Institute
+    website: ''
+    logo_url: https://icesat-2hackweek.github.io/assets/images/escience.png
+footer:
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/uwhackweek/
+_copy_without_render:
+- assets
+_extensions:
+- jinja_markdown.MarkdownExtension

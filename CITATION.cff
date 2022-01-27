@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this book, please cite it as below."
+title: "[Event Name] Hackweek JupyterBook Tutorials"
+version: 2021.??.??
+date-released: "2021-??-??"
+identifiers:
+- description: "collection of archived snapshots of all versions"
+  type: doi
+  value: TODO
+  license: MIT
+  repository-code: TODO
+authors:
+- family-names: Henderson
+  given-names: Scott
+  orcid: "https://orcid.org/0000-0003-0624-4965"
+  affiliation: University of Washington
+- family-names: Arendt
+  given-names: Anthony
+  orcid: "https://orcid.org/0000-0003-0429-6905"
+  affiliation: University of Washington
+- family-names: Scheick
+  given-names: Jessica
+  affiliation: University of New Hampshire
+  orcid: "https://orcid.org/0000-0002-3421-4459"
+
+keywords:
+- NASA
+- Hackweek
+- Python

@@ -1,0 +1,35 @@
+name: Test
+
+on:
+  schedule:
+    # run this once a week (sunday midnight) to preserve cache
+    # https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy
+    - cron:  '0 0 * * 0'
+  pull_request:
+    paths:
+      - '.github/**/*'
+      - '{{ cookiecutter.repo_directory }}/**'
+      - 'book/**'
+      - 'conda/**'
+      - 'scripts/**'
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    name: Build and test on OS - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest", "macos-latest" ]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - uses: ./.github/actions/buildresources
+      with:
+        jb-cache: true
+        publish-to-gh: false
+        jb-save: true

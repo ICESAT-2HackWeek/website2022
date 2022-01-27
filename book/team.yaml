@@ -1,0 +1,135 @@
+description:
+  The people on this page have helped organize the hackweek.
+  You'll find a few specializations listed per person if you're wondering who to reach out to during the event!
+
+# please add yourself as a team member in alphabetical order by last name (a template is provided in the README_jupyterbook.md)
+# you can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
+people:
+- title: Anthony Arendt
+  avatar: https://avatars.githubusercontent.com/u/4993098?v=4?s=100
+  role: Principal Research Scientist
+  organizations:
+  - name: eScience Institute
+  - name: APL
+  bio: Bacon ipsum dolor amet turkey corned beef tenderloin frankfurter, short ribs
+    burgdoggen t-bone pork loin kevin porchetta. Fatback jerky biltong short ribs
+    capicola chicken shankle porchetta pastrami. Bacon beef ribs short loin turkey
+    kielbasa t-bone chuck boudin ham corned beef hamburger pastrami tail meatloaf.
+    Short ribs landjaeger frankfurter hamburger, kevin pig rump short loin alcatra.
+    Pastrami corned beef tongue biltong brisket cow drumstick frankfurter. Boudin
+    bresaola bacon, pig brisket jowl picanha frankfurter spare ribs shank pork burgdoggen.
+  expertise: [Hackweeks, Glaciers, Python]
+  social:
+  - icon: github
+    icon_pack: fab
+    link: aaarendt
+  user_groups:
+  - Tutorial Lead
+  - Lead Hackweek Organizer
+- title: Charley Haley
+  avatar: https://highmountainasia.github.io/team-collaboration/images/CharleyHaley.jpg
+  role: Social Strategist and Collaboration Architect
+  organizations:
+  - name: Consultant
+  bio: Charley brings her awesome facilitation skills to Hackweeks.
+  expertise:
+  - Facilitation
+  - Team Building
+  social:
+  - icon: github
+    icon_pack: fab
+    link: ""
+  user_groups:
+  - Tutorial Lead
+- title: Scott Henderson
+  avatar: https://avatars2.githubusercontent.com/u/3924836?s=460&v=4
+  role: Research Scientist
+  organizations:
+  - name: eScience Institute
+  - name: ESS
+  bio: Bacon ipsum dolor amet turkey corned beef tenderloin frankfurter, short ribs
+    burgdoggen t-bone pork loin kevin porchetta. Fatback jerky biltong short ribs
+    capicola chicken shankle porchetta pastrami. Bacon beef ribs short loin turkey
+    kielbasa t-bone chuck boudin ham corned beef hamburger pastrami tail meatloaf.
+    Short ribs landjaeger frankfurter hamburger, kevin pig rump short loin alcatra.
+    Pastrami corned beef tongue biltong brisket cow drumstick frankfurter. Boudin
+    bresaola bacon, pig brisket jowl picanha frankfurter spare ribs shank pork burgdoggen.
+  expertise:
+  - InSAR
+  - Jupyter
+  - Python
+  social:
+  - icon: github
+    icon_pack: fab
+    link: scottyhq
+  user_groups:
+  - Tutorial Lead
+  - Organizer
+- title: Jane Koh
+  avatar: https://icesat-2hackweek.github.io/assets/images/JaneKoh.jpg
+  role: Admin
+  organizations:
+  - name: eScience
+  bio: about Jane here
+  expertise:
+  - Zoom
+  social:
+  - icon: github
+    icon_pack: fab
+    link: ""
+  user_groups:
+  - Tutorial Lead
+- title: Jessica Scheick
+  avatar: https://avatars.githubusercontent.com/u/11756442?v=4
+  role: Research Assistant Professor
+  organizations:
+  - name: University of New Hampshire
+  - name: eScience
+  bio: Jessica is a glaciologist, remote sensing specialist, open science advocate and educator,
+    collaborative developer, open-source software contributor and maintainer, and community manager.
+    She enjoys weaving her many roles together to work with others to build software that makes it easier
+    for everyone to access and manipulate data, and she's especially fond of detecting icebergs.
+  expertise:
+  - open science
+  - collaborative development
+  - Python
+  - git
+  - GitHub
+  - glaciers
+  - ICESat-2/icepyx
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/jessicas11
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/icesat2py
+  user_groups:
+  - Lead Hackweek Organizer
+  - Tutorial Lead
+  - Project Team Lead
+- title: Don Setiawan
+  avatar: https://avatars.githubusercontent.com/u/17802172?v=4
+  role: Research Software Engineer
+  organizations:
+  - name: School of Oceanography
+    url: https://www.ocean.washington.edu/home/Don_Setiawan
+  - name: University of Washington
+  bio: I am a Research Software Engineer at the University of Washington with a
+    strong focus in designing, developing, and maintaining scientific data analysis
+    systems. I am a contributor to various open source software. I learning new
+    technologies and apply them in my work.
+  expertise:
+  - Geospatial Information Systems (GIS)
+  - Data Engineering / Data Science
+  - Software Engineering
+  - Web Development
+  - DevOps/GitOps
+  - Oceanography
+  - Python
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/lsetiawan
+  user_groups:
+  - Tutorial Lead
