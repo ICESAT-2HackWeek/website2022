@@ -1,17 +1,15 @@
 repo_directory: html
-name: UW Hackweek
-about: Hackweeks are participant-driven events that strive to create welcoming spaces
-  for participants to learn new things, build community and gain hands-on experience
-  with collaboration and team science
+name: The ICESat-2 Hackweek 2022
+about: The ICESat-2 Hackweek is a 5-day collaborative learning experience designed to coalesce people and resources around exploring, creating, and promoting effective computation and analysis workflows for the large and complex data returned by the ATLAS sensor on board NASA's ICESat-2 satellite. We will bring together data managers, maintainers, and users to teach each other about open science practices and software during tutorials and contribute to centrally accessible, shareable tools during project work. Our vision includes creating an inclusive, open space that fosters networking, innovation, and sharing ideas.
 apply:
   url: '#'
-  title: Application coming soon
+  title: Applications Closed
 hackweek_mission: https://uwhackweek.github.io/hackweeks-as-a-service/mission.html
 banner:
-  title: UW Hackweek
-  description: An awesome learning event.
-  start_date: 12 Oct
-  end_date: 15 Oct
+  title: The ICESat-2 Hackweek 2022
+  description: A hybrid hands-on workshop
+  start_date: 21 March
+  end_date: 25 March
   year: 2022
   location: Seattle, WA
   links:
@@ -22,8 +20,7 @@ banner:
     title: More info
     new_window: false
   image: https://geohackweek.github.io/assets/images/banner.jpg
-applicant_info: UW Hackweek 2022 will take place in October 2022 (virtual or in-person
-  TBD). Applications have not yet opened, but should be anticipated in September 2022.
+applicant_info: 'Applications closed for 2022'
 team:
   !include book/team.yaml
 schedule:
@@ -38,7 +35,7 @@ footer:
   social:
   - icon: github
     icon_pack: fab
-    link: https://github.com/uwhackweek/
+    link: https://github.com/ICESAT-2HackWeek
 _copy_without_render:
 - assets
 _extensions:
