@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git &#8212; ICESat-2 Hackweek 2022</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Earthdata Login" href="earthdata.html" />
+    <link rel="prev" title="JupyterHub" href="jupyterhub.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ICESat-2 Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to ICESat-2 Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Preliminary Work
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Python Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tutorials/index.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/jupyter.html">
+     GitHub, Git, JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tutorials/example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../projects/list_of_projects.html">
+     List of Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/open_source_software.html">
+   Open source software
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/preliminary/git.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022/issues/new?title=Issue%20on%20page%20%2Fpreliminary/git.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ICESAT-2HackWeek/website2022/edit/main/book/preliminary/git.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-git">
+   What is Git?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-on-jupyterhub">
+   Setting up on JupyterHub
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login-to-jupyterhub">
+     1. Login to JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-terminal">
+     2. Open a Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-basic-git-information">
+     3. Configure basic
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+     </code>
+     information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authenticating-with-github">
+     4. Authenticating with GitHub
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional-advanced-github-setup">
+       (Optional) Advanced GitHub setup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-git-on-your-local-computer">
+   Installing
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     git
+    </span>
+   </code>
+   on your local computer
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Git</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-git">
+   What is Git?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-on-jupyterhub">
+   Setting up on JupyterHub
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login-to-jupyterhub">
+     1. Login to JupyterHub
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-terminal">
+     2. Open a Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-basic-git-information">
+     3. Configure basic
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+     </code>
+     information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authenticating-with-github">
+     4. Authenticating with GitHub
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional-advanced-github-setup">
+       (Optional) Advanced GitHub setup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-git-on-your-local-computer">
+   Installing
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     git
+    </span>
+   </code>
+   on your local computer
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-git">
+<h2>What is Git?<a class="headerlink" href="#what-is-git" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/">Git</a> is a popular version control system that is used in
+many open source software projects to manage their software code base.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You are not required to know Git in advance of this event, but come prepared to learn a lot about it!
+<a class="reference external" href="https://git-scm.com/video/what-is-git">Here a quick introduction video from the official website</a></p>
+</div>
+</div>
+<div class="section" id="setting-up-on-jupyterhub">
+<span id="setting-up-git"></span><h2>Setting up on JupyterHub<a class="headerlink" href="#setting-up-on-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<p>Below are instructions to get you setup with <code class="docutils literal notranslate"><span class="pre">git</span></code> on the ICESat-2 Hackweek hackweek
+JupyterHub. These are only basic instructions to get started. See the
+<a class="reference external" href="http://swcarpentry.github.io/git-novice/02-setup/index.html">Software Carpentry Git</a>
+instructions for a more thorough explanation and background information.</p>
+<div class="section" id="login-to-jupyterhub">
+<h3>1. Login to JupyterHub<a class="headerlink" href="#login-to-jupyterhub" title="Permalink to this headline">¶</a></h3>
+<p>Go to https://INSERT_JUPYTERHUB_URL. See also our JupyterHub documentation: <a class="reference internal" href="jupyterhub.html#accessing-jupyterhub"><span class="std std-ref">How do I access the shared cloud environment?</span></a></p>
+</div>
+<div class="section" id="open-a-terminal">
+<h3>2. Open a Terminal<a class="headerlink" href="#open-a-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Choose the ‘Terminal’ from the ‘Other’ options in the ‘Launcher’ tab.</p>
+<p><img alt="jupyterlab" src="../_images/jupyter-terminal.png" /></p>
+</div>
+<div class="section" id="configure-basic-git-information">
+<h3>3. Configure basic <code class="docutils literal notranslate"><span class="pre">git</span></code> information<a class="headerlink" href="#configure-basic-git-information" title="Permalink to this headline">¶</a></h3>
+<p>Set your username and email address. The email address should be the same
+as you used to register your GitHub account.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Use your personal name instead of the placeholder <code class="docutils literal notranslate"><span class="pre">{{hackweek}}</span> <span class="pre">Attendee</span></code>
+in the below commands. For the email, it should be the address you used to create
+your GitHub account instead of <code class="docutils literal notranslate"><span class="pre">attendee&#64;hackweek.com</span></code>. Both values need to be
+surrounded by quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Attendee Name&quot;</span>
+git config --global user.email <span class="s2">&quot;attendee@hackweek.com&quot;</span>
+git config --global pull.rebase <span class="nb">false</span>
+git config --global credential.helper store
+</pre></div>
+</div>
+<p>The third line is a configuration option that needs to be done with a first time
+setup. It specifies the strategy on how git will apply changes you pull from
+a remote git repository.
+More on strategies is <a class="reference external" href="http://git-scm.com/book/en/v2/Git-Branching-Rebasing">described here.</a></p>
+<p>The last line of the config will store your GitHub credentials and will save
+you from re-entering your username and password from the command line with each
+push, pull, or interactions with GitHub.</p>
+<p>To verify that you successfully executed the above commands, use the</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git config -l
+</pre></div>
+</div>
+<p>command.</p>
+<p>The output should look similar to this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jovyan@jupyter:~$ git config -l
+user.name<span class="o">=</span> Attendee Name
+user.email<span class="o">=</span>attendee@hackweek.com
+credential.helper<span class="o">=</span>store
+</pre></div>
+</div>
+</div>
+<div class="section" id="authenticating-with-github">
+<h3>4. Authenticating with GitHub<a class="headerlink" href="#authenticating-with-github" title="Permalink to this headline">¶</a></h3>
+<p>In order to interact with GitHub via the <code class="docutils literal notranslate"><span class="pre">git</span></code> command inside the JupyterHub environment,
+you need to set up an authentication method. One way to do this is to use your GitHub password.
+However, a better, more secure practice is to use a GitHub Personal Access Token, which offers
+more customizable permissions and can be revoked without affecting your main GitHub user
+account password.</p>
+<p>Take a moment to work through the instructions on the <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access tokens</a> page. For this hackweek, you need to check the <strong>repo</strong>, <strong>admin:org</strong>, and <strong>workflow</strong> scope.</p>
+<p><img alt="github-token" src="../_images/github-token.png" /></p>
+<p>Once you have created your token, be sure to save it on your computer in case
+you need to re-authenticate again. The token will give you access to your
+personal GitHub account. It will also give you permission to push changes to your project repository within
+the ICESat-2 Hackweek hackweek organization via the command line.</p>
+<p>To test your setup on the JupyterHub, we will be using a test repository from
+the ICESat-2 Hackweek Hackweek organization. Paste the following command into your open
+terminal on the JupyterHub. where you will be prompted for your GitHub username
+and the token.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone <span class="o">{{</span>github_org_url<span class="o">}}</span>.github_setup_check.git
+</pre></div>
+</div>
+<p>Since this is the first time you are interacting from the JupyterHub with GitHub,
+you will be then prompted for your personal inputs. The output in your Terminal
+will be similar to the below:</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Use your personal GitHub username instead of the placeholder <code class="docutils literal notranslate"><span class="pre">&lt;GitHub</span> <span class="pre">Username&gt;</span></code>
+in the below sample output. For the password, paste your created token.</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Cloning into <span class="s1">&#39;github_setup_check&#39;</span>...
+Username <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span>: &lt;GitHub Username&gt;
+Password <span class="k">for</span> <span class="s1">&#39;https://attendee@github.com&#39;</span>:
+remote: Enumerating objects: <span class="m">3</span>, <span class="k">done</span>.
+remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">3</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, pack-reused <span class="m">0</span>
+Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, <span class="k">done</span>.
+</pre></div>
+</div>
+<p>Now that you have entered your credentials once, you should no longer be prompted
+for your username and token again. To test the successful storage of your
+credentials, go inside the repository and issue a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> command. If
+successful, you should have an output similar to this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Go inside the directory</span>
+<span class="o">(</span>notebook<span class="o">)</span> jovyan@jupyter:~$ <span class="nb">cd</span> github_setup_check/
+<span class="c1"># Issue the pull command</span>
+<span class="o">(</span>notebook<span class="o">)</span> jovyan@jupyter:~/github_setup_check$ git pull
+Already up to date.
+</pre></div>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">git</span></code> command successfully set up, you can now remove the test
+repository.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Be careful with the <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span></code> command. There will be <strong>no</strong> confirmation prompt
+for this action and files and folders removed with this command are not
+recoverable.</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>rm -rf github_setup_check
+</pre></div>
+</div>
+<div class="section" id="optional-advanced-github-setup">
+<h4>(Optional) Advanced GitHub setup<a class="headerlink" href="#optional-advanced-github-setup" title="Permalink to this headline">¶</a></h4>
+<p>In addition to interacting with GitHub via the <code class="docutils literal notranslate"><span class="pre">git</span></code> command, you can also use
+the <code class="docutils literal notranslate"><span class="pre">gh</span></code> command, which is a set of <a class="reference external" href="https://cli.github.com/">command line tools developed by GitHub to
+interact with their website from the command line</a>.</p>
+<p>To set this up, use the <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">auth</span> <span class="pre">login</span></code> command and your access token.
+The answers to each question are shown in the output below.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>notebook<span class="o">)</span> jovyan@jupyter-jomey:~$ gh auth login
+? What account <span class="k">do</span> you want to log into? GitHub.com
+? What is your preferred protocol <span class="k">for</span> Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are <span class="s1">&#39;repo&#39;</span>, <span class="s1">&#39;read:org&#39;</span>, <span class="s1">&#39;workflow&#39;</span>.
+? Paste your authentication token: ****************************************
+- gh config <span class="nb">set</span> -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged <span class="k">in</span> as <span class="o">{{</span>hackweek<span class="o">}}</span>Hackweek
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="installing-git-on-your-local-computer">
+<h2>Installing <code class="docutils literal notranslate"><span class="pre">git</span></code> on your local computer<a class="headerlink" href="#installing-git-on-your-local-computer" title="Permalink to this headline">¶</a></h2>
+<p>If you want to use and setup <code class="docutils literal notranslate"><span class="pre">git</span></code> on your local computer and don’t have the
+command available in your local terminal, you can download the latest installer
+on <a class="reference external" href="https://git-scm.com">Git-SCM</a>.
+More help for the install process can be found in the
+<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">official Git documentation</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./preliminary"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="jupyterhub.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">JupyterHub</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="earthdata.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Earthdata Login</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
