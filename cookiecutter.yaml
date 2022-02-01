@@ -4,7 +4,7 @@ about: The ICESat-2 Hackweek is a 5-day collaborative learning experience design
 apply:
   url: '#'
   title: Applications Closed
-hackweek_mission: https://uwhackweek.github.io/hackweeks-as-a-service/mission.html
+hackweek_mission: https://icesat-2.hackweek.io/mission.html
 banner:
   title: The ICESat-2 Hackweek 2022
   description: A hybrid hands-on workshop
@@ -19,7 +19,7 @@ banner:
   - url: intro.html
     title: More info
     new_window: false
-  image: https://geohackweek.github.io/assets/images/banner.jpg
+  image: https://icesat-2hackweek.github.io/assets/images/banner.jpg
 applicant_info: 'Applications closed for 2022'
 team:
   !include book/team.yaml
@@ -31,6 +31,13 @@ sponsors:
   - name: eScience Institute
     website: ''
     logo_url: https://icesat-2hackweek.github.io/assets/images/escience.png
+  - name: NASA ICESat-2 Mission
+    website: 'https://icesat-2.gsfc.nasa.gov/mission'
+    logo_url: https://icesat-2hackweek.github.io/assets/images/ICESat2.png
+  - name: Amazon Web Services
+    website: ''
+    logo_url: https://aws.amazon.com/?nc2=h_lg
+
 footer:
   social:
   - icon: github
