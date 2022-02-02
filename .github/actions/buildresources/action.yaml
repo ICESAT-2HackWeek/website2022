@@ -41,6 +41,7 @@ runs:
         personal_token: ${{inputs.token}}
         publish_dir: book/_build/html
         publish_branch: gh-pages
+        cname: icesat-2.hackweek.io
 
     - name: Save Build
       if: inputs.jb-save == 'true'
