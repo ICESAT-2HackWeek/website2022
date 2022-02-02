@@ -7,16 +7,48 @@ name: hackweek
 channels:
   - conda-forge
 dependencies:
-  - cookiecutter
+  # Hackweek JupyterHub
+  - awscli
+  - cartopy
+  - dask
+  - datashader
+  - fsspec
+  - gh
+  - geopandas
+  - geoviews
+  - h5netcdf
+  - h5py
+  - holoviews
+  - hvplot
+  - icepyx
+  - intake
   - ipyleaflet
-  - jinja2>=2.11
-  - jupyter-book=0.12
   - jupyterhub-singleuser
-  - jupyterlab=3
+  - jupyterlab >= 3
   - jupyter-resource-usage
+  - kerchunk
+  - matplotlib-base
+  - numpy
+  - pandas
+  - pygeos
+  - pystac
+  - pystac-client
+  - python-graphviz
+  - rasterio
+  - rioxarray
+  - s3fs
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - xarray
+  - zarr
+  # JupyterBook
+  - cookiecutter
+  - jinja2 >= 2.11
+  - jupyter-book = 0.12
   - mamba
   - pip
-  - python=3.10
-  - pygments>=2.6.1
-  - pymdown-extensions>=7.1
+  - python = 3.9
+  - pygments >= 2.6.1
+  - pymdown-extensions >= 7.1
   - sphinxcontrib-bibtex
