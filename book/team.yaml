@@ -78,19 +78,20 @@ people:
   role: Research Scientist
   organizations:
   - name: eScience Institute
-  - name: ESS
-  bio: Scott's bio
+  - name: UW Earth and Space Sciences Department
+  bio: Scott is a research scientist and data science fellow at the University of Washington. His research is focused on applications of synthetic aperture radar to understand geophysical processes. Scott is excited about the potential for open source software and Cloud computing to enable more open and reproducible science.
   expertise:
   - InSAR
   - Jupyter
   - Python
+  - Cloud computing
   social:
   - icon: github
     icon_pack: fab
     link: scottyhq
   user_groups:
+  - Lead of Technology
   - Tutorial Lead
-  - Organizer
 - title: Jane Koh
   avatar: https://avatars.githubusercontent.com/u/51932541?v=4
   role: Program Manager
