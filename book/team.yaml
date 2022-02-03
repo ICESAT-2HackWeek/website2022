@@ -2,7 +2,8 @@ description:
   The people on this page have helped organize the hackweek.
   You'll find a few specializations listed per person if you're wondering who to reach out to during the event!
 
-# please add yourself as a team member in alphabetical order by last name (a template is provided in the README_jupyterbook.md)
+# please add yourself as a team member (a template will be provided - all fields must be included)
+# user groups can be found at: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
 # you can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
 people:
 - title: Jessica Scheick
