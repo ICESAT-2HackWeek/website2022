@@ -12,6 +12,7 @@ on:
       - 'book/**'
       - 'conda/**'
       - 'scripts/**'
+      - 'cookiecutter.yaml'
     branches:
       - main
 
