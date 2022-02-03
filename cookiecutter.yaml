@@ -35,8 +35,11 @@ sponsors:
     website: 'https://icesat-2.gsfc.nasa.gov/mission'
     logo_url: https://icesat-2hackweek.github.io/assets/images/ICESat2.png
   - name: Amazon Web Services
-    website: ''
-    logo_url: https://aws.amazon.com/?nc2=h_lg
+    website: 'https://aws.amazon.com'
+    logo_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg
+  - name: NASA
+    website: 'https://www.nasa.gov/'
+    logo_url: https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg
 
 footer:
   social:
