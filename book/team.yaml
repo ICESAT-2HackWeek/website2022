@@ -131,3 +131,25 @@ people:
     link: https://github.com/lsetiawan
   user_groups:
   - Tutorial Lead
+- title: Naomi Alterman
+  avatar: https://escience.washington.edu/wp-content/uploads/2021/01/nlalterman.jpg
+  role: Education Consultant
+  organizations:
+  - name: eScience Institute  
+  bio: Naomi is a Technical Education Specialist at the University of
+  Washington's eScience Institute. She has a background in electrical
+  engineering and computer science, but loves spending her time working on the
+  interface between complex domains of information, be they software, hardware,
+  or people.
+  expertise:
+  - Education and pedagogy
+  - Technical mentorship
+  - Python
+  - git
+  - Cloud computing
+  social:
+  - icon: github
+    icon_pack: fab
+    link: naclomi
+  user_groups:
+  - Education Consultant
