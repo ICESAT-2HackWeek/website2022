@@ -43,9 +43,9 @@ people:
   organizations:
   - name: eScience Institute
   - name: Applied Physics Laboratory
-  bio: Anthony is leading the eScience Institute's Hackweek-as-a-Service program. 
-    He is an advocate for open, inclusive and collaborative science. 
-    He has experience teaching GIS and has been the lead organizer for multiple earth-science themed hackweeks. 
+  bio: Anthony is leading the eScience Institute's Hackweek-as-a-Service program.
+    He is an advocate for open, inclusive and collaborative science.
+    He has experience teaching GIS and has been the lead organizer for multiple earth-science themed hackweeks.
     His background is in cryospheric science and remote sensing.
   expertise:
   - open science
@@ -68,9 +68,9 @@ people:
   - name: Collaboration Architect at eScience Institute
   - name: WayForagers
     url: https://WayForagers.org
-  bio: I am passionate about all things that are in service to building collaborations, especially interdisciplinary ones. 
-    I love building frameworks that make it easier for science groups (research, applied, data, stakeholders) to understand 
-    each other and how they might fit together to address the larger, more complex science challenges that are impossible to 
+  bio: I am passionate about all things that are in service to building collaborations, especially interdisciplinary ones.
+    I love building frameworks that make it easier for science groups (research, applied, data, stakeholders) to understand
+    each other and how they might fit together to address the larger, more complex science challenges that are impossible to
     touch without a community of collaborators representing all angles & all perspectives.
   expertise:
   - Participatory Design and facilitation
@@ -89,8 +89,8 @@ people:
   organizations:
   - name: eScience Institute
   - name: UW Earth and Space Sciences Department
-  bio: Scott is a research scientist and data science fellow at the University of Washington. 
-    His research is focused on applications of synthetic aperture radar to understand geophysical processes. 
+  bio: Scott is a research scientist and data science fellow at the University of Washington.
+    His research is focused on applications of synthetic aperture radar to understand geophysical processes.
     Scott is excited about the potential for open source software and Cloud computing to enable more open and reproducible science.
   expertise:
   - InSAR
@@ -169,3 +169,27 @@ people:
     link: naclomi
   user_groups:
   - Education Consultant
+# =============
+- title: Joachim Meyer
+  avatar: https://avatars.githubusercontent.com/u/178649?v=4
+  role: Graduate Student
+  organizations:
+    - name: University of Utah
+  bio: >
+    Joe is a graduate student at the University of Utah with a research focus
+    on snow hydrology and closing the gap between research and operations.
+    He has a background in software development and would love to see more
+    software development best practices, open source software, and open science
+    principles being adapted throughout the research community.
+  expertise:
+    - Sofware Development
+    - Python
+    - git, GDAL, anything in the Terminal really ...
+    - Modeling
+  social:
+    - icon: github
+      icon_pack: fab
+      link: jomey
+  user_groups:
+    - Technology
+# =============
