@@ -2,9 +2,10 @@ description:
   The people on this page have helped organize the hackweek.
   You'll find a few specializations listed per person if you're wondering who to reach out to during the event!
 
-# please add yourself as a team member (a template will be provided - all fields must be included)
-# user groups can be found at: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
-# you can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
+# INTRUCTIONS:
+# - All fields must be included per person
+# - User groups can be found at: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
+# - You can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
 people:
 - title: Jessica Scheick
   avatar: https://avatars.githubusercontent.com/u/11756442?v=4
@@ -35,6 +36,7 @@ people:
   - Lead Hackweek Organizer
   - Tutorial Lead
   - Project Team Lead
+# =============
 - title: Anthony Arendt
   avatar: https://avatars.githubusercontent.com/u/4993098?v=4?s=100
   role: Senior Data Science Fellow
@@ -42,7 +44,7 @@ people:
   - name: eScience Institute
   - name: Applied Physics Laboratory
   bio: Anthony is leading the eScience Institute's Hackweek-as-a-Service program. He is an advocate for open, inclusive and collaborative science. He has experience teaching GIS and has been the lead organizer for multiple earth-science themed hackweeks. His background is in cryospheric science and remote sensing.
-  expertise: 
+  expertise:
   - open science
   - community building
   - GIS
@@ -55,17 +57,18 @@ people:
     link: aaarendt
   user_groups:
   - Lead Hackweek Organizer
+# =============
 - title: Charley Haley
   avatar: https://highmountainasia.github.io/team-collaboration/images/CharleyHaley.jpg
   role: Social Strategist and Collaboration Architect
   organizations:
   - name: Collaboration Architect at eScience Institute
   - name: WayForagers
-    url: https://WayForagers.org 
-  bio: I am passionate about all things that are in service to building collaborations, especially interdisciplinary ones. I love building frameworks that make it easier for science groups (research, applied, data, stakeholders) to understand each other and how they might fit together to address the larger, more complex science challenges that are impossible to touch without a community of collaborators representing all angles & all perspectives.      
+    url: https://WayForagers.org
+  bio: I am passionate about all things that are in service to building collaborations, especially interdisciplinary ones. I love building frameworks that make it easier for science groups (research, applied, data, stakeholders) to understand each other and how they might fit together to address the larger, more complex science challenges that are impossible to touch without a community of collaborators representing all angles & all perspectives.
   expertise:
   - Participatory Design and facilitation
-  - Structuring productive meetings & discussions 
+  - Structuring productive meetings & discussions
   - Community development
   social:
   - icon: github
@@ -73,6 +76,7 @@ people:
     link: ""
   user_groups:
   - Lead Community Building
+# =============
 - title: Scott Henderson
   avatar: https://avatars2.githubusercontent.com/u/3924836?s=460&v=4
   role: Research Scientist
@@ -92,6 +96,7 @@ people:
   user_groups:
   - Lead of Technology
   - Tutorial Lead
+# =============
 - title: Jane Koh
   avatar: https://avatars.githubusercontent.com/u/51932541?v=4
   role: Program Manager
@@ -106,6 +111,7 @@ people:
     link: janekoh1
   user_groups:
   - Program Manager
+# =============
 - title: Don Setiawan
   avatar: https://avatars.githubusercontent.com/u/17802172?v=4
   role: Research Software Engineer
@@ -131,12 +137,14 @@ people:
     link: https://github.com/lsetiawan
   user_groups:
   - Tutorial Lead
+# =============
 - title: Naomi Alterman
   avatar: https://escience.washington.edu/wp-content/uploads/2021/01/nlalterman.jpg
   role: Education Consultant
   organizations:
-  - name: eScience Institute  
-  bio: Naomi is a Technical Education Specialist at the University of
+  - name: eScience Institute
+  bio: >
+    Naomi is a Technical Education Specialist at the University of
   Washington's eScience Institute. She has a background in electrical
   engineering and computer science, but loves spending her time working on the
   interface between complex domains of information, be they software, hardware,
