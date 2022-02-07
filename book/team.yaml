@@ -2,10 +2,10 @@ description:
   The people on this page have helped organize the hackweek.
   You'll find a few specializations listed per person if you're wondering who to reach out to during the event!
 
-# INTRUCTIONS:
-# - All fields must be included per person
-# - User groups can be found at: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
-# - You can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
+# INSTRUCTIONS:
+# - One entry per key must be included per person (title, avatar, role, organizations, bio, expertise, social, user_groups)
+# - user_groups correspond to hackweek roles defined here: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
+# - For 'avatar' an easy option is to use the URL for your GitHub user image: https://api.github.com/users/YOUR_GITHUB_USERNAME
 people:
 - title: Jessica Scheick
   avatar: https://avatars.githubusercontent.com/u/11756442?v=4
@@ -144,7 +144,7 @@ people:
     icon_pack: fab
     link: https://github.com/lsetiawan
   user_groups:
-  - Tutorial Lead
+  - Technology Specialist
 # =============
 - title: Naomi Alterman
   avatar: https://escience.washington.edu/wp-content/uploads/2021/01/nlalterman.jpg
@@ -182,7 +182,7 @@ people:
     software development best practices, open source software, and open science
     principles being adapted throughout the research community.
   expertise:
-    - Sofware Development
+    - Software Development
     - Python
     - git, GDAL, anything in the Terminal really ...
     - Modeling
@@ -191,5 +191,5 @@ people:
       icon_pack: fab
       link: jomey
   user_groups:
-    - Technology
+    - Technology Specialist
 # =============
