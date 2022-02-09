@@ -2,83 +2,11 @@ description:
   The people on this page have helped organize the hackweek.
   You'll find a few specializations listed per person if you're wondering who to reach out to during the event!
 
-# please add yourself as a team member in alphabetical order by last name (a template is provided in the README_jupyterbook.md)
-# you can easily get the URL of a GitHub user image via the GitHub API: `https://api.github.com/users/GITHUB_USERNAME`
+# INSTRUCTIONS:
+# - One entry per key must be included per person (title, avatar, role, organizations, bio, expertise, social, user_groups)
+# - user_groups correspond to hackweek roles defined here: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
+# - For 'avatar' an easy option is to use the URL for your GitHub user image: https://api.github.com/users/YOUR_GITHUB_USERNAME
 people:
-- title: Anthony Arendt
-  avatar: https://avatars.githubusercontent.com/u/4993098?v=4?s=100
-  role: Principal Research Scientist
-  organizations:
-  - name: eScience Institute
-  - name: APL
-  bio: Bacon ipsum dolor amet turkey corned beef tenderloin frankfurter, short ribs
-    burgdoggen t-bone pork loin kevin porchetta. Fatback jerky biltong short ribs
-    capicola chicken shankle porchetta pastrami. Bacon beef ribs short loin turkey
-    kielbasa t-bone chuck boudin ham corned beef hamburger pastrami tail meatloaf.
-    Short ribs landjaeger frankfurter hamburger, kevin pig rump short loin alcatra.
-    Pastrami corned beef tongue biltong brisket cow drumstick frankfurter. Boudin
-    bresaola bacon, pig brisket jowl picanha frankfurter spare ribs shank pork burgdoggen.
-  expertise: [Hackweeks, Glaciers, Python]
-  social:
-  - icon: github
-    icon_pack: fab
-    link: aaarendt
-  user_groups:
-  - Tutorial Lead
-  - Lead Hackweek Organizer
-- title: Charley Haley
-  avatar: https://highmountainasia.github.io/team-collaboration/images/CharleyHaley.jpg
-  role: Social Strategist and Collaboration Architect
-  organizations:
-  - name: Consultant
-  bio: Charley brings her awesome facilitation skills to Hackweeks.
-  expertise:
-  - Facilitation
-  - Team Building
-  social:
-  - icon: github
-    icon_pack: fab
-    link: ""
-  user_groups:
-  - Tutorial Lead
-- title: Scott Henderson
-  avatar: https://avatars2.githubusercontent.com/u/3924836?s=460&v=4
-  role: Research Scientist
-  organizations:
-  - name: eScience Institute
-  - name: ESS
-  bio: Bacon ipsum dolor amet turkey corned beef tenderloin frankfurter, short ribs
-    burgdoggen t-bone pork loin kevin porchetta. Fatback jerky biltong short ribs
-    capicola chicken shankle porchetta pastrami. Bacon beef ribs short loin turkey
-    kielbasa t-bone chuck boudin ham corned beef hamburger pastrami tail meatloaf.
-    Short ribs landjaeger frankfurter hamburger, kevin pig rump short loin alcatra.
-    Pastrami corned beef tongue biltong brisket cow drumstick frankfurter. Boudin
-    bresaola bacon, pig brisket jowl picanha frankfurter spare ribs shank pork burgdoggen.
-  expertise:
-  - InSAR
-  - Jupyter
-  - Python
-  social:
-  - icon: github
-    icon_pack: fab
-    link: scottyhq
-  user_groups:
-  - Tutorial Lead
-  - Organizer
-- title: Jane Koh
-  avatar: https://icesat-2hackweek.github.io/assets/images/JaneKoh.jpg
-  role: Admin
-  organizations:
-  - name: eScience
-  bio: about Jane here
-  expertise:
-  - Zoom
-  social:
-  - icon: github
-    icon_pack: fab
-    link: ""
-  user_groups:
-  - Tutorial Lead
 - title: Jessica Scheick
   avatar: https://avatars.githubusercontent.com/u/11756442?v=4
   role: Research Assistant Professor
@@ -108,6 +36,90 @@ people:
   - Lead Hackweek Organizer
   - Tutorial Lead
   - Project Team Lead
+# =============
+- title: Anthony Arendt
+  avatar: https://avatars.githubusercontent.com/u/4993098?v=4?s=100
+  role: Senior Data Science Fellow
+  organizations:
+  - name: eScience Institute
+  - name: Applied Physics Laboratory
+  bio: Anthony is leading the eScience Institute's Hackweek-as-a-Service program.
+    He is an advocate for open, inclusive and collaborative science.
+    He has experience teaching GIS and has been the lead organizer for multiple earth-science themed hackweeks.
+    His background is in cryospheric science and remote sensing.
+  expertise:
+  - open science
+  - community building
+  - GIS
+  - SQL
+  - glaciers
+  - Python
+  social:
+  - icon: github
+    icon_pack: fab
+    link: aaarendt
+  user_groups:
+  - Lead Hackweek Organizer
+# =============
+- title: Charley Haley
+  avatar: https://avatars.githubusercontent.com/u/70242677?v=4
+  role: Social Strategist and Collaboration Architect
+  organizations:
+  - name: Collaboration Architect at eScience Institute
+  - name: WayForagers
+    url: https://WayForagers.org
+  bio: I am passionate about all things that are in service to building collaborations, especially interdisciplinary ones.
+    I love building frameworks that make it easier for science groups (research, applied, data, stakeholders) to understand
+    each other and how they might fit together to address the larger, more complex science challenges that are impossible to
+    touch without a community of collaborators representing all angles & all perspectives.
+  expertise:
+  - Participatory Design and facilitation
+  - Structuring productive meetings & discussions
+  - Community development
+  social:
+  - icon: github
+    icon_pack: fab
+    link: ""
+  user_groups:
+  - Lead Community Building
+# =============
+- title: Scott Henderson
+  avatar: https://avatars2.githubusercontent.com/u/3924836?s=460&v=4
+  role: Research Scientist
+  organizations:
+  - name: eScience Institute
+  - name: UW Earth and Space Sciences Department
+  bio: Scott is a research scientist and data science fellow at the University of Washington.
+    His research is focused on applications of synthetic aperture radar to understand geophysical processes.
+    Scott is excited about the potential for open source software and Cloud computing to enable more open and reproducible science.
+  expertise:
+  - InSAR
+  - Jupyter
+  - Python
+  - Cloud computing
+  social:
+  - icon: github
+    icon_pack: fab
+    link: scottyhq
+  user_groups:
+  - Lead of Technology
+  - Tutorial Lead
+# =============
+- title: Jane Koh
+  avatar: https://avatars.githubusercontent.com/u/51932541?v=4
+  role: Program Manager
+  organizations:
+  - name: eScience Institute
+  bio: about Jane here
+  expertise:
+  - hackweek organization
+  social:
+  - icon: github
+    icon_pack: fab
+    link: janekoh1
+  user_groups:
+  - Program Manager
+# =============
 - title: Don Setiawan
   avatar: https://avatars.githubusercontent.com/u/17802172?v=4
   role: Research Software Engineer
@@ -132,4 +144,52 @@ people:
     icon_pack: fab
     link: https://github.com/lsetiawan
   user_groups:
-  - Tutorial Lead
+  - Technology Specialist
+# =============
+- title: Naomi Alterman
+  avatar: https://escience.washington.edu/wp-content/uploads/2021/01/nlalterman.jpg
+  role: Education Consultant
+  organizations:
+  - name: eScience Institute
+  bio: >
+    Naomi is a Technical Education Specialist at the University of
+    Washington's eScience Institute. She has a background in electrical
+    engineering and computer science, but loves spending her time working on the
+    interface between complex domains of information, be they software, hardware,
+    or people.
+  expertise:
+  - Education and pedagogy
+  - Technical mentorship
+  - Python
+  - git
+  - Cloud computing
+  social:
+  - icon: github
+    icon_pack: fab
+    link: naclomi
+  user_groups:
+  - Education Consultant
+# =============
+- title: Joachim Meyer
+  avatar: https://avatars.githubusercontent.com/u/178649?v=4
+  role: Graduate Student
+  organizations:
+    - name: University of Utah
+  bio: >
+    Joe is a graduate student at the University of Utah with a research focus
+    on snow hydrology and closing the gap between research and operations.
+    He has a background in software development and would love to see more
+    software development best practices, open source software, and open science
+    principles being adapted throughout the research community.
+  expertise:
+    - Software Development
+    - Python
+    - git, GDAL, anything in the Terminal really ...
+    - Modeling
+  social:
+    - icon: github
+      icon_pack: fab
+      link: jomey
+  user_groups:
+    - Technology Specialist
+# =============
