@@ -4,8 +4,6 @@
 Thank you to all people that have applied for this year's event!
 ```
 
-We are glad you are interested in applying to participate in {{hackweek}}!
-
 ## Considerations
 
 Hackweeks are participant-driven events that encourage collaboration and teamwork. We welcome people from a diverse range of career stages, experience levels, backgrounds and identities.
