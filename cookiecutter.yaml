@@ -13,11 +13,8 @@ banner:
   year: 2022
   location: Seattle, WA
   links:
-  - url: '#'
-    title: Event details coming soon
-    new_window: true
   - url: intro.html
-    title: More info
+    title: Event Jupyter Book
     new_window: false
   image: https://icesat-2hackweek.github.io/assets/images/banner.jpg
 applicant_info: 'Applications closed for 2022'
