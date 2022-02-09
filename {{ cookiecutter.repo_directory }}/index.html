@@ -67,8 +67,15 @@
 					</div>
 
 					{%- if cookiecutter.apply %}
-					<div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="{{ cookiecutter.apply.url }}"
-							target="_blank">{{ cookiecutter.apply.title }}</a>
+					<div class="navbar-btn order-lg-2">
+                        <a class="btn btn-secondary"
+                           {%- if 'url' in cookiecutter.apply %}
+                           href="{{ cookiecutter.apply.url }}"
+                           target="_blank"
+                           {%- endif %}
+                        >
+                            {{ cookiecutter.apply.title }}
+                        </a>
 					</div>
 					{%- endif %}
 
