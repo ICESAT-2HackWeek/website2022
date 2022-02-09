@@ -15,9 +15,9 @@ parse:
     github_org_url: "https://github.com/ICESAT-2HackWeek"
     book_repo: "website2022"
     website_url: "https://ICESAT-2HackWeek.github.io/website2022"
-    jupyterhub_url: "https://INSERT_JUPYTERHUB_URL"
-    slack_workspace_url: "https://INSERT_SLACK_URL"
-    docker_image: "https://INSERT_DOCKER_IMAGE_URL"
+    jupyterhub_url: "https://uwhackweeks.2i2c.cloud"
+    slack_workspace_url: "https://icesat2hackweek.slack.com"
+    docker_image: "https://hub.docker.com/r/uwhackweek/icesat2"
     contact_email: "uwhackweek@github.com"
     dataset: "ICESat-2"
     anon_reporting_url: "https://INSERT_FORM_LINK"
@@ -35,7 +35,7 @@ parse:
 execute:
   # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
   execute_notebooks: cache
-  exclude_patterns: ["*rendered*", "*skip*", "uavsar-download.ipynb"]
+  exclude_patterns: ["*rendered*", "*skip*"]
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300

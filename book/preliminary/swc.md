@@ -1,17 +1,10 @@
 # Software Carpentry Training
 
-We will host a {{hackweek}} hackweek [Software Carpentry](https://software-carpentry.org) training on June 21 - 22.
-This event is by invitation to {{hackweek}} hackweek participants only.
+[Software Carpentry](https://software-carpentry.org) is a fantastic organization that teaches basic lab skills for research computing.
 
-The purpose of this training is to help everyone gain skills in fundamental data science tools.
-By offering this work in advance of the hackweek we can maximize the amount of time we get to focus on {{dataset}} data!
-Feel free to contact one of us if you need more clarity on deciding whether this would be a good use of your time.
+For past hackweeks we have offered unofficial, abbreviated 2-day software carpentry trainings to help everyone gain skills in fundamental data science tools (Git, Linux Terminal, Python). By offering this work in advance of the hackweek we can maximize the amount of time we get to focus on more advanced topics.
 
-## Time Zones
-
-All times listed below are UTC -7 (Pacific Daylight Time).
-You might want to consult this [Time Zone Map](https://www.timeanddate.com/time/map/)
-to figure out times in your location.
+Below you will find links to our training materials from the 2021 SnowEx Hackweek. If you are new to Git, Linux, Python, please set aside a day or two to go over these materials in advance:
 
 ## Getting ready
 
@@ -25,11 +18,10 @@ We encourage you to test your [connection to JupyterHub](jupyterhub) before the 
 
 ## Schedule
 
-### Day 1: Monday June 21, 2021
+### Jupyter, Git, and Unix Shell
 
 #### [Link to video of Day 1 tutorial](https://www.youtube.com/watch?v=F8VhkKwCx0k)
 
-**Jupyter, Git, and Unix Shell**
 We'll be using these lessons:
 * http://swcarpentry.github.io/shell-novice/
 * http://swcarpentry.github.io/git-novice/
@@ -43,11 +35,10 @@ We'll be using these lessons:
 | 10:25 to 10:45 AM | Break |
 | 10:45 AM to 12:45 PM | Git/GitHub ([Topics 1 to 5](http://swcarpentry.github.io/git-novice/)) |
 
-### Day 2: Tuesday June 22, 2021
+### Python Programming Language
 
 #### [Link to video of Day 2 tutorial](https://www.youtube.com/watch?v=OhzHoGe9ZeI)
 
-**Python Programming Language**
 We'll be using this lesson:
 * http://swcarpentry.github.io/python-novice-gapminder/
 
