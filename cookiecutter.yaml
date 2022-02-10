@@ -2,7 +2,6 @@ repo_directory: html
 name: The ICESat-2 Hackweek 2022
 about: The ICESat-2 Hackweek is a 5-day collaborative learning experience designed to coalesce people and resources around exploring, creating, and promoting effective computation and analysis workflows for the large and complex data returned by the ATLAS sensor on board NASA's ICESat-2 satellite. We will bring together data managers, maintainers, and users to teach each other about open science practices and software during tutorials and contribute to centrally accessible, shareable tools during project work. Our vision includes creating an inclusive, open space that fosters networking, innovation, and sharing ideas.
 apply:
-  url: '#'
   title: Applications Closed
 hackweek_mission: https://icesat-2.hackweek.io/mission.html
 banner:

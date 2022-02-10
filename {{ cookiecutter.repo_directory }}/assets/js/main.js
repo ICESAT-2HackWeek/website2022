@@ -52,7 +52,7 @@ scrollLinks.forEach((scrollLink) => {
 function jumpToSection() {
   const section = new URLSearchParams(window.location.search).get('jump_to');
 
-  if (section.length > 0) {
+  if (section && section.length > 0) {
     window.scrollTo({
       top: document.getElementById(section).offsetTop + yOffset,
       behavior: 'smooth'
