@@ -40,13 +40,13 @@ dependencies:
   - scikit-image
   - scikit-learn
   - scipy
+  - sliderule
   - xarray
   - zarr
   # JupyterBook
   - cookiecutter
   - jinja2 >= 2.11
   - jupyter-book = 0.12
-  - mamba
   - pip
   - python = 3.9
   - pygments >= 2.6.1
