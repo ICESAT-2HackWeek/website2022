@@ -161,3 +161,19 @@ people:
     link: naclomi
   user_groups:
   - Education Consultant
+# =============
+- title: Nicoleta Cristea
+  avatar: https://avatars.githubusercontent.com/u/16614760?v=4
+  role: Lead Education Coordinator
+  organizations:
+  - name: eScience Institute
+  bio: >
+    Nicoleta's bio
+  expertise:
+  - Nicoleta's expertise
+  social:
+  - icon: github
+    icon_pack: fab
+    link: NCristea
+  user_groups:
+  - Lead Education Coordinator
