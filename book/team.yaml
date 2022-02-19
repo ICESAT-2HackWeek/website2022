@@ -57,7 +57,7 @@ people:
   social:
   - icon: github
     icon_pack: fab
-    link: aaarendt
+    link: https://github.com/aaarendt
   user_groups:
   - Lead Hackweek Organizer
 # =============
@@ -76,10 +76,6 @@ people:
   - Participatory Design and facilitation
   - Structuring productive meetings & discussions
   - Community development
-  social:
-  - icon: github
-    icon_pack: fab
-    link: ""
   user_groups:
   - Lead Community Building
 # =============
@@ -100,7 +96,7 @@ people:
   social:
   - icon: github
     icon_pack: fab
-    link: scottyhq
+    link: https://github.com/scottyhq
   user_groups:
   - Lead of Technology
   - Tutorial Lead
@@ -116,7 +112,7 @@ people:
   social:
   - icon: github
     icon_pack: fab
-    link: janekoh1
+    link: https://github.com/janekoh1
   user_groups:
   - Program Manager
 # =============
@@ -166,7 +162,7 @@ people:
   social:
   - icon: github
     icon_pack: fab
-    link: naclomi
+    link: https://github.com/naclomi
   user_groups:
   - Education Consultant
 # =============
@@ -189,7 +185,7 @@ people:
   social:
     - icon: github
       icon_pack: fab
-      link: jomey
+      link: https://github.com/jomey
   user_groups:
     - Technology Specialist
 # =============
