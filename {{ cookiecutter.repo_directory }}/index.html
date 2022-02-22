@@ -216,7 +216,7 @@
 								more &rarr;</a>
 						</div>
 						<!--//card-->
-						{%- if person['social'] %}
+						{%- if 'social' in person %}
 						<div class="card-footer text-muted">
 							<ul class="social-list list-inline mb-0">
 								{%- for social in person['social'] %}
@@ -254,15 +254,17 @@
 												<h2 class="name mb-2">{{person['title']}}</h2>
 												<div class="meta">{{ person['role'] }}</div>
 												<div class="meta mb-2">{{person['organizations']|map(attribute='name')|join(' &amp; ')}}</div>
-												<ul class="social-list list-inline mb-0">
-													{%- for social in person['social'] %}
-													<li class="list-inline-item">
-														<a href="{{social['link']}}">
-															<i class="{{social['icon_pack']}} fa-{{social['icon']}}"></i>
-														</a>
-													</li>
-													{%- endfor %}
-												</ul>
+                                                {%- if 'social' in person %}
+                                                    <ul class="social-list list-inline mb-0">
+                                                        {%- for social in person['social'] %}
+                                                        <li class="list-inline-item">
+                                                            <a href="{{social['link']}}">
+                                                                <i class="{{social['icon_pack']}} fa-{{social['icon']}}"></i>
+                                                            </a>
+                                                        </li>
+                                                        {%- endfor %}
+                                                    </ul>
+                                                {%- endif %}
 												<!--//social-list-->
 											</div>
 											<!--//col-->
