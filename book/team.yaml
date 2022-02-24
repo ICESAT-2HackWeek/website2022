@@ -5,7 +5,7 @@ description:
 # INSTRUCTIONS:
 # - One entry per key must be included per person (title, avatar, role, organizations, bio, expertise, social, user_groups)
 # - user_groups correspond to hackweek roles defined here: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
-# - For 'avatar' an easy option is to use the URL for your GitHub user image: https://api.github.com/users/YOUR_GITHUB_USERNAME
+# - For 'avatar' an easy option is to use the URL for your GitHub user image: https://api.github.com/users/YOUR_GITHUB_USERNAME 
 people:
 - title: Jessica Scheick
   avatar: https://avatars.githubusercontent.com/u/11756442?v=4
@@ -205,3 +205,18 @@ people:
   user_groups:
   - Lead Education Coordinator
   # =============
+- title: Jane Doe
+  avatar: https://avatars.githubusercontent.com/u/3924836?v=4
+  role: Data scientist
+  organizations:
+  - name: eScience Institute
+  bio: >
+    Scott's bio
+  expertise:
+  - Scott's expertise
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/scottyhq
+  user_groups:
+  - Tutorial Lead
