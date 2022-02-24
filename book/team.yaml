@@ -205,6 +205,22 @@ people:
   user_groups:
   - Lead Education Coordinator
 # =============
+- title: Aimee Barciauskas
+  avatar: https://avatars.githubusercontent.com/u/15016780?v=4
+  role: Data Engineer
+  organizations:
+  - name: Development Seed
+  bio: >
+    Aimee is a data engineer at Development Seed where she collaborates with Earth data providers and scientists in promoting open data and open science.
+  expertise:
+  - Cloud computing
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/abarciauskas-bgse
+  user_groups:
+  - Tutorial Lead
+# =============
 - title: Ben Smith
   avatar: https://avatars.githubusercontent.com/u/2279144?v=4
   role: Research Scientist
@@ -225,5 +241,3 @@ people:
   user_groups:
   - Tutorial Lead
   # =============
-
-
