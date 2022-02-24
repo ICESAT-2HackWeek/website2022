@@ -205,3 +205,22 @@ people:
   user_groups:
   - Lead Education Coordinator
   # =============
+- title: Daniel Shapero
+  avatar: http://psc.apl.uw.edu/wordpress/wp-content/uploads/shapero/200423%20-%20Shapero%20Profile%20picture.jpg
+  role: Senior Research Scientist
+  organizations:
+  - name: UW Applied Physics Laboratory
+  - name: UW Earth and Space Sciences
+  bio: Daniel develops a software package called Icepack for simulating the flow
+    of ice sheets and glaciers and for assimilating observational data into these models.
+  expertise:
+  - software development, git
+  - Python, Jupyter
+  - rasterio, GIS
+  - numerical modeling, finite elements
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/danshapero
+  user_groups:
+  - Tutorial Lead
