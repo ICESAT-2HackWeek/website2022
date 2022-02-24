@@ -277,3 +277,22 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Zachary Fair
+  avatar: https://avatars.githubusercontent.com/u/48361714?v=4
+  role: Postdoctoral Fellow
+  organizations:
+  - name: NASA GSFC
+  bio: >
+    I am a postdoc working with the ICESat-2 and SnowEx missions, with the goal of calibrating ICESat-2 data for snow depth studies. 
+    I have a background in radar meteorology and lidar remote sensing of the cryosphere. I am here to provide assistance in the 
+    integration of ICESat-2 with other data sets, and I am looking forward to learn more about open source software development.
+  expertise:
+  - ICESat-2 ATL03 data analysis
+  - Data integration with airborne/in-situ data
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/zachghiaccio
+  user_groups:
+  - Tutorial Developer
+  # =============
