@@ -257,3 +257,23 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Daniel Shapero
+  avatar: https://avatars.githubusercontent.com/u/3905742?v=4
+  role: Senior Research Scientist
+  organizations:
+  - name: UW Applied Physics Laboratory
+  - name: UW Earth and Space Sciences
+  bio: Daniel develops a software package called Icepack for simulating the flow
+    of ice sheets and glaciers and for assimilating observational data into these models.
+  expertise:
+  - software development, git
+  - Python, Jupyter
+  - rasterio, GIS
+  - numerical modeling, finite elements
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/danshapero
+  user_groups:
+  - Tutorial Lead
+# =============
