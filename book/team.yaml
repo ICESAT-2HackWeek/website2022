@@ -257,6 +257,29 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Romina Piunno
+  avatar: "https://avatars.githubusercontent.com/u/17185856?v=4"
+  role: Graduate Student
+  organizations: 
+  - name: University of Toronto
+  bio: >
+    Romina is a PhD candidate in atmospheric physics at the University of Toronto with a 
+    background in computer science and mathematics. Her research focuses on deep
+    convection in the Labrador Sea and its role in atmospheric carbon sequestration.
+    In additio to her research, Romina is actively involved in a project that aims to 
+    extend Icepyx functionality to other datasets. 
+  expertise:
+    - Python
+    - Matlab
+    - Atmospheric Physics
+    - Air-Sea Interactions
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/RomiP
+  user_groups:
+  - Tutorial Lead
+# =============
 - title: Daniel Shapero
   avatar: https://avatars.githubusercontent.com/u/3905742?v=4
   role: Senior Research Scientist
