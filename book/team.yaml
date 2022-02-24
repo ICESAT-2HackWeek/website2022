@@ -204,7 +204,7 @@ people:
     link: https://github.com/NCristea
   user_groups:
   - Lead Education Coordinator
-  # =============
+# =============
 - title: Axel Schweiger
   avatar: https://avatars.githubusercontent.com/u/47397809?v=4
   role: Project Coordination Lead
@@ -220,4 +220,26 @@ people:
     link: https://github.com/axelschweiger
   user_groups:
   - Lead Project Coordinator
-  # =============
+# =============
+- title: Ben Smith
+  avatar: https://avatars.githubusercontent.com/u/2279144?v=4
+  role: Research Scientist
+  organizations:
+  - name: University of Washington APL
+  bio: >
+    Ben is an investigator with the University of Washington Polar Science Center.  He has worked on a 
+    variety of projects involving ice-sheet dynamics, with a focus on using altimetry to measure ice-sheet 
+    mass change, and has worked on product design for the ICESat-2 mission.
+  expertise:
+  - ICESat-2 products
+  - Ice-sheet glaciology
+  - Ice-sheet change detection
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/smithB
+  user_groups:
+  - Tutorial Lead
+# =============
+
+
