@@ -204,8 +204,8 @@ people:
     link: https://github.com/NCristea
   user_groups:
   - Lead Education Coordinator
-  # =============
-  - title: Aimee Barciauskas
+# =============
+- title: Aimee Barciauskas
   avatar: https://avatars.githubusercontent.com/u/15016780?v=4
   role: Data Engineer
   organizations:
@@ -220,4 +220,4 @@ people:
     link: https://github.com/abarciauskas-bgse
   user_groups:
   - Tutorial Lead
-  # =============
+# =============
