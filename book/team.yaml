@@ -195,9 +195,15 @@ people:
   organizations:
   - name: eScience Institute
   bio: >
-    Nicoleta's bio
+    Nicoleta is a research hydrologist interested in using data science methods in
+    research and educational activities. Current projects focus on studying snowy
+    areas with machine learning and physics based models. She is also working on developing
+    GeoSMART, an educational framework for machine learning adoption in the geosciences.
   expertise:
-  - Nicoleta's expertise
+  - hydrology, snow hydrology
+  - remote sensing
+  - geospatial data analysis
+  - Python
   social:
   - icon: github
     icon_pack: fab
@@ -257,7 +263,94 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
-- title: Wei Ji Leong
+- title: Romina Piunno
+  avatar: "https://avatars.githubusercontent.com/u/17185856?v=4"
+  role: Graduate Student
+  organizations: 
+  - name: University of Toronto
+  bio: >
+    Romina is a PhD candidate in atmospheric physics at the University of Toronto with a 
+    background in computer science and mathematics. Her research focuses on deep
+    convection in the Labrador Sea and its role in atmospheric carbon sequestration.
+    In additio to her research, Romina is actively involved in a project that aims to 
+    extend Icepyx functionality to other datasets. 
+  expertise:
+    - Python
+    - Matlab
+    - Atmospheric Physics
+    - Air-Sea Interactions
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/RomiP
+  user_groups:
+  - Tutorial Lead
+# =============
+- title: Daniel Shapero
+  avatar: https://avatars.githubusercontent.com/u/3905742?v=4
+  role: Senior Research Scientist
+  organizations:
+  - name: UW Applied Physics Laboratory
+  - name: UW Earth and Space Sciences
+  bio: Daniel develops a software package called Icepack for simulating the flow
+    of ice sheets and glaciers and for assimilating observational data into these models.
+  expertise:
+  - software development, git
+  - Python, Jupyter
+  - rasterio, GIS
+  - numerical modeling, finite elements
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/danshapero
+  user_groups:
+  - Tutorial Lead
+# =============
+- title: Zachary Fair
+  avatar: https://avatars.githubusercontent.com/u/48361714?v=4
+  role: Postdoctoral Fellow
+  organizations:
+  - name: NASA GSFC
+  bio: >
+    I am a postdoc working with the ICESat-2 and SnowEx missions, with the goal of calibrating ICESat-2 data for snow depth studies. 
+    I have a background in radar meteorology and lidar remote sensing of the cryosphere. I am here to provide assistance in the 
+    integration of ICESat-2 with other data sets, and I am looking forward to learn more about open source software development.
+  expertise:
+  - ICESat-2 ATL03 data analysis
+  - Data integration with airborne/in-situ data
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/zachghiaccio
+  user_groups:
+  - Tutorial Developer
+  # =============
+- title: Philipp Arndt
+  avatar: https://avatars.githubusercontent.com/u/22216399?v=4
+  role: Graduate Student
+  organizations:
+  - name: Scripps Polar Center, UC San Diego
+  bio: >
+     I spend my days trying to understand how the floating ice shelves surrounding Antarctica are responding to a warming climate: 
+     How much ice turns into meltwater that pools in lakes at the surface? 
+     Where does all the meltwater go, and will it damage the ice shelf in the process? 
+     What does all this mean for the stability of the Antarctic Ice Sheet and global sea-level rise? 
+     To answer these questions, I use a combination of different high-resolution data products from multiple satellite missions. 
+     Whenever I'm not busy watching Antarctica melt from space through my computer, 
+     you'll probably find me doing flips at the gymnastics facility or climbing on the face of some mountain. 
+  expertise:
+  - Python
+  - Supraglacial Hydrology
+  - Satellite Remote Sensing
+  - ICESat-2 ATL03
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/fliphilipp
+  user_groups:
+  - Tutorial Lead / Helper
+  # =============
+  - title: Wei Ji Leong
   avatar: https://avatars.githubusercontent.com/u/23487320?v=4
   role: Postdoctoral Researcher
   organizations:
