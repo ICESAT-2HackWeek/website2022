@@ -221,3 +221,23 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Ben Smith
+  avatar: https://avatars.githubusercontent.com/u/2279144?v=4
+  role: Research Scientist
+  organizations:
+  - name: University of Washington APL
+  bio: >
+    Ben is an investigator with the University of Washington Polar Science Center.  He has worked on a 
+    variety of projects involving ice-sheet dynamics, with a focus on using altimetry to measure ice-sheet 
+    mass change, and has worked on product design for the ICESat-2 mission.
+  expertise:
+  - ICESat-2 products
+  - Ice-sheet glaciology
+  - Ice-sheet change detection
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/smithB
+  user_groups:
+  - Tutorial Lead
+  # =============
