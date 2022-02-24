@@ -204,26 +204,27 @@ people:
     link: https://github.com/NCristea
   user_groups:
   - Lead Education Coordinator
-# =============
-- title: Ben Smith
-  avatar: https://avatars.githubusercontent.com/u/2279144?v=4
-  role: Research Scientist
-  organizations:
-  - name: University of Washington APL
+  # =============
+  - title: Romina Piunno
+  avatar: "https://avatars.githubusercontent.com/u/17185856?v=4"
+  role: Graduate Student
+  organizations: 
+  - name: University of Toronto
   bio: >
-    Ben is an investigator with the University of Washington Polar Science Center.  He has worked on a 
-    variety of projects involving ice-sheet dynamics, with a focus on using altimetry to measure ice-sheet 
-    mass change, and has worked on product design for the ICESat-2 mission.
+    Romina is a PhD candidate in atmospheric physics at the University of Toronto with a 
+    background in computer science and mathematics. Her research focuses on deep
+    convection in the Labrador Sea and its role in atmospheric carbon sequestration.
+    In additio to her research, Romina is actively involved in a project that aims to 
+    extend Icepyx functionality to other datasets. 
   expertise:
-  - ICESat-2 products
-  - Ice-sheet glaciology
-  - Ice-sheet change detection
+    - Python
+    - Matlab
+    - Atmospheric Physics
+    - Air-Sea Interactions
   social:
   - icon: github
     icon_pack: fab
-    link: https://github.com/smithB
+    link: https://github.com/NCristea
   user_groups:
   - Tutorial Lead
   # =============
-
-
