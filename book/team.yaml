@@ -211,6 +211,22 @@ people:
   user_groups:
   - Lead Education Coordinator
 # =============
+- title: Axel Schweiger
+  avatar: https://avatars.githubusercontent.com/u/47397809?v=4
+  role: Project Coordination Lead
+  organizations:
+  - name: Polar Science Center/APL/UW
+  bio: >
+    Arctic Climate Change. Sea Ice, Atmosphere Interactions
+  expertise:
+  - sea ice, remote sensing, arctic clouds
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/axelschweiger
+  user_groups:
+  - Lead Project Coordinator
+# =============
 - title: Aimee Barciauskas
   avatar: https://avatars.githubusercontent.com/u/15016780?v=4
   role: Data Engineer
@@ -246,4 +262,4 @@ people:
     link: https://github.com/smithB
   user_groups:
   - Tutorial Lead
-  # =============
+# =============
