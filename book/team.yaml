@@ -195,9 +195,15 @@ people:
   organizations:
   - name: eScience Institute
   bio: >
-    Nicoleta's bio
+    Nicoleta is a research hydrologist interested in using data science methods in
+    research and educational activities. Current projects focus on studying snowy
+    areas with machine learning and physics based models. She is also working on developing
+    GeoSMART, an educational framework for machine learning adoption in the geosciences.
   expertise:
-  - Nicoleta's expertise
+  - hydrology, snow hydrology
+  - remote sensing
+  - geospatial data analysis
+  - Python
   social:
   - icon: github
     icon_pack: fab
