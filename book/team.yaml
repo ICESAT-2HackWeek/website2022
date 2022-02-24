@@ -257,3 +257,32 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Wei Ji Leong
+  avatar: https://avatars.githubusercontent.com/u/23487320?v=4
+  role: Postdoctoral Researcher
+  organizations:
+  - name: Byrd Polar and Climate Research Center
+  - name: The Ohio State University
+  bio: >
+    Wei Ji is a Geospatial Data Scientist working on applying Deep Learning to Earth Observation datasets.
+    His research interest is focused on the subglacial topography and hydrology of Antarctica, having used
+    ICESat-2 to map active subglacial lakes over an entire ice sheet and seeing how they drain and fill over time.
+    As an active open source contributor, he has contributed to many open source PyData projects, and is
+    a core developer of PyGMT - a Python library for geospatial data processing and visualization.
+    He values open science and is excited to get more early career researchers on board too!
+  expertise:
+  - remote sensing
+  - machine learning
+  - subglacial hydrology
+  - open science
+  - Python
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/weiji14
+  - icon: twitter
+    icon_pack: fab
+    link: https://twitter.com/weiji14_
+  user_groups:
+  - Tutorial Lead
+  - Project Helper
