@@ -405,3 +405,25 @@ people:
   user_groups:
   - Tutorial Lead
 # =============
+- title: Tasha Snow
+  avatar: https://avatars.githubusercontent.com/u/12904976?v=4
+  role: Postdoctoral Researcher
+  organizations:
+  - name: Colorado School of Mines
+  bio: >
+    Tasha is a postdoc at the Colorado School of Mines working to develop new ways of detecting 
+    ocean heat transport and glacier-ocean interactions with remote sensing (especially thermal 
+    infrared). In her research, she also works on cloud-based, open-sourced workflows for advancing 
+    data integration and machine learning techniques.
+  expertise:
+  - remote sensing
+  - machine learning
+  - ice-ocean interaction
+  - open science
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/tsnow03
+  user_groups:
+  - Tutorial Lead
+  # =============
