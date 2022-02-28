@@ -12,7 +12,7 @@ tabs:
     - Charley Haley
     - Jessica Scheick
     resources:
-      - title: 
+      - title:
         url:
   - time: 10:00 - 10:30
     location: Zoom
@@ -227,7 +227,7 @@ tabs:
     resources:
       - title: 
         url:
-- time: 1:30 - 3:00
+  - time: 1:30 - 3:00
     location: Zoom
     title: Project Hacking Time
     description: Placeholder for project hacking time whenever works best for your group!
