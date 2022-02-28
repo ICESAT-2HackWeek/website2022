@@ -19,7 +19,7 @@ tabs:
     title: Overview of ICESat-2 Mission
     description: 
     leads:
-    - Tom Neumann
+    - Jane Koh
     resources:
       - title: 
         url:
@@ -43,7 +43,7 @@ tabs:
     title: Getting Started
     description: Still having trouble with getting any technology going? We're here to help you debug!
     leads:
-    - Organizing Team
+    - Scott Henderson
     resources:
       - title: 
         url:
@@ -89,7 +89,7 @@ tabs:
     title: ICESat-2 Data Access
     description:
     leads:
-    - Mikala Beig
+    - Jane Koh
     resources:
       - title: 
         url:
@@ -124,7 +124,7 @@ tabs:
     title: Geospatial Transformations
     description: Getting oriented and goals
     leads:
-    - Hanna Besso?
+    - Jane Koh
     resources:
       - title: 
         url:
@@ -168,8 +168,7 @@ tabs:
     location: Zoom
     title: Detailed Dives
     description: 
-    leads:
-    -
+    leads: []
     resources:
       - title: 
         url:
@@ -201,8 +200,7 @@ tabs:
     location: Zoom
     title: Doing good science with ICESat-2
     description:
-    leads:
-    - []
+    leads: []
     resources:
       - title: 
         url:
@@ -242,8 +240,7 @@ tabs:
     location: Zoom
     title: Project work
     description:
-    leads:
-    - []
+    leads: []
     resources:
       - title: 
         url:
@@ -255,8 +252,7 @@ tabs:
     location: Zoom
     title: Project Presentations
     description:
-    leads:
-    - []
+    leads: []
     resources:
       - title: 
         url:
