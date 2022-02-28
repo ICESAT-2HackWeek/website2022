@@ -38,6 +38,7 @@ jobs:
         check_hidden: true
         only_warn: false
         skip: '*.js'
+        ignore_words_list: slippy
 
     # borrowed from https://github.com/ProjectPythia/pythia-foundations/blob/main/.github/workflows/link-checker.yaml
     - name: Disable Notebook Execution
