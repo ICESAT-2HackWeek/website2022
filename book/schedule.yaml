@@ -3,7 +3,7 @@ tabs:
 - title: Day 1
   date: Monday 21 March
   contents:
-  - time: 9:00 - 10:30
+  - time: 9:00 - 10:00
     location: Zoom
     title: Welcome to ICESat-2 Hackweek
     description: Getting oriented and goals
@@ -14,11 +14,7 @@ tabs:
     resources:
       - title: 
         url:
-  - time: 10:30 - 10:45
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:45 - 11:15
+  - time: 10:00 - 10:30
     location: Zoom
     title: Overview of ICESat-2 Mission
     description: 
@@ -27,7 +23,11 @@ tabs:
     resources:
       - title: 
         url:
-  - time: 11:15 - 12:15
+  - time: 10:30 - 10:45
+    title: Movement and coffee break
+    description: Take a look out the window.
+    leads: []
+  - time: 10:45 - 11:45
     location: Zoom
     title: Best Practices for Collaborative Development
     description: 
@@ -35,6 +35,15 @@ tabs:
     - Naomi Alterman
     - Nicoleta Cristea
     - Charley Haley
+    resources:
+      - title: 
+        url:
+  - time: 11:45 - 12:15
+    location: Zoom
+    title: Getting Started
+    description: Still having trouble with getting any technology going? We're here to help you debug!
+    leads:
+    - Organizing Team
     resources:
       - title: 
         url:
@@ -48,6 +57,14 @@ tabs:
     description: 
     leads:
     - Axel Schweiger
+    resources:
+      - title: 
+        url:
+  - time: 2:00 - 3:00
+    location: Zoom
+    title: Project Hacking Time
+    description: Placeholder for project hacking time whenever works best for your group!
+    leads: []
     resources:
       - title: 
         url:
@@ -88,6 +105,14 @@ tabs:
       - working together
     leads:
     - Romina Piunno
+    resources:
+      - title: 
+        url:
+  - time: 2:00 - 3:00
+    location: Zoom
+    title: Project Hacking Time
+    description: Placeholder for project hacking time whenever works best for your group!
+    leads: []
     resources:
       - title: 
         url:
@@ -148,6 +173,14 @@ tabs:
     resources:
       - title: 
         url:
+  - time: 2:00 - 3:00
+    location: Zoom
+    title: Project Hacking Time
+    description: Placeholder for project hacking time whenever works best for your group!
+    leads: []
+    resources:
+      - title: 
+        url:
 - title: Day 4
   date: Thursday 24 March
   contents:
@@ -190,8 +223,15 @@ tabs:
     location: Zoom
     title: Detailed Dives
     description:
-    leads:
-    - []
+    leads: []
+    resources:
+      - title: 
+        url:
+- time: 1:30 - 3:00
+    location: Zoom
+    title: Project Hacking Time
+    description: Placeholder for project hacking time whenever works best for your group!
+    leads: []
     resources:
       - title: 
         url:
