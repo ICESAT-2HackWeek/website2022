@@ -72,9 +72,10 @@
 
 ## Topical (event specific)
 ```{glossary}
-[SnowEx](https://snow.nasa.gov/campaigns/snowex)
-  5-year NASA funded effort to address the most important gaps in our snow
-  remote sensing knowledge, and thus lay the groundwork for a future snow
-  satellite mission.
+[ICESat-2](https://icesat-2.gsfc.nasa.gov)
+  Ice, Cloud, and land Elevation Satellite (2).
+  Launched in September 2018, the ICESat-2 satellite continues the ICESat and IceBridge missions to
+  collect multi-year elevation data.
+  Mission science goals focus on assessing changing land and sea ice and forest heights.
 
   ```
