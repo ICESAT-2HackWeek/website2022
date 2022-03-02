@@ -427,3 +427,21 @@ people:
   user_groups:
   - Tutorial Lead
   # =============
+- title: Mikala Beig
+  avatar: https://avatars.githubusercontent.com/u/83375472?v=4
+  role: Data support specialist
+  organizations:
+  - name: National Snow and Ice Data Center NASA DAAC
+  bio: >
+    Mikala is a Data support specialist at the National Snow and Ice Data Center NASA Distributed 
+    Active Archive Center, where all ICESat-2 data products are archived.  She supports data users 
+    in the discovery of and access to ICESat-2 data sets, as well as SnowEx and High Mountain Asia data sets.   
+  expertise:
+  - data access - on prem and cloud
+  - ICESat-2 data sets
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/mikala-nsidc
+  user_groups:
+  - Tutorial Lead
