@@ -16,8 +16,8 @@ Ready to contribute? Here's a quick guide
 1. Clone your fork locally:
 
     ```sh
-    git clone {{website_url}}.git
-    cd jupyterbook-template
+    git clone https://github.com/ICESAT-2HackWeek/website2022.git
+    cd website2022
     ```
 
 1. Create a branch to add your changes:
@@ -53,7 +53,7 @@ Ready to contribute? Here's a quick guide
     git push origin name-of-your-bugfix-or-feature
     ```
 
-1. Open a pull request through the GitHub website: {{website_url}}
+1. Open a pull request through the GitHub website: https://github.com/ICESAT-2HackWeek/website2022
 
 
 ## Contributing tutorials
@@ -65,6 +65,3 @@ When adding a new `.ipynb` file under `book/tutorials` be sure to:
 
   1. "Clear all Outputs" before saving. This keeps the book source code small, but outputs are still built for the HTML webpage by Jupyter Book.
 
-
-## Releasing new template versions
-Before using this template for events, make a git tag and GitHub Release. We follow a [calendar versioning scheme](https://calver.org), so tags are a date like `2021.05.05`. Don't forget to update the [Changelog](./CHANGELOG.md)!
