@@ -445,3 +445,25 @@ people:
     link: https://github.com/mikala-nsidc
   user_groups:
   - Tutorial Lead
+ # =============
+- title: Hannah Besso
+  avatar: https://avatars.githubusercontent.com/u/71660036?v=4
+  role: Graduate Student
+  organizations:
+  - name: University of Washington
+  bio: >
+    Hannah is a graduate student with the Mountain Hydrology Research Group at the University of Washington.
+    She uses ICESat-2 satellite altimetry and airborne lidar to measure snow depth in the Western US, and
+    enjoys working as a part-time ski patroller at Crystal Mountain to balance out all that time in front of a
+    computer.
+  expertise:
+  - remote sensing
+  - python
+  - jupyter
+  - SlideRule ICESat-2
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/bessoh2
+  user_groups:
+  - Tutorial Helper
