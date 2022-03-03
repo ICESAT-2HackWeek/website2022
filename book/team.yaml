@@ -467,3 +467,23 @@ people:
     link: https://github.com/bessoh2
   user_groups:
   - Tutorial Helper
+ # =============
+- title: Zheng Liu
+  avatar: https://avatars.githubusercontent.com/u/51420076?v=4
+  role: Senior Research Scientist
+  organizations:
+  - name: Polar Science Center/APL/UW
+  bio: >
+    Zheng works on the interactions between clouds and sea ice in the Arctic using satellite observations and regional atmospheric modeling.
+  expertise:
+  - Arctic clouds
+  - remote sensing
+  - Python, Jupyter
+  - ICESat-2 ATL07/09/10
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/liuzheng-arctic
+  user_groups:
+  - Tutorial Helper/Project Helper
+
