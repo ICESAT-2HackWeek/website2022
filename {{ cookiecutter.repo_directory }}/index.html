@@ -377,9 +377,11 @@
 							</div>
 							{% endif %}
 							<div class="desc">
-							{%- markdown -%}
-							{{ content['description']|safe }}
-							{%- endmarkdown -%}
+                                {% if 'description' in content and content['description'] is not none %}
+                                    {%- markdown -%}
+                                        {{ content['description']|safe }}
+                                    {%- endmarkdown -%}
+                                {%- endif %}
 							</div>
 							{%- if 'leads' in content and content['leads']|length > 0 %}
 							<div class="profile">
