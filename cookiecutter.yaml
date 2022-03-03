@@ -15,7 +15,7 @@ banner:
   - url: intro.html
     title: Event Jupyter Book
     new_window: false
-  image: https://icesat-2hackweek.github.io/assets/images/banner.jpg
+  image: https://github.com/ICESAT-2HackWeek/icesat-2hackweek.github.io/raw/2022.03.01/assets/images/banner.jpg 
 applicant_info: 'Applications closed for 2022'
 team:
   !include book/team.yaml
@@ -29,7 +29,7 @@ sponsors:
     logo_url: https://escience.washington.edu/wp-content/uploads/2015/10/Logo_eScience-stacked.png
   - name: NASA ICESat-2 Mission
     website: 'https://icesat-2.gsfc.nasa.gov/mission'
-    logo_url: https://icesat-2hackweek.github.io/assets/images/ICESat2.png
+    logo_url: https://github.com/ICESAT-2HackWeek/icesat-2hackweek.github.io/raw/2022.03.01/assets/images/ICESat2.png 
   - name: Amazon Web Services
     website: 'https://aws.amazon.com'
     logo_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg
