@@ -385,12 +385,21 @@
 							<div class="profile">
 								<h6 class="mb-1 mt-2"> Tutorial Lead(s)</h6>
 									{%- for lead in content['leads'] %}
-									{%- set person = cookiecutter.team['people']|selectattr('title', '==', lead)|list|first %}
-									{%- set modal_name = person['title']|lower|replace(' ', '--') %}
-									{%- set modal_key = '{}-modal'.format(modal_name) %}
-									<div class="name"><a class="theme-link" href="#{{modal_key}}"
-											data-bs-toggle="modal" data-bs-target="#{{modal_key}}">{{ lead }}</a>
-									</div>
+									{%- set person = cookiecutter.team['people']|selectattr('title', '==', lead)|list %}
+                                        {%- if person|length > 0 %}
+                                            {%- set modal_name = person[0]['title']|lower|replace(' ', '--') %}
+									        {%- set modal_key = '{}-modal'.format(modal_name) %}
+									        <div class="name">
+                                                <a class="theme-link"
+                                                   href="#{{modal_key}}"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#{{modal_key}}">
+                                                    {{ lead }}
+                                                </a>
+									        </div>
+                                        {%- else %}
+                                            <div class="name">{{ lead }}</div>
+                                        {%- endif %}
 									{%- endfor %}
 							</div>
 							{%- endif %}
