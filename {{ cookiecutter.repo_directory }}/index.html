@@ -377,24 +377,35 @@
 							</div>
 							{% endif %}
 							<div class="desc">
-							{%- markdown -%}
-							{{ content['description']|safe }}
-							{%- endmarkdown -%}
+                                {% if 'description' in content and content['description'] is not none %}
+                                    {%- markdown -%}
+                                        {{ content['description']|safe }}
+                                    {%- endmarkdown -%}
+                                {%- endif %}
 							</div>
 							{%- if 'leads' in content and content['leads']|length > 0 %}
 							<div class="profile">
 								<h6 class="mb-1 mt-2"> Tutorial Lead(s)</h6>
 									{%- for lead in content['leads'] %}
-									{%- set person = cookiecutter.team['people']|selectattr('title', '==', lead)|list|first %}
-									{%- set modal_name = person['title']|lower|replace(' ', '--') %}
-									{%- set modal_key = '{}-modal'.format(modal_name) %}
-									<div class="name"><a class="theme-link" href="#{{modal_key}}"
-											data-bs-toggle="modal" data-bs-target="#{{modal_key}}">{{ lead }}</a>
-									</div>
+									{%- set person = cookiecutter.team['people']|selectattr('title', '==', lead)|list %}
+                                        {%- if person|length > 0 %}
+                                            {%- set modal_name = person[0]['title']|lower|replace(' ', '--') %}
+									        {%- set modal_key = '{}-modal'.format(modal_name) %}
+									        <div class="name">
+                                                <a class="theme-link"
+                                                   href="#{{modal_key}}"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#{{modal_key}}">
+                                                    {{ lead }}
+                                                </a>
+									        </div>
+                                        {%- else %}
+                                            <div class="name">{{ lead }}</div>
+                                        {%- endif %}
 									{%- endfor %}
 							</div>
 							{%- endif %}
-							{%- if 'resources' in content and content['resources']|length > 0 %}
+							{%- if 'resources' in content and content['resources'] is not none %}
 							<div>
 								<h6 class="mb-1 mt-2"> Resource(s)</h6>
 								{%- for resource in content['resources'] %}

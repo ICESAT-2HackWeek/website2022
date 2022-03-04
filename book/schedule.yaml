@@ -1,271 +1,199 @@
 timezone: UTC -7 (Pacific Daylight Time)
 tabs:
-- title: Day 1
-  date: Monday 21 March
-  contents:
-  - time: 9:00 - 10:00
-    location: Zoom
-    title: Welcome to ICESat-2 Hackweek
-    description: Getting oriented and goals
-    leads:
-    - Anthony Arendt
-    - Charley Haley
-    - Jessica Scheick
-    resources:
-      - title:
-        url:
-  - time: 10:00 - 10:30
-    location: Zoom
-    title: Overview of ICESat-2 Mission
-    description: 
-    leads:
-    - Jane Koh
-    resources:
-      - title: 
-        url:
-  - time: 10:30 - 10:45
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:45 - 11:45
-    location: Zoom
-    title: Best Practices for Effective Teamwork
-    description: This tutorial focuses on the social and organizational aspects of working together effectively in groups.
-    leads:
-    - Naomi Alterman
-    - Nicoleta Cristea
-    - Charley Haley
-    resources:
-      - title: 
-        url:
-  - time: 11:45 - 12:15
-    location: Zoom
-    title: Getting Started
-    description: Still having trouble with getting any technology going? We're here to help you debug!
-    leads:
-    - Scott Henderson
-    resources:
-      - title: 
-        url:
-  - time: 12:15 - 1:00
-    title: Lunch
-    description: Take a look out the window.
-    leads: []
-  - time: 1:00 - 2:00
-    location: Zoom
-    title: Formation of Hacking Projects
-    description: 
-    leads:
-    - Axel Schweiger
-    resources:
-      - title: 
-        url:
-  - time: 2:00 - 3:00
-    location: Zoom
-    title: Project Hacking Time
-    description: Placeholder for project hacking time whenever works best for your group!
-    leads: []
-    resources:
-      - title: 
-        url:
-- title: Day 2
-  date: Tuesday 22 March
-  contents:
-  - time: 9:00 - 10:30
-    location: Zoom
-    title: About ICESat-2 Data
-    description:
-    leads:
-    - Ben Smith
-    resources:
-      - title: 
-        url:
-  - time: 10:30 - 10:45
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:45 - 12:00
-    location: Zoom
-    title: ICESat-2 Data Access
-    description:
-    leads:
-    - Jane Koh
-    resources:
-      - title: 
-        url:
-  - time: 12:00 - 12:45
-    title: Lunch
-    description: Take a look out the window.
-    leads: []
-  - time: 12:45 - 2:00
-    location: Zoom
-    title: Collaborative Deveopment
-    description: |  
-      - icepyx
-      - working together
-    leads:
-    - Romina Piunno
-    resources:
-      - title: 
-        url:
-  - time: 2:00 - 3:00
-    location: Zoom
-    title: Project Hacking Time
-    description: Placeholder for project hacking time whenever works best for your group!
-    leads: []
-    resources:
-      - title: 
-        url:
-- title: Day 3
-  date: Wednesday 23 March
-  contents:
-  - time: 9:00 - 9:30
-    location: Zoom
-    title: Geospatial Transformations
-    description: Getting oriented and goals
-    leads:
-    - Jane Koh
-    resources:
-      - title: 
-        url:
-  - time: 9:30 - 10:30
-    location: Zoom
-    title: Data Integration with other products (Part I of II)
-    description: 
-    leads:
-    - Tasha Snow
-    resources:
-      - title: 
-        url:
-  - time: 10:30 - 10:45
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:45 - 11:45
-    location: Zoom
-    title: Data Visualization
-    description: 
-    leads:
-    - Philipp Arndt
-    - Wei Ji Leong
-    resources:
-      - title: 
-        url:
-  - time: 11:45 - 12:30
-    title: Lunch
-    description: Take a look out the window.
-    leads: []
-  - time: 12:30 - 1:30
-    location: Zoom
-    title: Cloud Computing Tools
-    description: 
-    leads:
-    - Aimee Barciauskas
-    resources:
-      - title: 
-        url:
-  - time: 1:30 - 2:00
-    location: Zoom
-    title: Detailed Dives
-    description: 
-    leads: []
-    resources:
-      - title: 
-        url:
-  - time: 2:00 - 3:00
-    location: Zoom
-    title: Project Hacking Time
-    description: Placeholder for project hacking time whenever works best for your group!
-    leads: []
-    resources:
-      - title: 
-        url:
-- title: Day 4
-  date: Thursday 24 March
-  contents:
-  - time: 9:00 - 10:00
-    location: Zoom
-    title: ICESat-2 Data Applications
-    description:
-    leads:
-    - Tyler Sutterley
-    resources:
-      - title: 
-        url:
-  - time: 10:00 - 10:15
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:15 - 11:15
-    location: Zoom
-    title: Doing good science with ICESat-2
-    description:
-    leads: []
-    resources:
-      - title: 
-        url:
-  - time: 11:15 - 12:15
-    location: Zoom
-    title: Data Integration with other products (Part II of II)
-    description:
-    leads:
-    - Tasha Snow
-    resources:
-      - title: 
-        url:
-  - time: 12:15 - 1:00
-    title: Lunch
-    description: Take a look out the window.
-    leads: []
-  - time: 1:00 - 1:30
-    location: Zoom
-    title: Detailed Dives
-    description:
-    leads: []
-    resources:
-      - title: 
-        url:
-  - time: 1:30 - 3:00
-    location: Zoom
-    title: Project Hacking Time
-    description: Placeholder for project hacking time whenever works best for your group!
-    leads: []
-    resources:
-      - title: 
-        url:
-- title: Day 5
-  date: Friday 25 March
-  contents:
-  - time: 9:00 - 10:00
-    location: Zoom
-    title: Project work
-    description:
-    leads: []
-    resources:
-      - title: 
-        url:
-  - time: 10:00 - 10:15
-    title: Movement and coffee break
-    description: Take a look out the window.
-    leads: []
-  - time: 10:15 - 12:15
-    location: Zoom
-    title: Project Presentations
-    description:
-    leads: []
-    resources:
-      - title: 
-        url:
-  - time: 12:15 - 1:00
-    title: Lunch
-    description: Take a look out the window.
-    leads: []
-  - time: 1:00 - 2:00
-    location: Zoom
-    title: Project Presentations and Hands-on code sharing
-    description: Now that we've shared our presentations, lets share our code in a centralized location!
-    leads:
-    - Jessica Scheick
-    resources:
-      - title: 
-        url:
+  - title: Day 1
+    date: Monday 21 March
+    contents:
+      - time: 9:00 - 10:00
+        location: Zoom
+        title: Welcome to ICESat-2 Hackweek
+        description: Getting oriented and goals
+        leads:
+          - Anthony Arendt
+          - Charley Haley
+          - Jessica Scheick
+      - time: 10:00 - 10:30
+        location: Zoom
+        title: Overview of ICESat-2 Mission
+        description:
+        leads:
+          - TBD
+      - time: 10:30 - 10:45
+        title: Movement and coffee break
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 10:45 - 11:45
+        location: Zoom
+        title: Best Practices for Effective Teamwork
+        description: This tutorial focuses on the social and organizational aspects of working together effectively in groups.
+        leads:
+          - Naomi Alterman
+          - Nicoleta Cristea
+          - Charley Haley
+      - time: 11:45 - 12:15
+        location: Zoom
+        title: Getting Started
+        description: Still having trouble with getting any technology going? We're here to help you debug!
+        leads:
+          - Scott Henderson
+      - time: 12:15 - 1:00
+        title: Lunch
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 1:00 - 2:00
+        location: Zoom
+        title: Formation of Hacking Projects
+        description:
+        leads:
+          - Axel Schweiger
+      - time: 2:00 - 3:00
+        location: Zoom
+        title: Project Hacking Time
+        description: Placeholder for project hacking time whenever works best for your group!
+        leads: [ ]
+  - title: Day 2
+    date: Tuesday 22 March
+    contents:
+      - time: 9:00 - 10:30
+        location: Zoom
+        title: About ICESat-2 Data
+        description:
+        leads:
+          - Ben Smith
+      - time: 10:30 - 10:45
+        title: Movement and coffee break
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 10:45 - 12:00
+        location: Zoom
+        title: ICESat-2 Data Access
+        description:
+        leads:
+          - Jane Koh
+      - time: 12:00 - 12:45
+        title: Lunch
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 12:45 - 2:00
+        location: Zoom
+        title: Collaborative Deveopment
+        description: |
+          - icepyx
+          - working together
+        leads:
+          - Romina Piunno
+      - time: 2:00 - 3:00
+        location: Zoom
+        title: Project Hacking Time
+        description: Placeholder for project hacking time whenever works best for your group!
+        leads: [ ]
+  - title: Day 3
+    date: Wednesday 23 March
+    contents:
+      - time: 9:00 - 9:30
+        location: Zoom
+        title: Geospatial Transformations
+        description: Getting oriented and goals
+        leads:
+          - Jane Koh
+      - time: 9:30 - 10:30
+        location: Zoom
+        title: Data Integration with other products (Part I of II)
+        description:
+        leads:
+          - Tasha Snow
+      - time: 10:30 - 10:45
+        title: Movement and coffee break
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 10:45 - 11:45
+        location: Zoom
+        title: Data Visualization
+        description:
+        leads:
+          - Philipp Arndt
+          - Wei Ji Leong
+      - time: 11:45 - 12:30
+        title: Lunch
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 12:30 - 1:30
+        location: Zoom
+        title: Cloud Computing Tools
+        description:
+        leads:
+          - Aimee Barciauskas
+      - time: 1:30 - 2:00
+        location: Zoom
+        title: Detailed Dives
+        description:
+        leads: [ ]
+      - time: 2:00 - 3:00
+        location: Zoom
+        title: Project Hacking Time
+        description: Placeholder for project hacking time whenever works best for your group!
+        leads: [ ]
+  - title: Day 4
+    date: Thursday 24 March
+    contents:
+      - time: 9:00 - 10:00
+        location: Zoom
+        title: ICESat-2 Data Applications
+        description:
+        leads:
+          - Tyler Sutterley
+      - time: 10:00 - 10:15
+        title: Movement and coffee break
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 10:15 - 11:15
+        location: Zoom
+        title: Doing good science with ICESat-2
+        description:
+        leads: [ ]
+      - time: 11:15 - 12:15
+        location: Zoom
+        title: Data Integration with other products (Part II of II)
+        description:
+        leads:
+          - Tasha Snow
+      - time: 12:15 - 1:00
+        title: Lunch
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 1:00 - 1:30
+        location: Zoom
+        title: Detailed Dives
+        description:
+        leads: [ ]
+      - time: 1:30 - 3:00
+        location: Zoom
+        title: Project Hacking Time
+        description: Placeholder for project hacking time whenever works best for your group!
+        leads: [ ]
+  - title: Day 5
+    date: Friday 25 March
+    contents:
+      - time: 9:00 - 10:00
+        location: Zoom
+        title: Project work
+        description:
+        leads: [ ]
+      - time: 10:00 - 10:15
+        title: Movement and coffee break
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 10:15 - 12:15
+        location: Zoom
+        title: Project Presentations
+        description:
+        leads: [ ]
+      - time: 12:15 - 1:00
+        title: Lunch
+        description: Take a look out the window.
+        leads: [ ]
+      - time: 1:00 - 2:00
+        location: Zoom
+        title: Project Presentations and Hands-on code sharing
+        description: Now that we've shared our presentations, lets share our code in a centralized location!
+        leads:
+          - Jessica Scheick
