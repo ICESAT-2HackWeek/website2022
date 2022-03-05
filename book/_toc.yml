@@ -7,9 +7,9 @@ parts:
   chapters:
     - file: application
     - title: Schedule
-      url: https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=schedule
+      url: https://icesat-2.hackweek.io/#schedule
     - title: Team
-      url: https://uwhackweek.github.io/jupyterbook-template/index.html?jump_to=team
+      url: https://icesat-2.hackweek.io/#team
     - file: mission
     - file: CoC
 - caption: Preparation
