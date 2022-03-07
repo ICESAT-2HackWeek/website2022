@@ -46,6 +46,8 @@
 
 # %%
 import icepyx as ipx  # for downloading and loading ICESat-2 data
+import pygmt  # for making geographical maps and figures
+import rioxarray  # for performing geospatial operations like reprojection
 import xarray as xr  # for working with n-dimensional data
 
 # %% [markdown]
@@ -54,6 +56,7 @@ import xarray as xr  # for working with n-dimensional data
 
 # %%
 print(f"icepyx version: {ipx.__version__}")
+pygmt.show_versions()
 
 # %% [markdown]
 # ### A note about layers 🍰
@@ -138,7 +141,7 @@ print(region_iceland.product_version)
 #
 # ```
 #         Z-values in /z/
-#         
+#
 #              --------------------
 #             / 1 / 2 / 3 / 4 / 5 /
 #            / 2 / 4 / 2 / 7 / 0 /
@@ -149,28 +152,140 @@ print(region_iceland.product_version)
 #             X-dimension
 # ```
 
-# %%
-region_iceland.earthdata_login(
-    uid="penguin123",  # EarthData username, e.g. penguin123
-    email="penguin123@southpole.net",  # Email address, e.g. penguin123@southpole.net
-)
+# %% [raw]
+# region_iceland.avail_granules(ids=True, s3urls=True)
+# region_iceland.earthdata_login(
+#     uid="penguin123",  # EarthData username, e.g. penguin123
+#     email="penguin123@southpole.net",  # e.g. penguin123@southpole.net
+#     s3token=True,
+# )
+
+# %% [raw]
+# region_iceland.download_granules(path=".")
 
 # %%
-region_iceland.download_granules(path=".")
-
-# %%
+# Load the NetCDF using xarray.open_dataset
 # https://n5eil01u.ecs.nsidc.org/ATLAS/ATL14.001/2019.03.31/ATL14_IS_0311_100m_001_01.nc
-ds_iceland: xr.Dataset = xr.open_dataset(
-    "book/tutorials/DataVisualization/ATL14_IS_0311_100m_001_01.nc"
-)
-# ds_iceland.sel()
-print(ds_iceland)
+ds: xr.Dataset = xr.open_dataset(filename_or_obj="ATL14_IS_0311_100m_001_01.nc")
 
+
+# %% [markdown]
+# The original ATL14 NetCDF data comes in a projected coordinate system called
+# NSIDC Sea Ice Polar Stereographic North (EPSG:3413) 🧭.
+#
+# We'll reproject it to a geographic coordinate system (EPSG:4326) first,
+# and that will give nice looking longitude and latitude 🌐 coordinates.
+
+# %%
+ds_3413 = ds.rio.write_crs(input_crs="EPSG:3413")  # set initial projection
+ds_4326 = ds_3413.rio.reproject(dst_crs="EPSG:4326")  # reproject to WGS84
+ds_iceland = ds_4326.sel(x=slice(-28.0, -10.0), y=slice(68.0, 62.0))  # spatial subset
+ds_iceland
+
+# %% [markdown]
+# The 'ds_iceland' `xarray.Dataset` includes many data variables (Z-values) and attributes (metadata).
+#
+# Feel free to click on the dropdown icons 🔻📄🍔 to explore what's inside!
 
 # %% [markdown]
 # # 1️⃣ The raster basemap 🌈
 
+# %% [markdown]
+# ## Making the first figure! 🎬
+#
+# Colours are easier to visualize than numbers.
+# Let's begin with just three lines of code 🤹
+#
+# We'll use PyGMT's [pygmt.Figure.grdimage](https://www.pygmt.org/v0.4.1/api/generated/pygmt.Figure.grdimage.html)
+# to make this plot.
+
 # %%
+fig = pygmt.Figure()  # start a new instance of a blank Figure canvas
+fig.grdimage(grid=ds_iceland["h"], frame=True)  # plot the height variable
+fig.show()  # display the map as a jupyter notebook cell output
+
+# %% [markdown]
+# Already we're seeing 👀 some rainbow colors and a lot of gray.
+#
+# It's hard to know what those colors represent though, so let's add ➕ some context.
+
+# %% [markdown]
+# ## Adding a colorbar 🍫
+#
+# A color scalebar helps us to link the colors on a map with some actual numbers 🔢
+#
+# Let's use [`pygmt.Figure.colorbar`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.colorbar.html#pygmt.Figure.colorbar)
+# to add this to our existing map 🔲
+
+# %%
+fig.colorbar()  # just plot the default color scalebar on the bottom
+fig.show()
+
+# %% [markdown]
+# Now this isn't too bad, but we can definitely improve it more!
+#
+# Here are some ways to further customize the colorbar 📊:
+# - **J**ustify the colorbar position to the **M**iddle **R**ight ➡️
+# - Add a box representing NaN values using **+n** ◾
+# - Add labels to the colorbar frame to say that this represents Elevation in metres 🇲
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.5.0/gallery/embellishments/colorbar.html
+# - https://www.pygmt.org/v0.5.0/tutorials/earth_relief.html
+
+# %%
+fig.colorbar(position="JMR+n", frame=["x+lElevation", "y+lm"])
+fig.show()
+
+# %% [markdown]
+# Now we've got a map that makes more sense 😁
+#
+# Notice however, that there are two colorbars - our original horizontal 🚥 one and the new vertical 🚦 one.
+#
+# Recall back to what was said about 'layers' 🍰. Everytime you call `fig.something`, you will be 'drawing' on top of the existing canvas.
+#
+# If you want to start from a blank canvas 📄 again, make a new figure by calling `fig = pygmt.Figure()`.
+
+# %% [markdown]
+# ## Choosing a different colormap 🏳️‍🌈
+#
+# Do you have a favourite colourmap❓
+#
+# When making maps, we need to be mindful 😶‍🌫️ of how we represent data.
+#
+# Take some time ⏱️ to consider what is the most suitable type of colormap for this case.
+#
+# ![What type of colourmap to choose?](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig6_HTML.png?as=webp)
+#
+# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.makecpt.html) to change our map's color!!
+#
+# 🔖 References:
+#
+# - Crameri, F., Shephard, G.E. & Heron, P.J. The misuse of colour in science communication. Nat Commun 11, 5444 (2020). https://doi.org/10.1038/s41467-020-19160-7
+# - List of built-in GMT color palette tables: https://docs.generic-mapping-tools.org/6.3/cookbook/cpts.html#id3
+
+# %%
+fig = pygmt.Figure()  # start a new blank figure!
+
+pygmt.makecpt(
+    cmap="",  # insert your colormap's name here
+    series=[-200, 2500],  # min an max values to stretch the colormap
+)
+
+fig.grdimage(
+    grid=ds_iceland["h"],  # plot the xarray.Dataset's height variable
+    cmap=True,  # setting this as True tells pygmt to use the colormap from makecpt
+    frame=True,  # have automatic map frames
+)
+
+fig.show()
+
+# %% [markdown]
+# Once again, we'll add a colorbar on the right for completeness 🎓
+
+# %%
+fig.colorbar(position="JMR+n", frame=["x+lElevation", "y+lm"])
+fig.show()
 
 # %% [markdown]
 # # 2️⃣ The vector features 🚏

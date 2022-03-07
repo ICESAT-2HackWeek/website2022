@@ -15,3 +15,4 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | -  | - | - |  - |
 | [Open Science Tools](./jupyter.md) | Git, GitHub, JupyterHub | n/a | [Recording](https://youtu.be/rKhs5FLI5rc)  |
 | [Example Notebook](./example/tutorial-notebook.ipynb) | Jupyter Book formatting, ipyleaflet | n/a |  Not recorded |
+| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | ATL14 | TODO |
