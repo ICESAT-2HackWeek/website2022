@@ -37,7 +37,8 @@
 #
 # There are plenty of ways to make maps 🗾, from pen and paper to Photoshop.
 #
-# We'll start by loading some of these tools, that help us to process and visualize our data 📊.
+# We'll start by loading some of these tools,
+# that help us to process and visualize our data 📊.
 
 # %%
 # Install development versions
@@ -183,7 +184,8 @@ ds_iceland = ds_4326.sel(x=slice(-28.0, -10.0), y=slice(68.0, 62.0))  # spatial 
 ds_iceland
 
 # %% [markdown]
-# The 'ds_iceland' `xarray.Dataset` includes many data variables (Z-values) and attributes (metadata).
+# The 'ds_iceland' `xarray.Dataset` includes many data variables (Z-values)
+# and attributes (metadata).
 #
 # Feel free to click on the dropdown icons 🔻📄🍔 to explore what's inside!
 
@@ -240,11 +242,15 @@ fig.show()
 # %% [markdown]
 # Now we've got a map that makes more sense 😁
 #
-# Notice however, that there are two colorbars - our original horizontal 🚥 one and the new vertical 🚦 one.
+# Notice however, that there are two colorbars - our original horizontal 🚥 one
+# and the new vertical 🚦 one.
 #
-# Recall back to what was said about 'layers' 🍰. Everytime you call `fig.something`, you will be 'drawing' on top of the existing canvas.
+# Recall back to what was said about 'layers' 🍰.
+# Everytime you call `fig.something`,
+# you will be 'drawing' on top of the existing canvas.
 #
-# If you want to start from a blank canvas 📄 again, make a new figure by calling `fig = pygmt.Figure()`.
+# ‼️ To start from a blank canvas 📄 again,
+# make a new figure by calling `fig = pygmt.Figure()`‼️
 
 # %% [markdown]
 # ## Choosing a different colormap 🏳️‍🌈
@@ -253,16 +259,21 @@ fig.show()
 #
 # When making maps, we need to be mindful 😶‍🌫️ of how we represent data.
 #
-# Take some time ⏱️ to consider what is the most suitable type of colormap for this case.
+# Take some time ⏱️ to consider
+# what is the most suitable type of colormap for this case.
 #
 # ![What type of colourmap to choose?](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig6_HTML.png?as=webp)
 #
-# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.makecpt.html) to change our map's color!!
+# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.makecpt.html)
+# to change our map's color!!
 #
 # 🔖 References:
 #
-# - Crameri, F., Shephard, G.E. & Heron, P.J. The misuse of colour in science communication. Nat Commun 11, 5444 (2020). https://doi.org/10.1038/s41467-020-19160-7
-# - List of built-in GMT color palette tables: https://docs.generic-mapping-tools.org/6.3/cookbook/cpts.html#id3
+# - Crameri, F., Shephard, G.E. & Heron, P.J.
+#   The misuse of colour in science communication. Nat Commun 11, 5444 (2020).
+#   https://doi.org/10.1038/s41467-020-19160-7
+# - List of built-in GMT color palette tables:
+#   https://docs.generic-mapping-tools.org/6.3/cookbook/cpts.html#id3
 
 # %%
 fig = pygmt.Figure()  # start a new blank figure!
