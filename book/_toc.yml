@@ -7,9 +7,9 @@ parts:
   chapters:
     - file: application
     - title: Schedule
-      url: https://icesat-2.hackweek.io/#schedule
+      url: https://icesat-2.hackweek.io/index.html?jump_to=schedule
     - title: Team
-      url: https://icesat-2.hackweek.io/#team
+      url: https://icesat-2.hackweek.io/index.html?jump_to=team
     - file: mission
     - file: CoC
 - caption: Preparation
