@@ -75,8 +75,8 @@ tabs:
         leads: [ ]
       - time: 12:45 - 2:00
         location: Zoom
-        title: Collaborative Deveopment
-        description: |
+        title: Object Oriented Programming for Collaborative Development in Python
+        description: An introduction to writing well-formed modular code to facilitate collaborative programming
           - icepyx
           - working together
         leads:
