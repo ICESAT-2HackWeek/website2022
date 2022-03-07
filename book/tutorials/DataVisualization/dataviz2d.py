@@ -209,7 +209,27 @@ fig.show()  # display the map as a jupyter notebook cell output
 # %% [markdown]
 # Already we're seeing 👀 some rainbow colors and a lot of gray.
 #
-# It's hard to know what those colors represent though, so let's add ➕ some context.
+# Let's add some axis labels and a title so people know what we're looking at 😉
+#
+# Previously we used `frame=True` to do this automatically,
+# but let's customize it a bit more!
+
+# %%
+fig.grdimage(
+    grid=ds_iceland["h"],
+    frame=[
+        'xaf+l"Longitude"',  # x-axis, (a)nnotate, (f)ine ticks, +(l)abel
+        'yaf+l"Latitude"',  # y-axis, (a)nnotate, (f)ine ticks, +(l)abel
+        '+t"ATL14 ice surface height over Iceland"',  # map title
+    ],
+)
+fig.show()
+
+# %% [markdown]
+# Now we've got some x and y axis labels, and a plot title 🥳
+#
+# Still, it's hard to know what the map colors represent,
+# so let's add ➕ some extra context.
 
 # %% [markdown]
 # ## Adding a colorbar 🍫
@@ -297,6 +317,35 @@ fig.show()
 # %%
 fig.colorbar(position="JMR+n", frame=["x+lElevation", "y+lm"])
 fig.show()
+
+# %% [markdown]
+# ## (Optional) Advanced basemap customization 😎
+#
+# If you have time, try playing 🛝 with the [`pygmt.Figure.basemap`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.basemap.html)
+# method to customize your map even more.
+#
+# Do so by calling `fig.basemap()`, which has options to do things like:
+# - Adding graticules/gridlines using `frame="g"` 🌐
+# - Adding a North arrow (compass rose) using `rose="jTR+w2c"` 🔝
+# - Adding a kilometer scalebar using something like `map_scale="jBR+w5k+o1"` 📏
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.5.0/tutorials/frames.html
+# - https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.basemap.html#examples-using-pygmt-figure-basemap
+
+# %%
+# Code block to play with
+fig = pygmt.Figure()  # start a new figure
+
+fig.grdimage(grid=ds_iceland["h"], cmap="oleron")  # plot grid as a background
+
+# Customize your basemap here!!
+fig.basemap(
+    frame="afg",
+    # Add more options here!!
+)
+
+fig.show()  # show the map
 
 # %% [markdown]
 # # 2️⃣ The vector features 🚏
