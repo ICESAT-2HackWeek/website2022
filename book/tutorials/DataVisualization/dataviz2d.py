@@ -99,13 +99,13 @@ pygmt.show_versions()
 # - Official NSIDC download source - https://nsidc.org/data/ATL14
 # - Source code for generating ATL14/15 - https://github.com/SmithB/ATL1415
 
-# %%
-# Set up an instance of an icepyx Query object
-# for a Region of Interest located over Iceland
-region_iceland = ipx.Query(
-    product="ATL14",  # ICESat-2 Gridded Annual Ice Product
-    spatial_extent=[-28.0, 62.0, -10.0, 68.0],  # minlon, minlat, maxlon, maxlat
-)
+# %% [raw]
+# # Set up an instance of an icepyx Query object
+# # for a Region of Interest located over Iceland
+# region_iceland = ipx.Query(
+#     product="ATL14",  # ICESat-2 Gridded Annual Ice Product
+#     spatial_extent=[-28.0, 62.0, -10.0, 68.0],  # minlon, minlat, maxlon, maxlat
+# )
 
 # %% [markdown]
 # Inside of the `region_iceland` class instance are attributes
@@ -113,14 +113,14 @@ region_iceland = ipx.Query(
 #
 # ⏩ Type out `region_iceland.` and press `Tab` to see some of them!
 
-# %%
-# Check that we've selected the right region
-region_iceland.visualize_spatial_extent()
+# %% [raw]
+# # Check that we've selected the right region
+# region_iceland.visualize_spatial_extent()
 
-# %%
-# See the version of the ATL14 product we're using
-print(region_iceland.product)
-print(region_iceland.product_version)
+# %% [raw]
+# # See the version of the ATL14 product we're using
+# print(region_iceland.product)
+# print(region_iceland.product_version)
 
 # %% [markdown]
 # 🔖 For a more complete tutorial on using `icepyx`, see:
