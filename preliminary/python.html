@@ -43,15 +43,14 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tutorials" href="../tutorials/index.html" />
@@ -553,11 +552,11 @@ Python <span class="m">3</span>.7.3<span class="p">|</span>Anaconda custom <span
 <div class="section" id="installing-a-specific-python-version">
 <h3>Installing a specific python version<a class="headerlink" href="#installing-a-specific-python-version" title="Permalink to this headline">¶</a></h3>
 <p>We will be using Python 3 during the week. Since Anaconda (on Linux) expects you to work in the <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell, if this is not already your default shell, you need to set it to be so (use the <code class="docutils literal notranslate"><span class="pre">chsh</span> <span class="pre">-s</span> <span class="pre">/bin/bash</span></code> command to change your default shell to bash), then you can create an isolated Python environment with the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n py37 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name py39 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
 </pre></div>
 </div>
-<p>To use Python 3.7:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate py37
+<p>To use Python 3.9:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate py39
 </pre></div>
 </div>
 <p>To check if you have the correct version activated</p>
