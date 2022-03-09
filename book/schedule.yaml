@@ -16,7 +16,7 @@ tabs:
         title: Overview of ICESat-2 Mission
         description:
         leads:
-          - TBD
+          - Tom Neumann
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description: Take a look out the window.
@@ -68,7 +68,7 @@ tabs:
         title: ICESat-2 Data Access
         description:
         leads:
-          - Jane Koh
+          - Mikala Bieg
       - time: 12:00 - 12:45
         title: Lunch
         description: Take a look out the window.
@@ -94,10 +94,10 @@ tabs:
         title: Geospatial Transformations
         description: Getting oriented and goals
         leads:
-          - Jane Koh
+          - Tyler Sutterley
       - time: 9:30 - 10:30
         location: Zoom
-        title: Data Integration with other products (Part I of II)
+        title: Integration of ICESat-2 with other data - Tools and techniques for working with other data
         description:
         leads:
           - Tasha Snow
@@ -137,22 +137,25 @@ tabs:
     contents:
       - time: 9:00 - 10:00
         location: Zoom
-        title: ICESat-2 Data Applications
+        title: Data Integration - Slide Rule with Raster Data
         description:
         leads:
           - Tyler Sutterley
+          - Ian Joughin
       - time: 10:00 - 10:15
         title: Movement and coffee break
         description: Take a look out the window.
         leads: [ ]
       - time: 10:15 - 11:15
         location: Zoom
-        title: Doing good science with ICESat-2
-        description:
-        leads: [ ]
+        title: Flexible schedule time
+        description: We'll fill this time in as we get closer to it. It may include additional content, an opportunity to share code, or something else.
+        leads: 
+          - Jessica Scheick
+          - Anthony Arendt
       - time: 11:15 - 12:15
         location: Zoom
-        title: Data Integration with other products (Part II of II)
+        title: Data Integration - Conclusion
         description:
         leads:
           - Tasha Snow
