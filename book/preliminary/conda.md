@@ -68,13 +68,13 @@ print('Hello World!')
 
 
 ``` bash
-$ conda create --name py39 python=3.9
+$ conda create -n py37 python=3.7
 ```
 
-To use Python 3.9:
+To use Python 3.7:
 
 ``` bash
-$ conda activate py39
+$ conda activate py37
 ```
 
 To check if you have the correct version:

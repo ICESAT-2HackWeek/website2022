@@ -23,8 +23,7 @@ dependencies:
   - icepyx
   - intake
   - ipyleaflet
-  - ipympl
-  - jupyterhub-singleuser < 2
+  - jupyterhub-singleuser
   - jupyterlab >= 3
   - jupyter-resource-usage
   - kerchunk
@@ -37,7 +36,7 @@ dependencies:
   - python-graphviz
   - rasterio
   - rioxarray
-  - s3fs >= 2022
+  - s3fs
   - scikit-image
   - scikit-learn
   - scipy

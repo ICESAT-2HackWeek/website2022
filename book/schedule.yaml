@@ -21,44 +21,51 @@ tabs:
         title: Movement and coffee break
         description: Take a look out the window.
         leads: [ ]
-      - time: 10:45 - 11:45
+      - time: 10:45 - 11:30
         location: Zoom
-        title: Best Practices for Effective Teamwork
-        description: This tutorial focuses on the social and organizational aspects of working together effectively in groups.
-        leads:
-          - Naomi Alterman
-          - Nicoleta Cristea
-          - Charley Haley
-      - time: 11:45 - 12:15
-        location: Zoom
-        title: Getting Started
+        title: Getting Started on Technology
         description: Still having trouble with getting any technology going? We're here to help you debug!
         leads:
           - Scott Henderson
-      - time: 12:15 - 1:00
+          - Joachim Meyer
+          - Daniel Shapiro
+      - time: 11:30 - 12:00
+        location: Zoom
+        title: Project Ideation
+        description:
+        leads:
+          - Charley Haley
+      - time: 12:00 - 1:00
         title: Lunch
         description: Take a look out the window.
         leads: [ ]
-      - time: 1:00 - 2:00
+      - time: 1:00 - 2:15
         location: Zoom
         title: Formation of Hacking Projects
         description:
         leads:
           - Axel Schweiger
-      - time: 2:00 - 3:00
+          - Charley Haley
+      - time: 2:15 - 3:00
         location: Zoom
-        title: Project Hacking Time
-        description: Placeholder for project hacking time whenever works best for your group!
+        title: Project Set up and Logistics
+        description: Meet your teammates, figure out how/when you want to meet and communicate.
         leads: [ ]
   - title: Day 2
     date: Tuesday 22 March
     contents:
-      - time: 9:00 - 10:30
+      - time: 9:00 - 10:00
         location: Zoom
         title: About ICESat-2 Data
         description:
         leads:
           - Ben Smith
+      - time: 10:00 - 10:30
+        location: Zoom
+        title: Best Practices for Effective Teamwork
+        description: This tutorial focuses on the social and organizational aspects of working together effectively in groups.
+        leads:
+          - Naomi Alterman
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description: Take a look out the window.
@@ -68,7 +75,7 @@ tabs:
         title: ICESat-2 Data Access
         description:
         leads:
-          - Mikala Beig
+          - Mikala Bieg
       - time: 12:00 - 12:45
         title: Lunch
         description: Take a look out the window.
