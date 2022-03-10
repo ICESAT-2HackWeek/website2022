@@ -13,6 +13,7 @@ dependencies:
   - dask
   - datashader
   - fsspec
+  - geemap
   - gh
   - geopandas
   - geoviews
