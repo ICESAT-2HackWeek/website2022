@@ -1,4 +1,4 @@
-# Open source software
+# Open-source Software
 
 ## Ways to contribute
 One of the first things that come to mind contributing to a project is to add code
