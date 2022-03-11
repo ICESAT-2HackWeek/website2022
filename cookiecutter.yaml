@@ -5,12 +5,12 @@ apply:
   title: Applications Closed
 hackweek_mission: https://icesat-2.hackweek.io/mission.html
 banner:
-  title: The ICESat-2 Hackweek
-  description: A hybrid hands-on workshop
+  title: ICESat-2 Hackweek
+  description: A fully virtual workshop
   start_date: 21 March
   end_date: 25 March
   year: 2022
-  location: Seattle, WA
+  location: Zoom
   links:
   - url: intro.html
     title: Event Jupyter Book
