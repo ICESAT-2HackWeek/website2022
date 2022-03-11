@@ -104,7 +104,7 @@ tabs:
           - Tyler Sutterley
       - time: 9:30 - 10:30
         location: Zoom
-        title: Integration of ICESat-2 with other data - Tools and techniques for working with other data
+        title: Data Integration - Tools and Techniques
         description:
         leads:
           - Tasha Snow
@@ -162,7 +162,7 @@ tabs:
           - Anthony Arendt
       - time: 11:15 - 12:15
         location: Zoom
-        title: Data Integration - Conclusion
+        title: Data Integration - Advanced Analyses
         description:
         leads:
           - Tasha Snow
