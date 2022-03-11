@@ -9,7 +9,7 @@ LOCK_ENV='CondaLock'
 conda env list | grep ${LOCK_ENV} > /dev/null
 
 if [[ $? -eq 1 ]]; then
-  conda create -q -y -n ${LOCK_ENV} -c conda-forge conda-lock=0.13 mamba=0.20
+  conda create -q -y -n ${LOCK_ENV} -c conda-forge conda-lock=1 mamba=0.22
 fi
 
 # https://github.com/conda/conda/issues/7980#issuecomment-492784093
@@ -30,7 +30,7 @@ conda-lock lock --mamba -f ${ENV_FILE} -p linux-64 -p osx-64
 ## Generate environment.yml for binder compatibility
 printf "Generate environment.yml for BinderHub \n"
 conda-lock lock --mamba -f ${ENV_FILE} -p linux-64 -k env
-mv conda-linux-64.lock.yml ../binder/environment.yml
+cp conda-linux-64.lock.yml ../binder/environment.yml
 
 # Remove CondaLock environment when the last command was successful
 if [[ $? -eq 0 ]]; then
