@@ -9,12 +9,15 @@ channels:
 dependencies:
   # Hackweek JupyterHub
   - awscli
+  - black
   - cartopy
   - dask
+  - dask-labextension
   - datashader
   - fsspec
   - geemap
   - gh
+  - git
   - geopandas
   - geoviews
   - h5netcdf
@@ -25,8 +28,11 @@ dependencies:
   - intake
   - ipyleaflet
   - ipympl
+  - isort
   - jupyterhub-singleuser < 2
   - jupyterlab >= 3
+  - jupyterlab-git
+  - jupyterlab_code_formatter
   - jupyter-resource-usage
   - kerchunk
   - matplotlib-base
@@ -38,9 +44,11 @@ dependencies:
   - pip
   - progressbar2
   - pygeos
+  - pygmt
   - python = 3.9
   - pystac
   - pystac-client
+  - pytest
   - python-graphviz
   - rasterio
   - rioxarray
@@ -50,6 +58,8 @@ dependencies:
   - scipy
   - sliderule
   - stackstac
+  - vim
+  - wget
   - xarray
   - zarr
   # JupyterBook / Website
