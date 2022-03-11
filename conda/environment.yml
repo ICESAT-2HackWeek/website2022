@@ -62,3 +62,6 @@ dependencies:
   - pip:
     - jinja-markdown==1.210911
     - rio-stac
+platforms:
+  - linux-64
+  - osx-64

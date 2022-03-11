@@ -247,7 +247,7 @@ dependencies:
   - latexcodec=2.0.1=pyh9f0ad1d_0
   - libcblas=3.9.0=13_osx64_openblas
   - libdap4=3.20.6=h3e144a0_2
-  - libgd=2.3.3=hb8742e1_1
+  - libgd=2.3.3=h02d8a21_2
   - liblapack=3.9.0=13_osx64_openblas
   - libnetcdf=4.8.1=nompi_h6609ca0_101
   - libspatialite=5.0.1=hadde3e2_15
@@ -484,5 +484,5 @@ dependencies:
   - myst-nb=0.13.1=pyhd8ed1ab_0
   - jupyter-book=0.12.2=pyhd8ed1ab_0
   - pip:
-    - jinja-markdown === 1.210911 --hash=md5:None
-    - rio-stac === 0.3.2 --hash=md5:None
+    - jinja-markdown === 1.210911 
+    - rio-stac === 0.3.2 

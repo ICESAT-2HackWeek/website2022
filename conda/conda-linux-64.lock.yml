@@ -278,7 +278,7 @@ dependencies:
   - kiwisolver=1.3.2=py39h1a9c180_1
   - latexcodec=2.0.1=pyh9f0ad1d_0
   - libdap4=3.20.6=hd7c4107_2
-  - libgd=2.3.3=h3cfcdeb_1
+  - libgd=2.3.3=h283352f_2
   - libnetcdf=4.8.1=nompi_hb3fd0d9_101
   - libspatialite=5.0.1=ha867d66_15
   - linkify-it-py=1.0.3=pyhd8ed1ab_0
@@ -520,5 +520,5 @@ dependencies:
   - myst-nb=0.13.1=pyhd8ed1ab_0
   - jupyter-book=0.12.2=pyhd8ed1ab_0
   - pip:
-    - jinja-markdown === 1.210911 --hash=md5:None
-    - rio-stac === 0.3.2 --hash=md5:None
+    - jinja-markdown === 1.210911 
+    - rio-stac === 0.3.2 
