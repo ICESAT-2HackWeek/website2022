@@ -11,7 +11,7 @@ If you would like to follow this part of the tutorial interactively, you will ne
 
 ## Registering for an Earth Engine account
 
-* Go the the [GEE sign up page](https://signup.earthengine.google.com/) and enter the email you want to use for your GEE account. A gmail is best if you have one.
+* Go the the [GEE sign up page](https://signup.earthengine.google.com/) and enter the email you want to use for your GEE account. A gmail - or an institutional address with an associated google account - is best if you have one.
 * Enter your email, your affiliation and country/region. Where it asks what you want to accomplish, mention you are at ICESat-2 Hackweek at the University of Washington.
 * Review the terms, verify your non-robot identify and click ‘Submit’.
 * Check your email, including your spam folder, for a link from the Google Developer’s Team. The confirmation email will have directions on how to access the Code Editor.
