@@ -19,10 +19,6 @@ runs:
       with:
         miniforge-version: latest
         auto-update-conda: false
-        environment-file: conda/conda-${{ runner.os == 'Linux' && 'linux' || 'osx'  }}-64.lock
+        environment-file: conda/conda-${{ runner.os == 'Linux' && 'linux' || 'osx'  }}-64.lock.yml
         activate-environment: hackweek
         use-only-tar-bz2: true # IMPORTANT: This needs to be set for caching to work properly!
-      
-    - name: Add pip packages to environment
-      shell: bash -l {0}
-      run: pip install --no-deps jinja-markdown==1.210911
