@@ -52,6 +52,12 @@ Visit our [Earthdata](earthdata) page to learn how to access and Earthdata login
 
 ## Optional setup
 
+### Google Earth Engine Sign-Up
+The ICESat-2 visualization tutorial will have an interactive component that uses Google Earth Engine (GEE) to query for 
+additional data to help put ICESat-2 data into context. 
+If you would like to follow this part interactively, please visit our [Earth Engine](earthengine) page to learn how to sign up, 
+if you haven't already!
+
 ### Python
 Dive deeper into how [Python is managed and installed](python) on the JupyterHub
 and how you can install that on your personal machine.

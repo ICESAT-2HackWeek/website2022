@@ -13,6 +13,7 @@ dependencies:
   - dask
   - datashader
   - fsspec
+  - geemap
   - gh
   - geopandas
   - geoviews
@@ -23,32 +24,44 @@ dependencies:
   - icepyx
   - intake
   - ipyleaflet
-  - jupyterhub-singleuser
+  - ipympl
+  - jupyterhub-singleuser < 2
   - jupyterlab >= 3
   - jupyter-resource-usage
   - kerchunk
   - matplotlib-base
+  - nbgitpuller
   - numpy
   - pandas
+  - panel
+  - param 
+  - pip
+  - progressbar2
   - pygeos
+  - python = 3.9
   - pystac
   - pystac-client
   - python-graphviz
   - rasterio
   - rioxarray
-  - s3fs
+  - s3fs >= 2022
   - scikit-image
   - scikit-learn
   - scipy
   - sliderule
+  - stackstac
   - xarray
   - zarr
-  # JupyterBook
+  # JupyterBook / Website
   - cookiecutter
   - jinja2 >= 2.11
   - jupyter-book = 0.12
-  - pip
-  - python = 3.9
   - pygments >= 2.6.1
   - pymdown-extensions >= 7.1
   - sphinxcontrib-bibtex
+  - pip:
+    - jinja-markdown==1.210911
+    - rio-stac
+platforms:
+  - linux-64
+  - osx-64
