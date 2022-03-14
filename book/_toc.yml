@@ -21,6 +21,7 @@ parts:
         - file: preliminary/jupyterhub
         - file: preliminary/git
         - file: preliminary/earthdata
+        - file: preliminary/earthengine
         - file: preliminary/python
 - caption: Tutorials
   chapters:
