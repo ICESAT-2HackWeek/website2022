@@ -9,7 +9,6 @@ channels:
 dependencies:
   # Hackweek JupyterHub
   - awscli
-  - black
   - cartopy
   - dask
   - dask-labextension
@@ -28,11 +27,9 @@ dependencies:
   - intake
   - ipyleaflet
   - ipympl
-  - isort
   - jupyterhub-singleuser < 2
   - jupyterlab >= 3
   - jupyterlab-git
-  - jupyterlab_code_formatter
   - jupyter-resource-usage
   - kerchunk
   - matplotlib-base
@@ -48,7 +45,6 @@ dependencies:
   - python = 3.9
   - pystac
   - pystac-client
-  - pytest
   - python-graphviz
   - rasterio
   - rioxarray
