@@ -29,6 +29,9 @@ parts:
       sections:
         - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
+        - file: tutorials/data_access/intro-notebook
+        - file: tutorials/data_access/earthdata-intro-notebook
+        - file: tutorials/data_access/icepyx-intro-notebook
 - caption: Projects
   chapters:
     - file: projects/index

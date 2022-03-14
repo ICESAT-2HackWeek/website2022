@@ -15,3 +15,6 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | -  | - | - |  - |
 | [Open Science Tools](./jupyter.md) | Git, GitHub, JupyterHub | n/a | [Recording](https://youtu.be/rKhs5FLI5rc)  |
 | [Example Notebook](./example/tutorial-notebook.ipynb) | Jupyter Book formatting, ipyleaflet | n/a |  Not recorded |
+| [Data Access - intro](./data_access/intro-notebook.ipynb) | Programmatic and web ICESat-2 data access | n/a |  Not recorded |
+| [Data Access - earthdata](./data_access/earthdata-intro-notebook.ipynb) | How to use EarthData to access data | n/a |  Not recorded |
+| [Data Access - icepyx](./data_access/icepyx-intro-notebook.ipynb) | How to use icepyx to access + load data | n/a |  Not recorded |
