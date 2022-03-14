@@ -28,7 +28,9 @@ parts:
       sections:
         - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
-        - file: tutorials/Geospatial/geospatial-intro
+        - file: tutorials/geospatial/geospatial-intro
+          sections:
+            - file: tutorials/geospatial/geospatial-advanced
 - caption: Projects
   chapters:
     - file: projects/index
