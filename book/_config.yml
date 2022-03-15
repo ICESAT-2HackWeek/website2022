@@ -35,7 +35,10 @@ parse:
 execute:
   # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
   execute_notebooks: force
-  exclude_patterns: ["*rendered*", "*skip*"]
+  exclude_patterns: 
+   - "*rendered*"
+   - "*skip*"
+   - "tutorials/DataIntegration/*"
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300
