@@ -31,6 +31,6 @@ jobs:
 
     - uses: ./.github/actions/buildresources
       with:
-        jb-cache: true
+        jb-cache: false
         publish-to-gh: false
         jb-save: true

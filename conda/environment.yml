@@ -33,6 +33,7 @@ dependencies:
   - jupyterlab >= 3
   - jupyterlab-git
   - jupyter-resource-usage
+  - jupyter_server = 1.13
   - kerchunk
   - lxml
   - matplotlib-base
