@@ -35,6 +35,7 @@ cookiecutter ../. -f --no-input -o ../book/_build
 check_success
 
 echo "Building the Jupyter Book"
-jupyter-book build ../book/
+cd ../
+jupyter-book build book/
 
 check_success
