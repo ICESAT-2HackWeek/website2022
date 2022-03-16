@@ -31,9 +31,9 @@ runs:
 
     - name: Diagnostics
       shell: bash -l {0}
-      run:
+      run: |
         pwd
-        ls -l
+        ls -la
         ls -l book/*
         cat book/_config.yml 
 
