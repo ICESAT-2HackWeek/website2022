@@ -33,8 +33,7 @@ parse:
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
-  execute_notebooks: force
+  execute_notebooks: 'force'
   exclude_patterns: 
     - "**/dataintegration-1.ipynb"
     - "**/dataintegration-2.ipynb"
