@@ -37,7 +37,7 @@ jobs:
         check_filenames: true
         check_hidden: true
         only_warn: false
-        skip: '*.js',qaqc.yml
+        skip: '*.js,qaqc.yml'
         ignore_words_list: slippy,trough,thw
 
     # borrowed from https://github.com/ProjectPythia/pythia-foundations/blob/main/.github/workflows/link-checker.yaml
