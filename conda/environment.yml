@@ -14,6 +14,7 @@ dependencies:
   - dask
   - dask-labextension
   - datashader
+#  - earthdata
   - fsspec
   - geemap
   - gh
@@ -38,7 +39,7 @@ dependencies:
   - lxml
   - matplotlib-base
   - nbgitpuller
-  - numpy
+  - numpy < 1.22
   - pandas
   - panel
   - param 
@@ -52,6 +53,7 @@ dependencies:
   - python-graphviz
   - rasterio
   - rioxarray
+  - sat-search
   - s3fs >= 2022
   - scikit-image
   - scikit-learn
