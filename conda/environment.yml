@@ -9,11 +9,16 @@ channels:
 dependencies:
   # Hackweek JupyterHub
   - awscli
+  - boto3
   - cartopy
   - dask
+  - dask-labextension
   - datashader
+#  - earthdata
   - fsspec
+  - geemap
   - gh
+  - git
   - geopandas
   - geoviews
   - h5netcdf
@@ -22,33 +27,53 @@ dependencies:
   - hvplot
   - icepyx
   - intake
+  - intake-stac
   - ipyleaflet
-  - jupyterhub-singleuser
+  - ipympl
+  - jupyterhub-singleuser < 2
   - jupyterlab >= 3
+  - jupyterlab-git
   - jupyter-resource-usage
+  - jupyter_server = 1.13
   - kerchunk
+  - lxml
   - matplotlib-base
-  - numpy
+  - nbgitpuller
+  - numpy < 1.22
   - pandas
+  - panel
+  - param 
+  - pip
+  - progressbar2
   - pygeos
+  - pygmt
+  - python = 3.9
   - pystac
   - pystac-client
   - python-graphviz
   - rasterio
   - rioxarray
-  - s3fs
+  - sat-search
+  - s3fs >= 2022
   - scikit-image
   - scikit-learn
   - scipy
   - sliderule
+  - stackstac
+  - vim
+  - wget
   - xarray
   - zarr
-  # JupyterBook
+  # JupyterBook / Website
   - cookiecutter
   - jinja2 >= 2.11
   - jupyter-book = 0.12
-  - pip
-  - python = 3.9
   - pygments >= 2.6.1
   - pymdown-extensions >= 7.1
   - sphinxcontrib-bibtex
+  - pip:
+    - jinja-markdown==1.210911
+    - rio-stac
+platforms:
+  - linux-64
+  - osx-64

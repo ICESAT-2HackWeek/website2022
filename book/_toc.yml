@@ -21,6 +21,7 @@ parts:
         - file: preliminary/jupyterhub
         - file: preliminary/git
         - file: preliminary/earthdata
+        - file: preliminary/earthengine
         - file: preliminary/python
 - caption: Tutorials
   chapters:
@@ -31,6 +32,8 @@ parts:
         - file: tutorials/geospatial/geospatial-intro
           sections:
             - file: tutorials/geospatial/geospatial-advanced
+        - file: tutorials/DataIntegration/dataintegration-1
+        - file: tutorials/DataIntegration/dataintegration-2
 - caption: Projects
   chapters:
     - file: projects/index
