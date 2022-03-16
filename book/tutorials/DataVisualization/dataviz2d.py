@@ -41,11 +41,6 @@
 # that help us to process and visualize our data 📊.
 
 # %%
-# Install development versions
-# # !pip install https://github.com/icesat2py/icepyx/archive/refs/heads/development.zip
-# Note, need to restart jupyter kernel after installation for new version to show up
-
-# %%
 import icepyx as ipx  # for downloading and loading ICESat-2 data
 import pygmt  # for making geographical maps and figures
 import rioxarray  # for performing geospatial operations like reprojection
@@ -236,7 +231,7 @@ fig.show()
 #
 # A color scalebar helps us to link the colors on a map with some actual numbers 🔢
 #
-# Let's use [`pygmt.Figure.colorbar`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.colorbar.html#pygmt.Figure.colorbar)
+# Let's use [`pygmt.Figure.colorbar`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.colorbar.html)
 # to add this to our existing map 🔲
 
 # %%
@@ -252,8 +247,8 @@ fig.show()
 # - Add labels to the colorbar frame to say that this represents Elevation in metres 🇲
 #
 # 🔖 References:
-# - https://www.pygmt.org/v0.5.0/gallery/embellishments/colorbar.html
-# - https://www.pygmt.org/v0.5.0/tutorials/earth_relief.html
+# - https://www.pygmt.org/v0.6.0/gallery/embellishments/colorbar.html
+# - https://www.pygmt.org/v0.6.0/tutorials/advanced/earth_relief.html
 
 # %%
 fig.colorbar(position="JMR+n", frame=["x+lElevation", "y+lm"])
@@ -284,7 +279,7 @@ fig.show()
 #
 # ![What type of colourmap to choose?](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig6_HTML.png?as=webp)
 #
-# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.makecpt.html)
+# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.makecpt.html)
 # to change our map's color!!
 #
 # 🔖 References:
@@ -321,7 +316,7 @@ fig.show()
 # %% [markdown]
 # ## (Optional) Advanced basemap customization 😎
 #
-# If you have time, try playing 🛝 with the [`pygmt.Figure.basemap`](https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.basemap.html)
+# If you have time, try playing 🛝 with the [`pygmt.Figure.basemap`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.basemap.html)
 # method to customize your map even more.
 #
 # Do so by calling `fig.basemap()`, which has options to do things like:
@@ -330,8 +325,8 @@ fig.show()
 # - Adding a kilometer scalebar using something like `map_scale="jBR+w5k+o1"` 📏
 #
 # 🔖 References:
-# - https://www.pygmt.org/v0.5.0/tutorials/frames.html
-# - https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.basemap.html#examples-using-pygmt-figure-basemap
+# - https://www.pygmt.org/v0.6.0/tutorials/basics/frames.html
+# - https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.basemap.html#examples-using-pygmt-figure-basemap
 
 # %%
 # Code block to play with
