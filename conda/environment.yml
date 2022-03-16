@@ -52,6 +52,7 @@ dependencies:
   - python-graphviz
   - rasterio
   - rioxarray
+  - sat-search
   - s3fs >= 2022
   - scikit-image
   - scikit-learn
