@@ -29,14 +29,6 @@ runs:
 
     - uses: ./.github/actions/setupconda
 
-    - name: Diagnostics
-      shell: bash -l {0}
-      run: |
-        pwd
-        ls -la
-        ls -l book/*
-        cat book/_config.yml 
-
     - name: Build JupyterBook
       shell: bash -l {0}
       run: |
