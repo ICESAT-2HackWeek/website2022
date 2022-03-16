@@ -603,7 +603,8 @@ However, a better, more secure practice is to use a GitHub Personal Access Token
 more customizable permissions and can be revoked without affecting your main GitHub user
 account password.</p>
 <p>Take a moment to work through the instructions on the <a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub personal access tokens</a> page. For this hackweek, you need to check the <strong>repo</strong>, <strong>admin:org</strong>, and <strong>workflow</strong> scope.</p>
-<p><img alt="github-token" src="../_images/github-token.png" /></p>
+<p>Screenshot from <a class="reference external" href="http://github.com">github.com</a> setting up the token:
+<img alt="github-token" src="../_images/github-token.png" /></p>
 <p>Once you have created your token, be sure to save it on your computer in case
 you need to re-authenticate again. The token will give you access to your
 personal GitHub account. It will also give you permission to push changes to your project repository within
@@ -612,7 +613,7 @@ the ICESat-2 Hackweek hackweek organization via the command line.</p>
 the ICESat-2 Hackweek Hackweek organization. Paste the following command into your open
 terminal on the JupyterHub. where you will be prompted for your GitHub username
 and the token.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone <span class="o">{{</span>github_org_url<span class="o">}}</span>.github_setup_check.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ICESAT-2HackWeek/github_setup_check.git
 </pre></div>
 </div>
 <p>Since this is the first time you are interacting from the JupyterHub with GitHub,
