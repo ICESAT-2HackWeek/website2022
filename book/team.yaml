@@ -486,3 +486,16 @@ people:
         link: https://github.com/liuzheng-arctic
     user_groups:
       - Tutorial Helper/Project Helper
+  - title: Ian Joughin
+    avatar: https://coenv-media-gene1ufvxiloffjq.stackpathdns.com/2015/02/Ian-Joughin-528x528.jpg
+    role: Senior Principal Engineer
+    organizations:
+      - name: Polar Science Center/APL/UW
+    bio: >
+     Ian combines the remote sensing with field work and modeling to solve ice dynamics problems. 
+    expertise:
+      - Synthetic Aperture Radar
+      - remote sensing
+      - Ice sheet modeling
+    user_groups:
+      - Tutorial Helper/Project Helper

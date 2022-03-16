@@ -2,14 +2,14 @@
 
 ## Overview
 
-While we will be using a cloud-hosted computing environment during the hackweek 
-({ref}`event-jupyterhub`), it is often desirable to run Python code on your laptop. 
-We also want to ensure that hackweek tutorials or other scientific code is 
+While we will be using a cloud-hosted computing environment during the hackweek
+({ref}`event-jupyterhub`), it is often desirable to run Python code on your laptop.
+We also want to ensure that hackweek tutorials or other scientific code is
 reproducible and can be run on different computers and operating systems.
 
-This lesson takes you through our recommended procedure for managing Python 
-environments and software on your personal computer. We suggest you follow these 
-instructions in advance so that we can help you troubleshoot during the hackweek 
+This lesson takes you through our recommended procedure for managing Python
+environments and software on your personal computer. We suggest you follow these
+instructions in advance so that we can help you troubleshoot during the hackweek
 and have a fully functioning environment after.
 
 ## Python Software
@@ -65,13 +65,13 @@ Python 3.7.3|Anaconda custom (x86_64)| (default, Mar 27 2019, 22:11:17)
 We will be using Python 3 during the week. Since Anaconda (on Linux) expects you to work in the `bash` shell, if this is not already your default shell, you need to set it to be so (use the `chsh -s /bin/bash` command to change your default shell to bash), then you can create an isolated Python environment with the following commands:
 
 ``` bash
-conda create -n py37 python=3.7
+conda create --name py39 python=3.9
 ```
 
-To use Python 3.7:
+To use Python 3.9:
 
 ``` bash
-conda activate py37
+conda activate py39
 ```
 
 To check if you have the correct version activated

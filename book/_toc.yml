@@ -21,6 +21,7 @@ parts:
         - file: preliminary/jupyterhub
         - file: preliminary/git
         - file: preliminary/earthdata
+        - file: preliminary/earthengine
         - file: preliminary/python
 - caption: Tutorials
   chapters:
@@ -28,6 +29,8 @@ parts:
       sections:
         - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
+        - file: tutorials/DataIntegration/dataintegration-1
+        - file: tutorials/DataIntegration/dataintegration-2
         - file: tutorials/DataVisualization/dataviz2d.py
 - caption: Projects
   chapters:
