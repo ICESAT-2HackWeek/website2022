@@ -12,13 +12,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Configure NASA Earthdata Login
-      env:
-        # Warning: careful exposing secrets in scripts
-        EARTHDATA_USER: ${{ secrets.EARTHDATA_USER }}
-        EARTHDATA_PASS: ${{ secrets.EARTHDATA_PASS }}
       run:
-        echo "machine urs.earthdata.nasa.gov login $EARTHDATA_USER password $EARTHDATA_PASS" > ~/.netrc
-        chmod 0600 .netrc
+        echo "machine urs.earthdata.nasa.gov login ${{secrets.EARTHDATA_USER}} password ${{secrets.EARTHDATA_PASS}}" > ~/.netrc
+        chmod 0600 ~/.netrc
 
     - uses: ./.github/actions/buildresources
       with:
