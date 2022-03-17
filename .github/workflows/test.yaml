@@ -6,6 +6,7 @@ on:
     # https://docs.github.com/en/actions/guides/caching-dependencies-to-speed-up-workflows#usage-limits-and-eviction-policy
     - cron:  '0 0 * * 0'
   pull_request_target:
+    types: [labeled, synchronize]
     paths:
       - '.github/**/*'
       - '{{ cookiecutter.repo_directory }}/**'
