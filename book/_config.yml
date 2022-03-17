@@ -37,6 +37,8 @@ execute:
   exclude_patterns: 
     - "**/dataintegration-1.ipynb"
     - "**/dataintegration-2.ipynb"
+    - "**/geospatial-advanced.ipynb"
+
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300
