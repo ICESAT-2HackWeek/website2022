@@ -85,3 +85,32 @@ class dataCollector:
         self.atl08 = pd.DataFrame(data['series'][0]['lat_lon_elev_canopy'], columns = ['lat','lon','h','canopy'])
         if verbose:
             print(' Done.')
+            
+    def plotData(self):
+        import holoviews as hv
+        from holoviews import opts
+        hv.extension('bokeh', 'matplotlib')
+        
+        confdict = {'Noise': -1.0, 'Buffer': 0.0, 'Low': 1.0, 'Medium': 2.0, 'High': 3.0}
+        self.atl03['conf_num'] = [confdict[x] for x in self.atl03.conf]
+        self.atl08['canopy_h'] = self.atl08.h + self.atl08.canopy
+        atl03scat = hv.Scatter(self.atl03, 'lat', vdims=['h', 'conf_num'], label='ATL03')\
+                    .opts(color='conf_num', alpha=1, cmap='dimgray_r')
+        atl06line = hv.Curve(self.atl06, 'lat', 'h', label='ATL06')\
+                    .opts(color='r', alpha=0.5, line_width=3)
+        atl08line = hv.Curve(self.atl08, 'lat', 'h', label='ATL08')\
+                    .opts(color='b', alpha=1, line_width=1)
+        atl08scat = hv.Scatter(self.atl08, 'lat', 'canopy_h', label='ATL08 Canopy')
+        atl08scat = atl08scat.opts(alpha=1, color='g', size=4)
+        hrange = self.atl06.h.max() - self.atl06.h.min()
+        overlay = (atl03scat * atl06line * atl08line * atl08scat).opts(
+            height=500, 
+            width=800,
+            xlabel='latitude', 
+            ylabel='elevation', 
+            title='ICESat-2 track %d %s on %s' % (self.track,self.beam.upper(),self.date),
+            legend_position='bottom_right',
+            ylim=(self.atl06.h.min()-hrange, self.atl06.h.max()+hrange),
+            xlim=(self.atl06.lat.min(), self.atl06.lat.max())
+        )
+        return overlay
