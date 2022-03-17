@@ -486,6 +486,7 @@ people:
         link: https://github.com/liuzheng-arctic
     user_groups:
       - Tutorial Helper/Project Helper
+  # =============
   - title: Ian Joughin
     avatar: https://coenv-media-gene1ufvxiloffjq.stackpathdns.com/2015/02/Ian-Joughin-528x528.jpg
     role: Senior Principal Engineer
@@ -505,8 +506,9 @@ people:
     role: Research Assistant Professor
     organizations:
       - name: Oregon State University
-    bio: Kelsey is a biogeochemical oceanographer and remote sensing specialist. She advocates for open science and for using 
-    satellite data outside of their intended use (ie using ICESat-2 to inform detections of phytoplankton). 
+    bio: > 
+      Kelsey is a biogeochemical oceanographer and remote sensing specialist. She advocates for open science and for using 
+      satellite data outside of their intended use (ie using ICESat-2 to inform detections of phytoplankton). 
     expertise:
       - ICESat-2/icepyx
       - collaborative development
