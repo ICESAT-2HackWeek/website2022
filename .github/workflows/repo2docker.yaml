@@ -3,10 +3,8 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'LICENSE'
-      - 'README.md'
-      - '.gitignore'
+    paths:
+      - 'binder/**'
 
 jobs:
   build-image-and-push:
