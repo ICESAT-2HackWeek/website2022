@@ -33,6 +33,7 @@ parts:
           sections:
             - file: tutorials/geospatial/geospatial-advanced
         - file: tutorials/DataIntegration/dataintegration-1
+        - file: tutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022
         - file: tutorials/DataIntegration/dataintegration-2
 - caption: Projects
   chapters:
