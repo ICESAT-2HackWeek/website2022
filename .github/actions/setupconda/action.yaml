@@ -18,6 +18,8 @@ runs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         miniforge-version: latest
+        miniforge-variant: Mambaforge
+        use-mamba: true
         auto-update-conda: false
         environment-file: conda/conda-${{ runner.os == 'Linux' && 'linux' || 'osx'  }}-64.lock.yml
         activate-environment: hackweek
