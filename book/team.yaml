@@ -499,3 +499,25 @@ people:
       - Ice sheet modeling
     user_groups:
       - Tutorial Helper/Project Helper
+  # =============
+  - title: Kelsey Bisson
+    avatar: https://avatars.githubusercontent.com/u/48059682?v=4
+    role: Research Assistant Professor
+    organizations:
+      - name: Oregon State University
+    bio: Kelsey is a biogeochemical oceanographer and remote sensing specialist. She advocates for open science and for using 
+    satellite data outside of their intended use (ie using ICESat-2 to inform detections of phytoplankton). 
+    expertise:
+      - ICESat-2/icepyx
+      - collaborative development
+      - phytoplankton, ocean
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/kelseybisson
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/icesat2py
+    user_groups:
+      - Tutorial Helper
+  # =============
