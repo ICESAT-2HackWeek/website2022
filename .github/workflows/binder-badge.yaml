@@ -6,7 +6,7 @@ on:
     paths:
       - 'book/tutorials/**'
       - '.github/workflows/binder-badge.yml'
-      - 'binder'
+      - 'binder/**'
 jobs:
   add-badge:
     runs-on: ubuntu-20.04
