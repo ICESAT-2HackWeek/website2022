@@ -35,6 +35,7 @@ parts:
             - file: tutorials/geospatial/geospatial-advanced
         - file: tutorials/DataIntegration/dataintegration-1
         - file: tutorials/DataIntegration/dataintegration-2
+        - file: tutorials/cloud-computing/cloud-computing-tutorial
 - caption: Projects
   chapters:
     - file: projects/index
