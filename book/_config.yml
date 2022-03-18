@@ -35,7 +35,8 @@ parse:
 execute:
   # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
   execute_notebooks: cache
-  exclude_patterns: ["*rendered*", "*skip*"]
+  exclude_patterns:
+    - "**/icepyx-intro-notebook.ipynb"
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300
