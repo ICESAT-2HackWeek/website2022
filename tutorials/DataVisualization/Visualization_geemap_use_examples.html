@@ -1,0 +1,1087 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAltimery and GEE Use Examples &#8212; ICESat-2 Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data integration with ICESat-2 - Part II" href="../DataIntegration/dataintegration-2.html" />
+    <link rel="prev" title="Interactive Visualizion with Open Altimetry &amp; Google Earth Engine" href="Visualization_Earth_Engine_geemap_IS2_HW_2022.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LZVEY6377Z"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-LZVEY6377Z');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ICESat-2 Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to ICESat-2 Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://icesat-2.hackweek.io/index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://icesat-2.hackweek.io/index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthengine.html">
+     Google Earth Engine Sign-Up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/python.html">
+     Python Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyter.html">
+     GitHub, Git, JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataProducts/DataProducts.html">
+     ICESat-2 data products
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../geospatial/geospatial-intro.html">
+     Geospatial Transforms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../geospatial/geospatial-advanced.html">
+       Geospatial Transformations In-depth
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataIntegration/dataintegration-1.html">
+     Data integration with ICESat-2 - Part I
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="Visualization_Earth_Engine_geemap_IS2_HW_2022.html">
+     Interactive Visualizion with Open Altimetry &amp; Google Earth Engine
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       OpenAltimery and GEE Use Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataIntegration/dataintegration-2.html">
+     Data integration with ICESat-2 - Part II
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/list_of_projects.html">
+     List of Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/DataVisualization/Visualization_geemap_use_examples.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/DataVisualization/Visualization_geemap_use_examples.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ICESAT-2HackWeek/website2022/edit/main/book/tutorials/DataVisualization/Visualization_geemap_use_examples.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ICESAT-2HackWeek/website2022/main?urlpath=lab/tree/book/tutorials/DataVisualization/Visualization_geemap_use_examples.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-data-from-tutorial-melt-lake-on-nivlisen-ice-shelf">
+   Example data from tutorial: melt lake on Nivlisen Ice Shelf
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-data">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-geemap-to-find-a-satellite-image">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-and-plot">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nearshore-bathymetry">
+   Nearshore Bathymetry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#half-dome">
+   Half Dome
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-shelf-rift">
+   Ice Shelf Rift
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#melt-lake-in-greenland">
+   Melt Lake in Greenland
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-do-this-all-at-once">
+     Let’s do this all at once
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-covered-lake-on-ice-shelf">
+   Ice-Covered Lake on Ice Shelf
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-the-date-only">
+     Change the date only
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-s-the-lake-now">
+     Where’s the lake now?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>OpenAltimery and GEE Use Examples</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-data-from-tutorial-melt-lake-on-nivlisen-ice-shelf">
+   Example data from tutorial: melt lake on Nivlisen Ice Shelf
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input-data">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-geemap-to-find-a-satellite-image">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-and-plot">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nearshore-bathymetry">
+   Nearshore Bathymetry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#half-dome">
+   Half Dome
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-shelf-rift">
+   Ice Shelf Rift
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Input data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Use geemap to find a satellite image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Download and plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#melt-lake-in-greenland">
+   Melt Lake in Greenland
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-do-this-all-at-once">
+     Let’s do this all at once
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ice-covered-lake-on-ice-shelf">
+   Ice-Covered Lake on Ice Shelf
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-the-date-only">
+     Change the date only
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-s-the-lake-now">
+     Where’s the lake now?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="openaltimery-and-gee-use-examples">
+<h1>OpenAltimery and GEE Use Examples<a class="headerlink" href="#openaltimery-and-gee-use-examples" title="Permalink to this headline">¶</a></h1>
+<p>For the functions shown in the Google Earth Engine tutorial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils.oa</span> <span class="kn">import</span> <span class="n">dataCollector</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If needed, uncomment below to authenticate Earth Engine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ee.Authenticate()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-data-from-tutorial-melt-lake-on-nivlisen-ice-shelf">
+<h2>Example data from tutorial: melt lake on Nivlisen Ice Shelf<a class="headerlink" href="#example-data-from-tutorial-melt-lake-on-nivlisen-ice-shelf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="input-data">
+<h3>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl03?date=2020-01-16&amp;minx=12.107692195781404&amp;miny=-70.34956862465471&amp;maxx=12.426364789894341&amp;maxy=-70.2449105354736&amp;trackId=312&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;beamName=gt1r&amp;beamName=gt1l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2r&#39;</span>
+
+<span class="c1"># initialize the dataCollector</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="use-geemap-to-find-a-satellite-image">
+<h3>Use geemap to find a satellite image<a class="headerlink" href="#use-geemap-to-find-a-satellite-image" title="Permalink to this headline">¶</a></h3>
+<p>(Note: <code class="docutils literal notranslate"><span class="pre">days_buffer=60</span></code> her because ICESat-2 passed over in the winter, when it’s completely dark in Antarctica…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-and-plot">
+<h3>Download and plot<a class="headerlink" href="#download-and-plot" title="Permalink to this headline">¶</a></h3>
+<p>Here we use <code class="docutils literal notranslate"><span class="pre">crs='EPSG:3031'</span></code> (WGS 84 / Antarctic Polar Stereographic) because we know we’re in Antarctica. This would default to <code class="docutils literal notranslate"><span class="pre">crs='EPSG:3857'</span></code> (Web Mercator) if we don’t specify it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;LANDSAT/LC08/C01/T2/LC08_165110_20200114&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3031&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over an ice-covered lake (Nivlisen Ice Shelf)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+This file already exists, not downloading again: downloads/LANDSAT-LC08-C01-T2-LC08_165110_20200114-8bitRGB.tif
+Saved plot to: plots/LANDSAT-LC08-C01-T2-LC08_165110_20200114-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_9_1.png" src="../../_images/Visualization_geemap_use_examples_9_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="nearshore-bathymetry">
+<h2>Nearshore Bathymetry<a class="headerlink" href="#nearshore-bathymetry" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Input data<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl12?date=2020-12-15&amp;minx=-77.858681&amp;miny=25.728091&amp;maxx=-77.831461&amp;maxy=25.832559&amp;trackId=1254&amp;beamName=gt1r&amp;beamName=gt1l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt1r&#39;</span>
+
+<span class="c1"># initialize the dataCollector</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Use geemap to find a satellite image<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Download and plot<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;COPERNICUS/S2_SR/20201213T155521_20201213T155522_T17RRJ&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over nearshore bathymetry&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/COPERNICUS-S2_SR-20201213T155521_20201213T155522_T17RRJ-8bitRGB.tif
+Saved plot to: plots/COPERNICUS-S2_SR-20201213T155521_20201213T155522_T17RRJ-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_15_1.png" src="../../_images/Visualization_geemap_use_examples_15_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="half-dome">
+<h2>Half Dome<a class="headerlink" href="#half-dome" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>Input data<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl06?date=2021-01-10&amp;minx=-119.587886&amp;miny=37.730067&amp;maxx=-119.488871&amp;maxy=37.775582&amp;trackId=265&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;beamName=gt1r&amp;beamName=gt1l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2l&#39;</span>
+
+<span class="c1"># initialize the dataCollector</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Use geemap to find a satellite image<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Download and plot<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;COPERNICUS/S2_SR/20210111T184739_20210111T184945_T10SGG&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over Half Dome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/COPERNICUS-S2_SR-20210111T184739_20210111T184945_T10SGG-8bitRGB.tif
+Saved plot to: plots/COPERNICUS-S2_SR-20210111T184739_20210111T184945_T10SGG-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_21_1.png" src="../../_images/Visualization_geemap_use_examples_21_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ice-shelf-rift">
+<h2>Ice Shelf Rift<a class="headerlink" href="#ice-shelf-rift" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Input data<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl06?date=2020-01-26&amp;minx=99.85237589431291&amp;miny=-66.35086607273658&amp;maxx=100.0381369994367&amp;maxy=-66.19796463586664&amp;trackId=476&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt3r&#39;</span>
+
+<span class="c1"># initialize the dataCollector</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Use geemap to find a satellite image<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Download and plot<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;LANDSAT/LC08/C01/T2/LC08_112107_20200127&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3031&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over a Rift in Shackleton Ice Shelf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/LANDSAT-LC08-C01-T2-LC08_112107_20200127-8bitRGB.tif
+Saved plot to: plots/LANDSAT-LC08-C01-T2-LC08_112107_20200127-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_27_1.png" src="../../_images/Visualization_geemap_use_examples_27_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="melt-lake-in-greenland">
+<h2>Melt Lake in Greenland<a class="headerlink" href="#melt-lake-in-greenland" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="let-s-do-this-all-at-once">
+<h3>Let’s do this all at once<a class="headerlink" href="#let-s-do-this-all-at-once" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl08?date=2019-08-22&amp;minx=-22.184563606833546&amp;miny=79.06859700015742&amp;maxx=-21.876748966627616&amp;maxy=79.1380278178076&amp;trackId=848&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt3l&#39;</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+<span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;COPERNICUS/S2_SR/20190823T152819_20190823T152813_T27XVH&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3995&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over a Greenland melt lake&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/COPERNICUS-S2_SR-20190823T152819_20190823T152813_T27XVH-8bitRGB.tif
+Saved plot to: plots/COPERNICUS-S2_SR-20190823T152819_20190823T152813_T27XVH-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_30_1.png" src="../../_images/Visualization_geemap_use_examples_30_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ice-covered-lake-on-ice-shelf">
+<h2>Ice-Covered Lake on Ice Shelf<a class="headerlink" href="#ice-covered-lake-on-ice-shelf" title="Permalink to this headline">¶</a></h2>
+<p>(Note: we use <code class="docutils literal notranslate"><span class="pre">days_buffer=60</span></code> her because ICESat-2 passed over in the winter, when it’s completely dark in Antarctica…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl06?date=2019-05-15&amp;minx=71.42728712317059&amp;miny=-71.35245299984994&amp;maxx=71.58501878594811&amp;maxy=-71.26628346466289&amp;trackId=721&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;outputFormat=json&#39;</span>
+<span class="n">track</span> <span class="o">=</span> <span class="mi">721</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt3r&#39;</span>
+<span class="n">latlims</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">71.35</span><span class="p">,</span> <span class="o">-</span><span class="mf">71.26</span><span class="p">]</span>
+<span class="n">lonlims</span> <span class="o">=</span> <span class="p">[</span><span class="mf">71.41</span><span class="p">,</span> <span class="mf">71.59</span><span class="p">]</span>
+<span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2019-05-15&#39;</span><span class="p">,</span> <span class="n">track</span><span class="o">=</span><span class="n">track</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">latlims</span><span class="o">=</span><span class="n">latlims</span><span class="p">,</span> <span class="n">lonlims</span><span class="o">=</span><span class="n">lonlims</span><span class="p">)</span>
+<span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;LANDSAT/LC08/C01/T2/LC08_127110_20190322&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3031&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 data over an ice-covered lake&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/LANDSAT-LC08-C01-T2-LC08_127110_20190322-8bitRGB.tif
+Saved plot to: plots/LANDSAT-LC08-C01-T2-LC08_127110_20190322-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_33_1.png" src="../../_images/Visualization_geemap_use_examples_33_1.png" />
+</div>
+</div>
+<div class="section" id="change-the-date-only">
+<h3>Change the date only<a class="headerlink" href="#change-the-date-only" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myData</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2019-11-13&#39;</span><span class="p">,</span> <span class="n">track</span><span class="o">=</span><span class="n">track</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">latlims</span><span class="o">=</span><span class="n">latlims</span><span class="p">,</span> <span class="n">lonlims</span><span class="o">=</span><span class="n">lonlims</span><span class="p">)</span>
+<span class="c1"># myData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="where-s-the-lake-now">
+<h3>Where’s the lake now?<a class="headerlink" href="#where-s-the-lake-now" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene_id</span><span class="o">=</span><span class="s1">&#39;COPERNICUS/S2_SR/20191119T034629_20191119T034625_T42DWF&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">myData</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">scene_id</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3031&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Where did the lake go?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has not yet been requested from OpenAltimetry yet. Doing this now.
+---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+Downloaded downloads/COPERNICUS-S2_SR-20191119T034629_20191119T034625_T42DWF-8bitRGB.tif
+Saved plot to: plots/COPERNICUS-S2_SR-20191119T034629_20191119T034625_T42DWF-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<img alt="../../_images/Visualization_geemap_use_examples_37_1.png" src="../../_images/Visualization_geemap_use_examples_37_1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/DataVisualization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Visualization_Earth_Engine_geemap_IS2_HW_2022.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Interactive Visualizion with Open Altimetry &amp; Google Earth Engine</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../DataIntegration/dataintegration-2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data integration with ICESat-2 - Part II</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

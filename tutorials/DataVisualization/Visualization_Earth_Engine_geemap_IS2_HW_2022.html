@@ -1,0 +1,1624 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Visualizion with Open Altimetry &amp; Google Earth Engine &#8212; ICESat-2 Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="OpenAltimery and GEE Use Examples" href="Visualization_geemap_use_examples.html" />
+    <link rel="prev" title="Data integration with ICESat-2 - Part I" href="../DataIntegration/dataintegration-1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LZVEY6377Z"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-LZVEY6377Z');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ICESat-2 Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to ICESat-2 Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://icesat-2.hackweek.io/index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://icesat-2.hackweek.io/index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthengine.html">
+     Google Earth Engine Sign-Up
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/python.html">
+     Python Installation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyter.html">
+     GitHub, Git, JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataProducts/DataProducts.html">
+     ICESat-2 data products
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../geospatial/geospatial-intro.html">
+     Geospatial Transforms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../geospatial/geospatial-advanced.html">
+       Geospatial Transformations In-depth
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataIntegration/dataintegration-1.html">
+     Data integration with ICESat-2 - Part I
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     Interactive Visualizion with Open Altimetry &amp; Google Earth Engine
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Visualization_geemap_use_examples.html">
+       OpenAltimery and GEE Use Examples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../DataIntegration/dataintegration-2.html">
+     Data integration with ICESat-2 - Part II
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/list_of_projects.html">
+     List of Projects
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ICESAT-2HackWeek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ICESAT-2HackWeek/website2022/edit/main/book/tutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ICESAT-2HackWeek/website2022/main?urlpath=lab/tree/book/tutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-environment">
+   Computing environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-earth-engine-authentication-and-initialization">
+   Google Earth Engine Authentication and Initialization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-data-from-the-openaltimetry-api">
+   Downloading data from the OpenAltimetry API
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-short-explanation-of-how-i-got-the-data">
+     A short explanation of how I got the data:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-openaltimetry-info-into-python">
+     Getting the OpenAltimetry info into python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requesting-the-data-from-the-openaltimetry-api">
+     Requesting the data from the OpenAltimetry API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-the-atl03-atl06-and-atl08-data">
+   Plotting the ATL03, ATL06 and ATL08 data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-the-plot-to-a-file">
+   Saving the Plot to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ground-track-stats">
+   Ground Track Stats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-earth-engine">
+   Google Earth Engine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#show-a-ground-track-on-a-map">
+   Show a ground track on a map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#query-for-sentinel-2-and-landsat-8-images">
+   Query for Sentinel-2 and Landsat 8 images
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-an-image-collection">
+     Access an image collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter-an-image-collection">
+     Filter an image collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-image-colletion-info">
+     Get image colletion info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-images-by-id">
+     Access images by ID
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-landsat-image-to-the-map">
+     Add a Landsat image to the map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-multiple-images-as-layers">
+     Add multiple images as layers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-images-from-earth-engine">
+     Download images from Earth Engine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-geotiff-in-rasterio">
+     Open a GeoTIFF in rasterio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-a-geotiff-in-matplotlib">
+     Plot a GeoTIFF in Matplotlib
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transform-the-ground-track-into-the-image-crs">
+     transform the ground track into the image CRS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#putting-it-all-together">
+   Putting it all together
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Interactive Visualizion with Open Altimetry & Google Earth Engine</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-environment">
+   Computing environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-earth-engine-authentication-and-initialization">
+   Google Earth Engine Authentication and Initialization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-data-from-the-openaltimetry-api">
+   Downloading data from the OpenAltimetry API
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-short-explanation-of-how-i-got-the-data">
+     A short explanation of how I got the data:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-openaltimetry-info-into-python">
+     Getting the OpenAltimetry info into python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requesting-the-data-from-the-openaltimetry-api">
+     Requesting the data from the OpenAltimetry API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-the-atl03-atl06-and-atl08-data">
+   Plotting the ATL03, ATL06 and ATL08 data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving-the-plot-to-a-file">
+   Saving the Plot to a file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ground-track-stats">
+   Ground Track Stats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#google-earth-engine">
+   Google Earth Engine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#show-a-ground-track-on-a-map">
+   Show a ground track on a map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#query-for-sentinel-2-and-landsat-8-images">
+   Query for Sentinel-2 and Landsat 8 images
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-an-image-collection">
+     Access an image collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter-an-image-collection">
+     Filter an image collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-image-colletion-info">
+     Get image colletion info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#access-images-by-id">
+     Access images by ID
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-landsat-image-to-the-map">
+     Add a Landsat image to the map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-multiple-images-as-layers">
+     Add multiple images as layers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-images-from-earth-engine">
+     Download images from Earth Engine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-a-geotiff-in-rasterio">
+     Open a GeoTIFF in rasterio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-a-geotiff-in-matplotlib">
+     Plot a GeoTIFF in Matplotlib
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transform-the-ground-track-into-the-image-crs">
+     transform the ground track into the image CRS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#putting-it-all-together">
+   Putting it all together
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2">
+   Exercise 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="interactive-visualizion-with-open-altimetry-google-earth-engine">
+<h1>Interactive Visualizion with Open Altimetry &amp; Google Earth Engine<a class="headerlink" href="#interactive-visualizion-with-open-altimetry-google-earth-engine" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Load ICESat-2 data using the OpenAltimetry API.</p></li>
+<li><p>Query Google Earth Engine for geospatial raster data and display it along with ICESat-2 ground tracks on an interactive map.</p></li>
+<li><p>Better understand what you are looking at in ATL03 features without downloading a bunch of files.</p></li>
+</ul>
+</div>
+<div class="section" id="computing-environment">
+<h2>Computing environment<a class="headerlink" href="#computing-environment" title="Permalink to this headline">¶</a></h2>
+<p>We’ll be using the following Python libraries in this notebook:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">ee</span>
+<span class="kn">import</span> <span class="nn">geemap</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">from</span> <span class="nn">rasterio</span> <span class="kn">import</span> <span class="n">plot</span>
+<span class="kn">from</span> <span class="nn">rasterio</span> <span class="kn">import</span> <span class="n">warp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The import below is a class that I wrote myself. It helps us read and store data from the OpenAltimetry API.<br />
+If you are interested in how this works, you can find the code in <code class="docutils literal notranslate"><span class="pre">utils/oa.py</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils.oa</span> <span class="kn">import</span> <span class="n">dataCollector</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="google-earth-engine-authentication-and-initialization">
+<h2>Google Earth Engine Authentication and Initialization<a class="headerlink" href="#google-earth-engine-authentication-and-initialization" title="Permalink to this headline">¶</a></h2>
+<p>GEE requires you to authenticate your access, so if <code class="docutils literal notranslate"><span class="pre">ee.Initialize()</span></code> does not work you first need to run <code class="docutils literal notranslate"><span class="pre">ee.Authenticate()</span></code>. This gives you a link at which you can use your google account that is associated with GEE to get an authorization code. Copy the authorization code into the input field and hit <em>enter</em> to complete authentication.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">ee</span><span class="o">.</span><span class="n">Initialize</span><span class="p">()</span>
+<span class="k">except</span><span class="p">:</span> 
+    <span class="n">ee</span><span class="o">.</span><span class="n">Authenticate</span><span class="p">()</span>
+    <span class="n">ee</span><span class="o">.</span><span class="n">Initialize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-data-from-the-openaltimetry-api">
+<h2>Downloading data from the OpenAltimetry API<a class="headerlink" href="#downloading-data-from-the-openaltimetry-api" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say we have found some data that looks weird to us, and we don’t know what’s going on.</p>
+<p><img alt="gif showing how to get to the data in OpenAltimetry" src="https://user-images.githubusercontent.com/23487320/159029794-748ff020-32a7-4794-958d-d27340ffd6ca.gif" /></p>
+<div class="section" id="a-short-explanation-of-how-i-got-the-data">
+<h3>A short explanation of how I got the data:<a class="headerlink" href="#a-short-explanation-of-how-i-got-the-data" title="Permalink to this headline">¶</a></h3>
+<p>I went to <a class="reference external" href="https://openaltimetry.org/">openaltimetry.org</a> and selected <strong>BROWSE ICESAT-2 DATA</strong>. Then I selected <strong>ATL 06</strong> (Land Ice Height) on the top right, and switched the projection🌎 to <strong>Antarctic</strong>. Then I selected <strong>January 16, 2020</strong> in the calendar📅 on the bottom left, and toggled the <strong>cloud</strong>☁️ button to show MODIS imagery of that date. I then zoomed in on my region of interest (Nivlisen Ice Shelf). Looks like there’s a cloud in MODIS, but ICESat-2 has data. I wonder what this cloud is hiding?🤔</p>
+<p>To find out, I clicked on <strong>SELECT A REGION</strong> on the top left, and drew a rectangle around that mysterious cloud. When right-clicking on that rectangle, I could select <strong>View Elevation profile</strong>. This opened a new tab, and showed me ATL06 and ATL08 elevations.</p>
+<p>It looks like ATL06 can’t decide where the surface is, and ATL08 tells me that there’s a forest canopy on this ice shelf in Antarctica?? To get to the bottom of this, I scrolled all the way down and selected 🛈<strong>Get API URL</strong>. The website confirms that the <em>“API endpoint was copied to clipboard.”</em> Now I can use this to access the data myself.</p>
+<p><em>Note: Instead of trying to find Nivlisen Ice Shelf yourself, you can access the OpenAltimetry page shown above by going to <a class="reference external" href="https://openaltimetry.org/data/icesat2/?annoId=501&amp;shareKey=3407f280d15816afe4bf77cbb719210e">this annotation🏷️</a>. Just left-click on the red box and select “View Elevation Profile”.</em></p>
+</div>
+<div class="section" id="getting-the-openaltimetry-info-into-python">
+<h3>Getting the OpenAltimetry info into python<a class="headerlink" href="#getting-the-openaltimetry-info-into-python" title="Permalink to this headline">¶</a></h3>
+<p>All we need to do is to paste the API URL that we copied from the webpage into a string.
+We also need to specify which beam we would like to look at. The <strong>GT2R</strong> ground track looks funky, so let’s look at that one!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># paste the API URL from OpenAltimetry below, and specify the beam you are interested in</span>
+<span class="n">oa_api_url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl03?date=2020-01-16&amp;minx=12.107692195781404&amp;miny=-70.34956862465471&amp;maxx=12.426364789894341&amp;maxy=-70.2449105354736&amp;trackId=312&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;beamName=gt1r&amp;beamName=gt1l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2r&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now initialize a <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code> object, using the copy-pasted OpenAltimetry API URL, and the beam we would like to look at.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is2data</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">oa_api_url</span><span class="p">,</span><span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alternatively, we could use a date, track number, beam, and lat/lon bounding box as input to the <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latlims</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">70.34957</span><span class="p">,</span> <span class="o">-</span><span class="mf">70.24491</span><span class="p">]</span>
+<span class="n">lonlims</span> <span class="o">=</span> <span class="p">[</span><span class="mf">12.10769</span><span class="p">,</span> <span class="mf">12.42636</span><span class="p">]</span>
+<span class="n">rgt</span> <span class="o">=</span> <span class="mi">312</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2r&#39;</span>
+<span class="n">date</span> <span class="o">=</span> <span class="s1">&#39;2020-01-16&#39;</span>
+<span class="n">is2data</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">latlims</span><span class="o">=</span><span class="n">latlims</span><span class="p">,</span> <span class="n">lonlims</span><span class="o">=</span><span class="n">lonlims</span><span class="p">,</span> <span class="n">track</span><span class="o">=</span><span class="n">rgt</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that this also constructs the API url for us.</p>
+</div>
+<div class="section" id="requesting-the-data-from-the-openaltimetry-api">
+<h3>Requesting the data from the OpenAltimetry API<a class="headerlink" href="#requesting-the-data-from-the-openaltimetry-api" title="Permalink to this headline">¶</a></h3>
+<p>Here we use the <code class="docutils literal notranslate"><span class="pre">requestData()</span></code> function of the <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code> class, which is defined in <code class="docutils literal notranslate"><span class="pre">utils/oa.py</span></code>. It downloads ATL03, ATL06 and ATL08 data based on the inputs with which we initialized our <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code>, and writes them to pandas dataframes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is2data</span><span class="o">.</span><span class="n">requestData</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data are now stored as data frames in our <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code> object. To verify this, we can run the cell below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">vars</span><span class="p">(</span><span class="n">is2data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-the-atl03-atl06-and-atl08-data">
+<h2>Plotting the ATL03, ATL06 and ATL08 data<a class="headerlink" href="#plotting-the-atl03-atl06-and-atl08-data" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s plot this data. Here, we are just creating an empty figure <code class="docutils literal notranslate"><span class="pre">fig</span></code> with axes <code class="docutils literal notranslate"><span class="pre">ax</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the figure and axis</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s plot ATL06 elevation versus latitude on these axes above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atl06</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">is2data</span><span class="o">.</span><span class="n">atl06</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">is2data</span><span class="o">.</span><span class="n">atl06</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ATL06&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, we can add ATL08 to the plot. Let’s make this one dashed by adding <code class="docutils literal notranslate"><span class="pre">linestyle='--'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atl08</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">is2data</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">is2data</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ATL08&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For ATL03, we want a scatter plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atl03</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">is2data</span><span class="o">.</span><span class="n">atl03</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">is2data</span><span class="o">.</span><span class="n">atl03</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ATL03&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now this doesn’t look so great. We’re not interested in all these noise photons, so we need to adjust the extent of the axes.
+We can do this interactively on the plot.</p>
+<p>Alternatively, we could adjust the axes to whichever values we like by calling something like the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="o">-</span><span class="mf">70.34</span><span class="p">,</span> <span class="o">-</span><span class="mf">70.25</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="mi">23</span><span class="p">,</span> <span class="mi">47</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Have you ever lost points on a problem set because you didn’t label your axes? Let’s label them axes!<br />
+…and let’s throw in a fun title for good measure too.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;latitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;elevation in meters&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Some ICESat-2 data I found on OpenAltimetry!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To know what we’re looking at, we need a legend as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>…and we can do all sorts of other funky stuff. Here it’s nice to have some context about the data. (Because we don’t want to find this plot somewhere in a year from now just to realize we have no idea where the data came from…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add some text to provide info on what is plotted</span>
+<span class="n">info</span> <span class="o">=</span> <span class="s1">&#39;ICESat-2 track </span><span class="si">{track:d}</span><span class="s1">-</span><span class="si">{beam:s}</span><span class="s1"> on </span><span class="si">{date:s}</span><span class="se">\n</span><span class="s1">(</span><span class="si">{lon:.4f}</span><span class="s1">E, </span><span class="si">{lat:.4f}</span><span class="s1">N)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="n">is2data</span><span class="o">.</span><span class="n">track</span><span class="p">,</span> 
+                                                                                        <span class="n">beam</span><span class="o">=</span><span class="n">is2data</span><span class="o">.</span><span class="n">beam</span><span class="p">,</span> 
+                                                                                        <span class="n">date</span><span class="o">=</span><span class="n">is2data</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> 
+                                                                                        <span class="n">lon</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">is2data</span><span class="o">.</span><span class="n">lonlims</span><span class="p">),</span> 
+                                                                                        <span class="n">lat</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">is2data</span><span class="o">.</span><span class="n">latlims</span><span class="p">))</span>
+<span class="n">infotext</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span>
+                   <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> 
+                   <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> 
+                   <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span>
+                   <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">edgecolor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-plot-to-a-file">
+<h2>Saving the Plot to a file<a class="headerlink" href="#saving-the-plot-to-a-file" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;my-plot.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is not really publication quality, so we can adjust the resolution using the <code class="docutils literal notranslate"><span class="pre">dpi</span></code> argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;my-plot-better-resolution.jpg&#39;</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To make plots easier to produce, the <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code> class also has a method to plot the data that we downloaded.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">is2data</span><span class="o">.</span><span class="n">plotData</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s wrap this all into a function!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_from_oa_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">gtx</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;ICESat-2 Data&#39;</span><span class="p">):</span>
+    <span class="n">mydata</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">oaurl</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">)</span>
+    <span class="n">mydata</span><span class="o">.</span><span class="n">requestData</span><span class="p">()</span>
+    <span class="n">myplot</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">plotData</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">myplot</span><span class="p">,</span> <span class="n">mydata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>Find some data from openaltimetry that you would like to read into python, and plot it here.</strong></p>
+<p>Look for small-scale features, where ATL03 photon cloud may give us some information that we would not get from ATL08 or ATL06 (Say a few hundred meters to 20 kilometers along-track. <em>Hint: OpenAltimetry has a scale bar.</em>)</p>
+<p>If you don’t know where to start with OpenAltimetry, you can look at any of these annotations below:</p>
+<ul class="simple">
+<li><p>Like mountains? Look at gt2l <a class="reference external" href="http://openaltimetry.org/data/icesat2/?annoId=260&amp;shareKey=6bcd62fe2f581f61c4a1b4b5a4f07de5">here</a>.</p></li>
+<li><p>Like the ocean? Look at gt1r <a class="reference external" href="http://openaltimetry.org/data/icesat2/?annoId=505&amp;shareKey=4345379a3318b8c055d026723ca60162">here</a>.</p></li>
+<li><p>Like the previous example but don’t wanna go to Antarctica? Look at gt3l <a class="reference external" href="http://openaltimetry.org/data/icesat2/?annoId=260&amp;shareKey=6bcd62fe2f581f61c4a1b4b5a4f07de5">here</a>.</p></li>
+<li><p>Curious about more ice shelf suff? Look at gt3r <a class="reference external" href="http://openaltimetry.org/data/icesat2/?annoId=207&amp;shareKey=e90e9fb891a716064f5cc8b0e13f750a">here</a>.</p></li>
+<li><p>Can you tell what’s going on in gt3r <a class="reference external" href="http://openaltimetry.org/data/icesat2/?annoId=504&amp;shareKey=aae14eeca098358c6f9e686ca659a93e">here</a>?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### YOUR CODE GOES HERE</span>
+<span class="c1"># url = &#39;http://???.org/??&#39;</span>
+<span class="c1"># gtx = &#39;gt??&#39;</span>
+<span class="c1"># myplot, mydata = plot_from_oa_url(url=url, gtx=gtx, title=&#39;&lt;your title here&gt;&#39;)</span>
+<span class="c1"># myplot.savefig(&#39;geemap_tutorial_exercise1.jpg&#39;, dpi=300)</span>
+<span class="c1"># myplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://openaltimetry.org/data/api/icesat2/atl03?date=2020-01-16&amp;minx=12.107692195781404&amp;miny=-70.34956862465471&amp;maxx=12.426364789894341&amp;maxy=-70.2449105354736&amp;trackId=312&amp;beamName=gt3r&amp;beamName=gt3l&amp;beamName=gt2r&amp;beamName=gt2l&amp;beamName=gt1r&amp;beamName=gt1l&amp;outputFormat=json&#39;</span>
+<span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2r&#39;</span>
+<span class="n">myplot</span><span class="p">,</span> <span class="n">mydata</span> <span class="o">=</span> <span class="n">plot_from_oa_url</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">gtx</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Exciting Data!!!&#39;</span><span class="p">)</span>
+<span class="n">myplot</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;geemap_tutorial_exercise1.jpg&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ground-track-stats">
+<h2>Ground Track Stats<a class="headerlink" href="#ground-track-stats" title="Permalink to this headline">¶</a></h2>
+<p>So far we have only seen the data in elevation vs. latitude space. It’s probably good to know what the scale on the x-axis is here in units that we’re familiar with.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dist_latlon2meters</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">):</span>
+    <span class="c1"># returns the distance between two coordinate points - (lon1, lat1) and (lon2, lat2) along the earth&#39;s surface in meters.</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mi">6371000</span>
+    <span class="k">def</span> <span class="nf">deg2rad</span><span class="p">(</span><span class="n">deg</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">deg</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
+    <span class="n">dlat</span> <span class="o">=</span> <span class="n">deg2rad</span><span class="p">(</span><span class="n">lat2</span><span class="o">-</span><span class="n">lat1</span><span class="p">)</span>
+    <span class="n">dlon</span> <span class="o">=</span> <span class="n">deg2rad</span><span class="p">(</span><span class="n">lon2</span><span class="o">-</span><span class="n">lon1</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlat</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlat</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">lat1</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">lat2</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlon</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">dlon</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">R</span> <span class="o">*</span> <span class="n">c</span>
+
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">ground_track_length</span> <span class="o">=</span> <span class="n">dist_latlon2meters</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The ground track is about </span><span class="si">%.1f</span><span class="s1"> kilometers long.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ground_track_length</span><span class="o">/</span><span class="mf">1e3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="google-earth-engine">
+<h2>Google Earth Engine<a class="headerlink" href="#google-earth-engine" title="Permalink to this headline">¶</a></h2>
+<p>Google Earth Engine (GEE) has a large <a class="reference external" href="https://developers.google.com/earth-engine/datasets">catalog</a> of geospatial raster data, which is ready for analysis in the cloud. It also comes with an online JavaScript code editor.<br />
+<a class="reference internal" href="../../_images/gee_codeeditor.png"><img alt="gif showing how to get to the data in OpenAltimetry" src="../../_images/gee_codeeditor.png" style="width: 600px;" /></a><br />
+But since we all seem to be using python, it would be nice to have these capabilities available in our Jupyter comfort zone…</p>
+<p>Thankfully, there is a <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api">python API for GEE</a>, which we have imported using <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">ee</span></code> earlier. It doesn’t come with an interactive map, but the python package <a class="reference external" href="https://geemap.org/">geemap</a> has us covered!</p>
+</div>
+<div class="section" id="show-a-ground-track-on-a-map">
+<h2>Show a ground track on a map<a class="headerlink" href="#show-a-ground-track-on-a-map" title="Permalink to this headline">¶</a></h2>
+<p>We can start working on our map by calling <code class="docutils literal notranslate"><span class="pre">geemap.Map()</span></code>. This just gives us a world map with a standard basemap.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">Map</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we need to add our ICESat-2 gound track to that map. Let’s use the lon/lat coordinates of the ATL08 data product for this.<br />
+We also need to specify which <strong>Coordinate Reference System (CRS)</strong> our data is in. The longitude/latitude system that we are all quite familiar with is referenced by <a class="reference external" href="https://epsg.io/4326"><code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code></a>. To add the ground track to the map we need to turn it into an <a class="reference external" href="https://developers.google.com/earth-engine/guides/feature_collections">Earth Engine “Feature Collection”</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ground_track_coordinates</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+<span class="n">ground_track_projection</span> <span class="o">=</span> <span class="s1">&#39;EPSG:4326&#39;</span> <span class="c1"># &lt;-- this specifies that our data longitude/latitude in degrees [https://epsg.io/4326]</span>
+<span class="n">gtx_feature</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">LineString</span><span class="p">(</span><span class="n">coords</span><span class="o">=</span><span class="n">ground_track_coordinates</span><span class="p">,</span> 
+                                      <span class="n">proj</span><span class="o">=</span><span class="n">ground_track_projection</span><span class="p">,</span> 
+                                      <span class="n">geodesic</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="n">gtx_feature</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have it in the right format, we can add it as a <strong>layer</strong> to the map.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">gtx_feature</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span> <span class="s1">&#39;ground track&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>According to the cell above this should be a red line. But we still can’t see it, because we first need to tell the map where to look for it.<br />
+Let’s calculate the center longitude and latitude, and center the map on it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">center_lon</span> <span class="o">=</span> <span class="p">(</span><span class="n">lon1</span> <span class="o">+</span> <span class="n">lon2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">center_lat</span> <span class="o">=</span> <span class="p">(</span><span class="n">lat1</span> <span class="o">+</span> <span class="n">lat2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="n">center_lon</span><span class="p">,</span> <span class="n">center_lat</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we actually couldn’t see it because it was in Antarctica (of all places!).<br />
+Unfortunately the basemap here doesn’t give us much more information. Let’s add a satellite imagery basemap.
+This is a good time to look at the layer control on the top right.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;SATELLITE&#39;</span><span class="p">)</span> <span class="c1"># &lt;-- this adds a layer called &#39;Google Satellite&#39;</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">layer_opacity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Google Satellite&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="n">center_lon</span><span class="p">,</span> <span class="n">center_lat</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">7</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay, we’re on an ice shelf!
+But the basemap was plotted over the ground track, so let’s add that back again on top of it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">gtx_feature</span><span class="p">,{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span><span class="s1">&#39;ground track&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>…looks like this basemap still doesn’t give us any more clues about the nature of this weird ICESat-2 data. Let’s dig deeper.</p>
+</div>
+<div class="section" id="query-for-sentinel-2-and-landsat-8-images">
+<h2>Query for Sentinel-2 and Landsat 8 images<a class="headerlink" href="#query-for-sentinel-2-and-landsat-8-images" title="Permalink to this headline">¶</a></h2>
+<p>Both of these satellites take images of most places on our planet every week or so. Maybe these images can tell us what was happening here around the same time that ICESat-2 acquired our data?</p>
+<p>The imagery scenes of both satellites (amongst many more) live in image collections on Google Earth Engine.<br />
+You can find all collections here: <a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/">https://developers.google.com/earth-engine/datasets/catalog/</a></p>
+<p>Let’s have a look at Landsat 8 first. The above link tells us we can find some images under <code class="docutils literal notranslate"><span class="pre">'LANDSAT/LC08/C01/T2'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection_name1</span> <span class="o">=</span> <span class="s1">&#39;LANDSAT/LC08/C01/T2&#39;</span>  <span class="c1"># Landsat 8 earth engine collection </span>
+<span class="c1"># https://developers.google.com/earth-engine/datasets/catalog/LANDSAT_LC08_C01_T2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="access-an-image-collection">
+<h3>Access an image collection<a class="headerlink" href="#access-an-image-collection" title="Permalink to this headline">¶</a></h3>
+<p>To access the collection, we call <code class="docutils literal notranslate"><span class="pre">ee.ImageCollection</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">ImageCollection</span><span class="p">(</span><span class="n">collection_name1</span><span class="p">)</span>
+<span class="n">collection</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Can we find out how many images there are in total?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_scenes</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="n">number_of_scenes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Actually, asking for the size of the collection does not do anything on the client side (our local machine). It just tells Earth Engine on the server-side that this variable refers to the size of the collection, which we may need later to do some analysis on the server.</p>
+<p>To get this information to our own machine, we need to call <code class="docutils literal notranslate"><span class="pre">.getInfo()</span></code>. <em>(This takes a while…)</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_scenes</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<span class="n">number_of_scenes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filter-an-image-collection">
+<h3>Filter an image collection<a class="headerlink" href="#filter-an-image-collection" title="Permalink to this headline">¶</a></h3>
+<p>Who wants to look at almost a million pictures? I don’t. So let’s try to narrow it down.<br />
+Let’s start with only images that overlap with the center of our ground track.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the point of interest (center of the track) as an Earth Engine Geometry</span>
+<span class="n">point_of_interest</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Geometry</span><span class="o">.</span><span class="n">Point</span><span class="p">(</span><span class="n">center_lon</span><span class="p">,</span> <span class="n">center_lat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">filterBounds</span><span class="p">(</span><span class="n">point_of_interest</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are </span><span class="si">{number:d}</span><span class="s1"> images in the spatially filtered collection.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Much better! Now let’s only look at images that were taken soon before or after ICESat-2 passed over this spot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days_buffer_imagery</span> <span class="o">=</span> <span class="mi">15</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dateformat</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span>
+<span class="n">datetime_requested</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">mydata</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="n">dateformat</span><span class="p">)</span>
+<span class="n">search_start</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime_requested</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days_buffer_imagery</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dateformat</span><span class="p">)</span>
+<span class="n">search_end</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime_requested</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days_buffer_imagery</span><span class="p">))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dateformat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Search for imagery from </span><span class="si">{start:s}</span><span class="s1"> to </span><span class="si">{end:s}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">search_start</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">search_end</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">filterDate</span><span class="p">(</span><span class="n">search_start</span><span class="p">,</span> <span class="n">search_end</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are </span><span class="si">{number:d}</span><span class="s1"> images in the spatially filtered collection.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also sort the collection by date (<code class="docutils literal notranslate"><span class="pre">'system:time_start'</span></code>), to make things a little less messy moving forward.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collection</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;system:time_start&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-image-colletion-info">
+<h3>Get image colletion info<a class="headerlink" href="#get-image-colletion-info" title="Permalink to this headline">¶</a></h3>
+<p>Again, we need to use <code class="docutils literal notranslate"><span class="pre">.getInfo()</span></code> to actually see any information on our end.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a python dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see what’s inside!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">'features'</span></code> sounds like it could hold information about the images we are trying to find…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A list of 10 things! Those are probably the 10 images in the collection. Let’s pick the first one and dig deeper!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="n">feature_number</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks like we found a reference to a Landsat image! Let’s look at the <code class="docutils literal notranslate"><span class="pre">'bands'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">band</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="n">feature_number</span><span class="p">][</span><span class="s1">&#39;bands&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">band</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">'properties'</span></code> could be useful too!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s a lot going on right there! But <code class="docutils literal notranslate"><span class="pre">'LANDSAT_PRODUCT_ID'</span></code> is probably useful. Let’s go through all our features and print the product id.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;LANDSAT_PRODUCT_ID&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="access-images-by-id">
+<h3>Access images by ID<a class="headerlink" href="#access-images-by-id" title="Permalink to this headline">¶</a></h3>
+<p>Turns out we can access images from the <code class="docutils literal notranslate"><span class="pre">'image</span> <span class="pre">collection'</span></code> by their <code class="docutils literal notranslate"><span class="pre">'id'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">this_id</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="n">feature_number</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">this_id</span><span class="p">)</span>
+<span class="n">myImage</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">this_id</span><span class="p">)</span>
+<span class="n">myImage</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="add-a-landsat-image-to-the-map">
+<h3>Add a Landsat image to the map<a class="headerlink" href="#add-a-landsat-image-to-the-map" title="Permalink to this headline">¶</a></h3>
+<p>The visible bands in Landsat 8 are <code class="docutils literal notranslate"><span class="pre">'B2'</span></code>:blue, <code class="docutils literal notranslate"><span class="pre">'B3'</span></code>:green, <code class="docutils literal notranslate"><span class="pre">'B4'</span></code>:red.<br />
+So to show a “true color” RGB composite image on the map, we need to select these bands in the R-G-B order:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myImage_RGB</span> <span class="o">=</span> <span class="n">myImage</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">myImage_RGB</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my image&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This seems to have worked. But there’s clouds everywhere. We can try another random image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">feature_number</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">myImage</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="n">feature_number</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+<span class="n">myImage_RGB</span> <span class="o">=</span> <span class="n">myImage</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">myImage_RGB</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;my other image&#39;</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">gtx_feature</span><span class="p">,{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span><span class="s1">&#39;ground track&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>More clouds…</strong></p>
+</div>
+<div class="section" id="add-multiple-images-as-layers">
+<h3>Add multiple images as layers<a class="headerlink" href="#add-multiple-images-as-layers" title="Permalink to this headline">¶</a></h3>
+<p>We need a better approach to get anywhere here.<br />
+Let’s start over with a new map, and add all the images we have as different layers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span> <span class="o">=</span> <span class="n">geemap</span><span class="o">.</span><span class="n">Map</span><span class="p">()</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="s1">&#39;SATELLITE&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feature</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]):</span>
+    <span class="n">image_id</span> <span class="o">=</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="n">reference</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%02d</span><span class="s1">: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">image_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">reference</span><span class="p">)</span>
+    <span class="n">myImage_RGB</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">image_id</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
+    <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">myImage_RGB</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">reference</span><span class="p">,</span> <span class="n">shown</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">gtx_feature</span><span class="p">,{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span><span class="s1">&#39;ground track&#39;</span><span class="p">)</span>
+<span class="n">Map</span><span class="o">.</span><span class="n">centerObject</span><span class="p">(</span><span class="n">gtx_feature</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">Map</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>The fifth image looks good!</strong> Let’s go ahead and download that one.<br />
+From the print statements above we see that it’s id is <code class="docutils literal notranslate"><span class="pre">LANDSAT/LC08/C01/T2/LC08_165110_20200114</span></code></p>
+</div>
+<div class="section" id="download-images-from-earth-engine">
+<h3>Download images from Earth Engine<a class="headerlink" href="#download-images-from-earth-engine" title="Permalink to this headline">¶</a></h3>
+<p>We can use <a class="reference external" href="https://developers.google.com/earth-engine/apidocs/ee-image-getdownloadurl"><code class="docutils literal notranslate"><span class="pre">.getDownloadUrl()</span></code></a> on an Earth Engine image.</p>
+<p>It needs a CRS (here we use <a class="reference external" href="https://epsg.io/3031"><code class="docutils literal notranslate"><span class="pre">'EPSG:3031'</span></code> (WGS 84 / Antarctic Polar Stereographic)</a> because we know we are in Antarctica. It also asks for a scale, which is just the pixel size in meters (30 m for Landsat 8 visible bands). It also asks for the region we would like to export; here we use a <a class="reference external" href="https://developers.google.com/earth-engine/apidocs/ee-geometry-buffer"><code class="docutils literal notranslate"><span class="pre">.buffer</span></code></a> around the center.</p>
+<p><em>(Note: This function can only be effectively used for small download jobs because there is a request size limit. Here, we only download a small region around the ground track, and convert the image to an 8-bit RGB composite to keep file size low. For larger jobs you should use <a class="reference external" href="https://developers.google.com/earth-engine/apidocs/export-image-todrive"><code class="docutils literal notranslate"><span class="pre">Export.image.toDrive</span></code></a>)</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected_image_id</span> <span class="o">=</span> <span class="s1">&#39;LANDSAT/LC08/C01/T2/LC08_165110_20200114&#39;</span>
+<span class="n">rgb</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">selected_image_id</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span> <span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">)</span>
+
+<span class="n">buffer_around_center_meters</span> <span class="o">=</span> <span class="n">ground_track_length</span><span class="o">*</span><span class="mf">0.7</span>
+<span class="n">download_region</span> <span class="o">=</span> <span class="n">point_of_interest</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="n">buffer_around_center_meters</span><span class="p">)</span>
+<span class="n">rgbmax</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">max</span><span class="p">())</span><span class="o">.</span><span class="n">reduceRegion</span><span class="p">(</span><span class="n">reducer</span><span class="o">=</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">geometry</span><span class="o">=</span><span class="n">download_region</span><span class="p">,</span> <span class="n">bestEffort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">maxPixels</span><span class="o">=</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">rgbmin</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">min</span><span class="p">())</span><span class="o">.</span><span class="n">reduceRegion</span><span class="p">(</span><span class="n">reducer</span><span class="o">=</span><span class="n">ee</span><span class="o">.</span><span class="n">Reducer</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">geometry</span><span class="o">=</span><span class="n">download_region</span><span class="p">,</span> <span class="n">bestEffort</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">maxPixels</span><span class="o">=</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">rgb</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">.</span><span class="n">unitScale</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">Number</span><span class="p">(</span><span class="n">rgbmin</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;min&#39;</span><span class="p">)),</span> <span class="n">ee</span><span class="o">.</span><span class="n">Number</span><span class="p">(</span><span class="n">rgbmax</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max&#39;</span><span class="p">)))</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="o">.</span><span class="n">uint8</span><span class="p">()</span>
+
+<span class="n">rgb_info</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
+<span class="n">downloadURL</span> <span class="o">=</span> <span class="n">rgb</span><span class="o">.</span><span class="n">getDownloadUrl</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;mySatelliteImage&#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;crs&#39;</span><span class="p">:</span> <span class="s1">&#39;EPSG:3031&#39;</span><span class="p">,</span>
+                                  <span class="s1">&#39;scale&#39;</span><span class="p">:</span> <span class="n">rgb_info</span><span class="p">[</span><span class="s1">&#39;bands&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;crs_transform&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                                  <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="n">download_region</span><span class="p">,</span>
+                                  <span class="s1">&#39;filePerBand&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                                  <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;GEO_TIFF&#39;</span><span class="p">})</span>
+
+<span class="n">downloadURL</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can save the content of the download URL with the <a class="reference external" href="https://docs.python-requests.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">downloadURL</span><span class="p">)</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;my-satellite-image.tif&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="open-a-geotiff-in-rasterio">
+<h3>Open a GeoTIFF in rasterio<a class="headerlink" href="#open-a-geotiff-in-rasterio" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have saved the file, we can open it locally with the <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/intro.html"><code class="docutils literal notranslate"><span class="pre">rasterio</span></code></a> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myImage</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">myImage</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-a-geotiff-in-matplotlib">
+<h3>Plot a GeoTIFF in Matplotlib<a class="headerlink" href="#plot-a-geotiff-in-matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Now we can easily plot the image in a matplotlib figure, just using the <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.plot.html"><code class="docutils literal notranslate"><span class="pre">rasterio.plot()</span></code></a> module.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">myImage</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transform-the-ground-track-into-the-image-crs">
+<h3>transform the ground track into the image CRS<a class="headerlink" href="#transform-the-ground-track-into-the-image-crs" title="Permalink to this headline">¶</a></h3>
+<p>Because our plot is now in the Antarctic Polar Stereographic Coodrinate Reference System, we need to project the coordinates of the ground track from lon/lat values. The <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.warp.html"><code class="docutils literal notranslate"><span class="pre">rasterio.warp.transform</span></code></a> function has us covered. From then on, it’s just plotting in Matplotlib.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gtx_x</span><span class="p">,</span> <span class="n">gtx_y</span> <span class="o">=</span> <span class="n">warp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">src_crs</span><span class="o">=</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">,</span> <span class="n">dst_crs</span><span class="o">=</span><span class="n">myImage</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">gtx_x</span><span class="p">,</span> <span class="n">gtx_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>The code above is found more concisely in two more methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataCollector.makeGEEmap(days_buffer=25)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataCollector.plotDataAndMap(scene_id,</span> <span class="pre">crs='EPSG:3857',</span> <span class="pre">title='ICESat-2</span> <span class="pre">Data')</span></code>
+We can now do everything we did in this tutorial in a few lines!</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mydata</span><span class="o">.</span><span class="n">makeGEEmap</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myProductId</span> <span class="o">=</span> <span class="s1">&#39;LANDSAT/LC08/C01/T2/LC08_165110_20200114&#39;</span> <span class="c1"># &lt;-- copy-pasted from above, after looking at the layers in the map</span>
+<span class="n">figure</span> <span class="o">=</span> <span class="n">mydata</span><span class="o">.</span><span class="n">plotDataAndMap</span><span class="p">(</span><span class="n">myProductId</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Plot your data from before with a suitable satellite image.</strong></p>
+<p>Use the OpenAltimetry API URL that you already pasted in Exercise 1 for this. Edit the code below and paste it here again.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### YOUR CODE GOES HERE</span>
+<span class="c1"># url = &#39;http://???.org/??&#39;</span>
+<span class="c1"># gtx = &#39;gt??&#39;</span>
+<span class="c1"># yourData = dataCollector(oaurl=url, beam=gtx)</span>
+<span class="c1"># yourData.makeGEEmap()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### MORE OF YOUR CODE GOES HERE</span>
+<span class="c1"># scene_id=&#39;&lt;paste the scene id corresponding to whichever image from the GEE map you would like to use&gt;&#39;</span>
+<span class="c1"># fig = yourData.plotDataAndMap(scene_id, title=&#39;&lt;your figure title goes here&gt;&#39;)</span>
+<span class="c1"># fig.savefig(&#39;geemap_tutorial_exercise2.jpg&#39;, dpi=300) </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>🎉 Congratulations! You’ve completed this tutorial and have seen how we can put ICESat-2 photon-level data into context using Google Earth Engine and the OpenAltimetry API.</p>
+<p>You can explore a few more use cases for this code (and possible solutions for Exercise 2) in <a class="reference internal" href="Visualization_geemap_use_examples.html"><span class="doc std std-doc">this notebook</span></a>.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>To further explore the topics of this tutorial see the following detailed documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://openaltimetry.org/data/swagger-ui/">The OpenAltimetry API</a></p></li>
+<li><p><a class="reference external" href="https://developers.google.com/earth-engine/guides">Google Earth Engine JavaScript and Python Guides</a></p></li>
+<li><p><a class="reference external" href="https://geemap.org/">The geemap package</a> and <a class="reference external" href="https://geemap.org/tutorials/">tutorials</a></p></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/DataVisualization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../DataIntegration/dataintegration-1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data integration with ICESat-2 - Part I</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Visualization_geemap_use_examples.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OpenAltimery and GEE Use Examples</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
