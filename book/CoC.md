@@ -30,7 +30,7 @@ We expect participants and instructors to act in ways that foster a supportive a
 ## Reporting a violation
 Harassment and other code of conduct violations reduce the value of the event for everyone. If someone makes you or anyone else feel unsafe or unwelcome, please report it as soon as possible.
 
-If you feel comfortable contacting someone associated with our event, you may speak with one of the event organizers in person, send an e-mail to {{ '[`{email}`](mailto:{email})'.format(email=contact_email) }}, or contact an organizer on a private Slack channel. You may also submit an anonymous comment to our {{ '[virtual comment box]({url})'.format(url=anon_reporting_url) }}.
+If you feel comfortable contacting someone associated with our event, you may speak with one of the event organizers in person, send an e-mail to {{ '[`{email}`](mailto:{email})'.format(email=contact_email) }}, or contact an organizer on a private Slack channel. You may also submit an anonymous comment to our {{ '[virtual comment box]({url})'.format(url='https://forms.gle/8wr6bkEAehVx9pyv7') }}.
 
 If you have experienced or observed harassment, unethical or unprofessional behavior as described above (a violation of this code of conduct) and want to talk to someone not directly associated with our event about it, choose from these specialists below:
 
