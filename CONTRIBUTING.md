@@ -11,6 +11,8 @@ Ready to contribute? Here's a quick guide
 
 ## Contributing website changes
 
+For our Python environment management we recommend using `conda` and `mamba`. If you already do not already have those tools installed, you can use the [Mambaforge Installer for your platform](https://github.com/conda-forge/miniforge#mambaforge)
+
 1. Fork this hackweek's website repo on GitHub.
 
 1. Clone your fork locally:
@@ -28,10 +30,10 @@ Ready to contribute? Here's a quick guide
 
 1. Create and activate the "hackweek" conda environment.
 
-   __NOTE__: If you're running linux or Windows use `conda/conda-linux-64.lock`
-
+   __NOTE__: If you're running linux or Windows use `conda/conda-linux-64.lock.yml`
+   __NOTE__: `mamba env create` tends to be much faster than `conda env create`
     ```sh
-    conda create --name hackweek --file conda/conda-osx-64.lock
+    mamba env create --name hackweek --file conda/conda-osx-64.lock.yml
     conda activate hackweek
     ```
     __NOTE__: If you want to add packages or change the environment,
@@ -64,4 +66,3 @@ When adding a new `.ipynb` file under `book/tutorials` be sure to:
   1. Add an entry to the table of contents `book/_toc.yml`
 
   1. "Clear all Outputs" before saving. This keeps the book source code small, but outputs are still built for the HTML webpage by Jupyter Book.
-

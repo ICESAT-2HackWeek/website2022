@@ -9,5 +9,7 @@ lockfiles ensure everyone working on this project has exactly the same developme
 ```
 conda deactivate
 conda remove --name hackweek --all
-conda create --name hackweek --file conda-linux-64.lock
+# Can use mamba to speed this step up:
+mamba env create --name hackweek --file conda-linux-64.lock.yml
+conda activate hackweek
 ```
