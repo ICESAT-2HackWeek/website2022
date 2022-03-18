@@ -15,7 +15,8 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | -  | - | - |  - |
 | [Open Science Tools](./jupyter.md) | Git, GitHub, JupyterHub | n/a | [Recording](https://youtu.be/rKhs5FLI5rc)  |
 | About ICESat-2 Data | Standard products purpose and access | ATL-X |  TBD |
-| ICESat-2 Data Access | Programmatic access and web-mapping | TBD |  TBD |
+| ICESat-2 Data Access | Programmatic and cloud access | ATL-X |  TBD |
+| Object-oriented Programming | Modular programming for collaboration | n/a | TBD |
 | [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python | ATL06, COP30 |  TBD |
 | Data Integration 1 | TBD | TBD |  TBD |
 | Visualization Tools | pyGMT, GEE | TBD |  TBD |
