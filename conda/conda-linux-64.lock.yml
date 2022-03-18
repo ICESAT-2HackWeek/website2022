@@ -548,5 +548,5 @@ dependencies:
   - myst-nb=0.13.1=pyhd8ed1ab_0
   - jupyter-book=0.12.2=pyhd8ed1ab_0
   - pip:
-    - jinja-markdown === 1.210911
-    - rio-stac === 0.3.2
+    - jinja-markdown === 1.210911 
+    - rio-stac === 0.3.2 
