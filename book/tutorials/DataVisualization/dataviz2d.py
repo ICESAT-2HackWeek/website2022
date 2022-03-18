@@ -148,14 +148,14 @@ print(region_iceland.product_version)
 #             X-dimension
 # ```
 
-# %%
+# %% tags=["hide-output"]
 # Login to Earthdata and download the ATL14 NetCDF file using icepyx
-# region_iceland.earthdata_login(
-#     uid="penguin123",  # EarthData username, e.g. penguin123
-#     email="penguin123@southpole.net",  # e.g. penguin123@southpole.net
-#     s3token=True,
-# )
-# region_iceland.download_granules(path=".")
+region_iceland.earthdata_login(
+    uid="uwhackweek",  # EarthData username, e.g. penguin123
+    email="hackweekadmin@uw.edu",  # e.g. penguin123@southpole.net
+    s3token=True,
+)
+region_iceland.download_granules(path="/tmp")
 
 
 # %%
@@ -174,7 +174,7 @@ print(region_iceland.product_version)
 # %%
 # Load the NetCDF using xarray.open_dataset
 # https://n5eil01u.ecs.nsidc.org/ATLAS/ATL14.001/2019.03.31/ATL14_IS_0311_100m_001_01.nc
-ds: xr.Dataset = xr.open_dataset(filename_or_obj="ATL14_IS_0311_100m_001_01.nc")
+ds: xr.Dataset = xr.open_dataset(filename_or_obj="/tmp/ATL14_IS_0311_100m_001_01.nc")
 
 
 # %% [markdown]
@@ -412,17 +412,17 @@ fig.show()
 # Use `icepyx` to download the ATL11 hdf5 file, or get a sample from this
 # [NSIDC link](https://n5eil01u.ecs.nsidc.org/ATLAS/ATL11.004/2019.06.26/ATL11_135803_0311_004_01.h5)
 
-# %%
+# %% tags=["hide-output"]
 ## Download ICESat-2 ATL11 Annual Land Ice Height using icepyx
-# region_iceland = ipx.Query(
-#     product="ATL11",
-#     spatial_extent=[-28.0, 62.0, -10.0, 68.0],  # minlon, minlat, maxlon, maxlat
-#     tracks=["1358"],  # Get one specific track only
-# )
-# region_iceland.earthdata_login(
-#     uid="username", email="email@domain.com"  # assumes .netrc is present
-# )
-# region_iceland.download_granules(path=".")
+region_iceland = ipx.Query(
+    product="ATL11",
+    spatial_extent=[-28.0, 62.0, -10.0, 68.0],  # minlon, minlat, maxlon, maxlat
+    tracks=["1358"],  # Get one specific track only
+)
+region_iceland.earthdata_login(
+    uid="uwhackweek", email="hackweekadmin@gmail.com"  # assumes .netrc is present
+)
+region_iceland.download_granules(path="/tmp")
 
 # %% [markdown]
 # Once downloaded 💾, we can load the ATL11 hdf5 file into an
@@ -433,7 +433,7 @@ fig.show()
 
 # %%
 dataset: xr.Dataset = xr.open_dataset(
-    filename_or_obj="processed_ATL11_135803_0311_004_01.h5",
+    filename_or_obj="/tmp/processed_ATL11_135803_0311_004_01.h5",
     group="pt2",  # take the middle pair track out of pt1, pt2 & pt3
 )
 dataset
