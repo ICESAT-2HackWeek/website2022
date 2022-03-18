@@ -1,4 +1,4 @@
-name: Repo2Docker
+name: Repo2DockerPR
 on:
   pull_request:
     branches:
@@ -17,7 +17,7 @@ jobs:
       id: calver
       run: echo "::set-output name=version::$(date +'%Y.%m.%d')"
 
-    - name: Build and Push to DockerHub
+    - name: Repo2Docker
       uses: jupyterhub/repo2docker-action@master
       with:
         NO_PUSH: true
