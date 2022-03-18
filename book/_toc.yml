@@ -29,6 +29,10 @@ parts:
       sections:
         - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
+        - file: tutorials/DataProducts/DataProducts
+        - file: tutorials/geospatial/geospatial-intro
+          sections:
+            - file: tutorials/geospatial/geospatial-advanced
         - file: tutorials/DataIntegration/dataintegration-1
         - file: tutorials/DataIntegration/dataintegration-2
         - file: tutorials/DataVisualization/dataviz2d.py
