@@ -58,7 +58,7 @@ pygmt.show_versions()
 # ### A note about layers 🍰
 #
 # What do you do when you want to plot several
-# datasets overlaping the same geographical area? 🤔
+# datasets overlapping the same geographical area? 🤔
 #
 # A general rule of thumb is to have the raster images on the
 # 'bottom' 👎🏽, and the vector data plotted on 'top' 👍🏽.
@@ -132,7 +132,7 @@ print(region_iceland.product_version)
 #
 # So, for a raster grid, there would be X and Y geographical dimensions.
 #
-# At each X and Y coodinate, there is a Z value.
+# At each X and Y coordinate, there is a Z value.
 # This Z value can be something like elevation or temperature.
 #
 # ```
@@ -276,7 +276,7 @@ fig.show()
 # and the new vertical 🚦 one.
 #
 # Recall back to what was said about 'layers' 🍰.
-# Everytime you call `fig.something`,
+# Every time you call `fig.something`,
 # you will be 'drawing' on top of the existing canvas.
 #
 # ‼️ To start from a blank canvas 📄 again,
