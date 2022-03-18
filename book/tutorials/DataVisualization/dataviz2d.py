@@ -153,7 +153,7 @@ print(region_iceland.product_version)
 region_iceland.earthdata_login(
     uid="uwhackweek",  # EarthData username, e.g. penguin123
     email="hackweekadmin@uw.edu",  # e.g. penguin123@southpole.net
-    s3token=True,
+    s3token=False, # Change to True if you signed up for preliminary access
 )
 region_iceland.download_granules(path="/tmp")
 
