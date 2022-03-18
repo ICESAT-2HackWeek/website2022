@@ -136,8 +136,8 @@ print(region_iceland.product_version)
 # This Z value can be something like elevation or temperature.
 #
 # ```
-#         Z-values in /z/
-#
+#        Z-values in /z/
+#             |
 #              --------------------
 #             / 1 / 2 / 3 / 4 / 5 /
 #            / 2 / 4 / 2 / 7 / 0 /
@@ -148,16 +148,28 @@ print(region_iceland.product_version)
 #             X-dimension
 # ```
 
-# %% [raw]
-# region_iceland.avail_granules(ids=True, s3urls=True)
+# %%
+# Login to Earthdata and download the ATL14 NetCDF file using icepyx
 # region_iceland.earthdata_login(
 #     uid="penguin123",  # EarthData username, e.g. penguin123
 #     email="penguin123@southpole.net",  # e.g. penguin123@southpole.net
 #     s3token=True,
 # )
-
-# %% [raw]
 # region_iceland.download_granules(path=".")
+
+
+# %%
+## Reading ATL14 NetCDF file using icepyx
+# reader = ipx.Read(
+#     data_source="ATL14_IS_0311_100m_001_01.nc",
+#     product="ATL14",
+#     filename_pattern="ATL{product:2}_{region:2}_{first_cycle:2}{last_cycle:2}_100m_{version:3}_{revision:2}.nc",
+# )
+# print(reader.vars.avail())
+# reader.vars.append(var_list=["x", "y", "h", "h_sigma"])
+# ds: xr.Dataset = reader.load()
+# ds
+
 
 # %%
 # Load the NetCDF using xarray.open_dataset
@@ -229,9 +241,11 @@ fig.show()
 # %% [markdown]
 # ## Adding a colorbar 🍫
 #
-# A color scalebar helps us to link the colors on a map with some actual numbers 🔢
+# A color scalebar helps us to link
+# the colors on a map with some actual numbers 🔢
 #
-# Let's use [`pygmt.Figure.colorbar`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.colorbar.html)
+# Let's use
+# [`pygmt.Figure.colorbar`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.colorbar.html)
 # to add this to our existing map 🔲
 
 # %%
@@ -244,7 +258,8 @@ fig.show()
 # Here are some ways to further customize the colorbar 📊:
 # - **J**ustify the colorbar position to the **M**iddle **R**ight ➡️
 # - Add a box representing NaN values using **+n** ◾
-# - Add labels to the colorbar frame to say that this represents Elevation in metres 🇲
+# - Add labels to the colorbar frame to say that this represents
+#   Elevation in metres 🇲
 #
 # 🔖 References:
 # - https://www.pygmt.org/v0.6.0/gallery/embellishments/colorbar.html
@@ -279,7 +294,8 @@ fig.show()
 #
 # ![What type of colourmap to choose?](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-020-19160-7/MediaObjects/41467_2020_19160_Fig6_HTML.png?as=webp)
 #
-# Done? Now let's use [`pygmt.makecpt`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.makecpt.html)
+# Done? Now let's use
+# [`pygmt.makecpt`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.makecpt.html)
 # to change our map's color!!
 #
 # 🔖 References:
@@ -294,7 +310,7 @@ fig.show()
 fig = pygmt.Figure()  # start a new blank figure!
 
 pygmt.makecpt(
-    cmap="",  # insert your colormap's name here
+    cmap="fes",  # insert your colormap's name here
     series=[-200, 2500],  # min an max values to stretch the colormap
 )
 
@@ -316,13 +332,14 @@ fig.show()
 # %% [markdown]
 # ## (Optional) Advanced basemap customization 😎
 #
-# If you have time, try playing 🛝 with the [`pygmt.Figure.basemap`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.basemap.html)
+# If you have time, try playing 🛝 with the
+# [`pygmt.Figure.basemap`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.basemap.html)
 # method to customize your map even more.
 #
 # Do so by calling `fig.basemap()`, which has options to do things like:
 # - Adding graticules/gridlines using `frame="g"` 🌐
-# - Adding a North arrow (compass rose) using `rose="jTR+w2c"` 🔝
-# - Adding a kilometer scalebar using something like `map_scale="jBR+w5k+o1"` 📏
+# - Adding a North arrow (compass rose) using `rose="jTL+w2c"` 🔝
+# - Adding a kilometer scalebar using something like `map_scale="jBL+w3k+o1"` 📏
 #
 # 🔖 References:
 # - https://www.pygmt.org/v0.6.0/tutorials/basics/frames.html
@@ -332,11 +349,18 @@ fig.show()
 # Code block to play with
 fig = pygmt.Figure()  # start a new figure
 
-fig.grdimage(grid=ds_iceland["h"], cmap="oleron")  # plot grid as a background
+# Plot grid as a background
+fig.grdimage(
+    grid=ds_iceland["h"],
+    cmap="oleron",
+    shading=True,  # hillshading to make it look fancy
+)
 
 # Customize your basemap here!!
 fig.basemap(
     frame="afg",
+    rose="jTL+w2c",
+    map_scale="jBL+w3k+o1"
     # Add more options here!!
 )
 
@@ -346,9 +370,340 @@ fig.show()  # show the map
 # # 2️⃣ The vector features 🚏
 
 
+# %% [markdown]
+# ## Coastlines for context ⛱️
+
+# %% [markdown]
+# Vectors include points, lines and polygons 🪢.
+#
+# To keep things clean 🫧, let's start a new map with just Iceland's coastline.
+#
+# We'll use
+# [`pygmt.Figure.coast`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.coast.html)
+# to 🖌️ plot this.
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.6.0/gallery/maps/shorelines.html
+# - https://www.pygmt.org/v0.6.0/gallery/maps/land_and_water.html
+
 # %%
+# Plain basemap with just Iceland's coastline
+fig = pygmt.Figure()
+fig.basemap(
+    region=[-28, -10, 62, 68],  # PyGMT uses minlon, maxlon, minlat, maxlat
+    frame=True,
+)
+fig.coast(shorelines=True, resolution="l")  # Plot low resolution shoreline
+fig.show()
+
+# %% [markdown]
+# ## Overlay ICESat-2 ATL11 point track 🐧
+#
+# Let's plot some 🇽, 🇾, 🇿 data!
+#
+# First, we'll get one [ATL11](https://doi.org/10.5067/ATLAS/ATL11.004)
+# Annual Land Ice Height track that crosses Iceland 🇮🇸
+#
+# Easiest way to find the right track number is using
+# 🛰️ [OpenAltimetry](https://openaltimetry.org/data/icesat2)'s web interface.
+#
+# ![ATL11 track 1358 crossing Iceland on 12 Dec 2021](https://user-images.githubusercontent.com/23487320/158869949-8139a066-43a3-4ac2-85b5-3a43816d55af.png)
+#
+# Use `icepyx` to download the ATL11 hdf5 file, or get a sample from this
+# [NSIDC link](https://n5eil01u.ecs.nsidc.org/ATLAS/ATL11.004/2019.06.26/ATL11_135803_0311_004_01.h5)
+
+# %%
+## Download ICESat-2 ATL11 Annual Land Ice Height using icepyx
+# region_iceland = ipx.Query(
+#     product="ATL11",
+#     spatial_extent=[-28.0, 62.0, -10.0, 68.0],  # minlon, minlat, maxlon, maxlat
+#     tracks=["1358"],  # Get one specific track only
+# )
+# region_iceland.earthdata_login(
+#     uid="username", email="email@domain.com"  # assumes .netrc is present
+# )
+# region_iceland.download_granules(path=".")
+
+# %% [markdown]
+# Once downloaded 💾, we can load the ATL11 hdf5 file into an
+# [`xarray.Dataset`](https://docs.xarray.dev/en/v2022.03.0/generated/xarray.Dataset.html).
+#
+# The key 🔑 data variables we'll use later are
+# 'longitude', 'latitude' and 'h_corr' (mean corrected height).
+
+# %%
+dataset: xr.Dataset = xr.open_dataset(
+    filename_or_obj="processed_ATL11_135803_0311_004_01.h5",
+    group="pt2",  # take the middle pair track out of pt1, pt2 & pt3
+)
+dataset
+
+# %% [markdown]
+# Great, we've got some ATL11 point data 🎊!!
+#
+# Let's add ➕ this to our basemap.
+#
+# Plotting 2D vector data 🪡 happens via
+# [`pygmt.Figure.plot`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.plot.html).
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.plot.html#examples-using-pygmt-figure-plot
+# - https://www.pygmt.org/v0.6.0/gallery/lines/linestyles.html
+
+# %%
+# Plot the ATL11 pt2 track in lightgreen color
+fig.plot(x=dataset.longitude, y=dataset.latitude, color="lightgreen")
+fig.show()
+
+# %% [markdown]
+# Maybe not totally obvious 🥸 since the green points are quite faint.
+#
+# Let's modify the [`plot`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.plot.html)
+# command to make it stand out more:
+#
+# 1. Use the 'style' parameter to plot bigger 🟢 circles
+# 2. Use the 'label' parameter to add this track to the legend entry
+#
+# Oh yes, 🍀 there's a way to automatically add a legend using
+# [`pygmt.Figure.legend`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.legend.html)!
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.6.0/gallery/embellishments/legend.html
+# - https://www.pygmt.org/v0.6.0/gallery/symbols/scatter.html
+
+# %%
+fig.plot(
+    x=dataset.longitude,
+    y=dataset.latitude,
+    color="lightgreen",
+    style="c0.1c",  # circle of size 0.1 cm
+    label="Track 1358 pt2",  # Label this ICESat-2 track in the legend
+)
+fig.legend()  # With no arguments, the legend will be on the top-right corner
+fig.show()
+
+# %% [markdown]
+# ## Text annotations 💬
+#
+# Quite often, you'll just want to write some 🔤 words directly on a map.
+#
+# For example, you might want to ✍️ label a placename, or an A-B transect.
+#
+# Let's see how to do this using
+# [`pygmt.Figure.text`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.colorbar.html) ☺️.
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.6.0/tutorials/basics/text.html
+# - https://www.pygmt.org/v0.6.0/gallery/symbols/text_symbols.html
+
+# %%
+# Start off with labelling the capital Reykjavík
+fig.text(x=-23.2, y=64.3, text="Reykjavík", font="16p")
+
+# Add a red square of size 0.2 cm at the capital
+fig.plot(x=-21.89541, y=64.13548, style="s0.2c", color="red")
+
+fig.show()
+
+
+# %% [markdown]
+# Afterwards, maybe you want to label the 🏁 start and end 🔚 points
+# of the ICESat-2 ATL11 track as **A** and **B**.
+#
+# Let's do that, and we'll see how to customize the font further 🤗
+#
+# Use a comma-separated string of 3️⃣ components:
+# 1. The font size (e.g. 15p)
+# 2. The font [style](https://docs.generic-mapping-tools.org/6.3/cookbook/postscript-fonts.html)
+#    (e.g. Helvetica-Bold)
+# 3. The font [color](https://docs.generic-mapping-tools.org/6.3/gmtcolors.html#list-of-colors)
+#    (e.g. purple)
+
+# %%
+fig.text(x=-20.5, y=65.4, text="A", font="15p,Helvetica-Bold,purple")
+fig.text(x=-19.5, y=63.4, text="B", font="15p,Helvetica-Bold,purple")
+fig.show()
+
+# %% [markdown]
+# Finally, if you're really obsessed with placenames 🏣,
+# you can provide a Python list too!
+#
+# Just note that each item in a single `fig.text` call
+# will have the same font 😉.
+
+# %%
+# Label the oceans
+fig.text(
+    x=[-19, -18],  # longitude1, longitude2, etc
+    y=[62.8, 66.8],  # latitude1, latitude2, etc
+    text=["Atlantic Ocean", "Arctic Ocean"],
+    font="24p,ZapfChancery-MediumItalic,blue",
+)
+# Label top 3 largest ice caps/glaciers
+fig.text(
+    x=[-16.5, -21.1, -18.6],
+    y=[64.5, 64.8, 65.0],
+    text=["Vatnajökull", "Langjökull", "Hofsjökull"],
+    font="9p,Times-Italic,blue",
+)
+fig.show()
+
+# %% [markdown]
+# ## (Optional) adding an overview map 📍
+#
+# For context, people might want to know where your 🔻 study region is.
+#
+# Adding an 🌐 overview map as an inset can help with that.
+#
+# Let's quickly ⚡ see how to do it using
+# [`pygmt.Figure.inset`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.inset.html)
+# and [`pygmt.Figure.coast`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.coast.html).
+#
+# 🔖 References:
+# - https://www.pygmt.org/v0.6.0/tutorials/advanced/insets.html
+# - https://www.pygmt.org/v0.6.0/gallery/embellishments/inset_rectangle_region.html
+
+# %%
+# Start an inset cut-out at the Bottom Right corner
+# with a width of 3.5 cm, offset by 0.2 cm from the map edge
+with fig.inset(position="jBR+w3.5c+o0.2c"):
+    # All plotting here in the with-context manager will
+    # be in the inset cut-out. This example uses the
+    # azimuthal orthogonal projection centered at 10W, 60N.
+    fig.coast(
+        region="g",
+        projection="G-10/60/?",
+        land="darkgray",  # land color as darkgray
+        water="lightgray",  # water color as lightgray
+        dcw="IS+gorange",  # highlight Iceland in orange color
+    )
+fig.show()
 
 # %% [markdown]
 # # 3️⃣ Saving the map 💾
 
+# %% [markdown]
+# Now put it all together, like mixing the dry and wet ingredients of a cake 🍰
+#
+# We'll start with the raster basemap 🌈, and then plot the vector features 🚏 on top.
+
 # %%
+fig = pygmt.Figure()  # Create blank new figure
+
+### 1. Raster layers
+
+## 1.1 - Plot the ICESat-2 ATL14 height grid
+pygmt.makecpt(
+    cmap="fes",  # insert your colormap's name here
+    series=[-200, 2500],  # min an max values to stretch the colormap
+)
+fig.grdimage(
+    grid=ds_iceland["h"],
+    frame=[
+        'xaf+l"Longitude"',  # x-axis, (a)nnotate, (f)ine ticks, +(l)abel
+        'yaf+l"Latitude"',  # y-axis, (a)nnotate, (f)ine ticks, +(l)abel
+        '+t"ATL14 & ATL11 ice surface height over Iceland"',  # map title
+    ],
+    cmap=True,  # use colormap from makecpt
+    shading=True,  # add hillshading
+)
+
+### 1.2 - Add a colorbar
+fig.colorbar(position="JMR+n", frame=["x+lElevation", "y+lm"])
+
+## 1.4 - Advanced basemap customization (gridlines, north arrow, scalebar)
+fig.basemap(
+    frame="af",
+    rose="jTL+w2c",
+    map_scale="jBL+w3k+o1"
+    # Add more options here!!
+)
+
+fig.show()
+
+# %%
+### 2. Vector layers
+
+## 2.1 Coastline
+fig.coast(shorelines=True, resolution="h")  # Plot high resolution shoreline
+
+## 2.2 Plot ICESat-2 ATL11 point track
+fig.plot(
+    x=dataset.longitude,
+    y=dataset.latitude,
+    color="lightgreen",
+    style="c0.1c",  # circle of size 0.1 cm
+    label="Track 1358 pt2",  # Label this ICESat-2 track in the legend
+)
+fig.legend()  # Default legend position is on the top-right corner
+
+## 2.3 Text annotations
+# Start off with labelling the capital Reykjavík!
+fig.text(x=-23.2, y=64.2, text="Reykjavík", font="16p")
+# Add a red square of size 0.2 cm at the capital
+fig.plot(x=-21.89541, y=64.13548, style="s0.2c", color="red")
+# A-B transect labels
+fig.text(x=-20.5, y=65.4, text="A", font="15p,Helvetica-Bold,purple")
+fig.text(x=-19.5, y=63.4, text="B", font="15p,Helvetica-Bold,purple")
+# Label the oceans
+fig.text(
+    x=[-19, -18],
+    y=[62.8, 66.8],
+    text=["Atlantic Ocean", "Arctic Ocean"],
+    font="24p,ZapfChancery-MediumItalic,blue",
+)
+# Label top 3 largest ice caps/glaciers
+fig.text(
+    x=[-16.5, -21.1, -18.6],
+    y=[64.5, 64.8, 65.0],
+    text=["Vatnajökull", "Langjökull", "Hofsjökull"],
+    font="9p,Times-Italic,blue",
+)
+
+## 2.4 Overview map
+with fig.inset(position="jBR+w3.5c+o0.2c"):
+    # All plotting here in the with-context manager will
+    # be in the inset cut-out. This example uses the
+    # azimuthal orthogonal projection centered at 10W, 60N.
+    fig.coast(
+        region="g",
+        projection="G-10/60/?",
+        land="darkgray",  # land color as darkgray
+        water="lightgray",  # water color as lightgray
+        dcw="IS+gorange",  # highlight Iceland in orange color
+    )
+
+fig.show()
+
+# %% [markdown]
+# To save ⬇️ the figure, use
+# [`pygmt.Figure.savefig`](https://www.pygmt.org/v0.6.0/api/generated/pygmt.Figure.savefig.html).
+#
+# The format 💽 you save it in will depend on where you want to display it.
+#
+# As a general guide:
+# - Social media 🐦 or Presentations 🧑‍🏫
+#   - PNG or JPG (raster formats)
+#   - Use about 150dpi or 300dpi
+# - Posters 🪧 or Publications 📜
+#   - PDF or EPS (vector formats)
+#   - Use about 300dpi or 600dpi
+
+# %%
+fig.savefig(fname="iceland_map.png", dpi=300)
+fig.savefig(fname="iceland_map.pdf", dpi=600)
+
+# %% [markdown]
+# That's all 🎉! For more information on how to customize your map 🗺️,
+# check out:
+#
+# - Tutorials at https://www.pygmt.org/v0.6.0/tutorials/index.html
+# - Gallery examples at https://www.pygmt.org/v0.6.0/gallery/index.html
+#
+# If you have any questions 🙋, feel free to visit the PyGMT forum at
+# https://forum.generic-mapping-tools.org/c/questions/pygmt-q-a/11.
+#
+# Submit any ✨ feature requests/bug reports to the GitHub repo at
+# https://github.com/GenericMappingTools/pygmt
+#
+# Cheers!
