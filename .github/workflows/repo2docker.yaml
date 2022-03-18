@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'binder/**'
+      - 'conda/**'
 
 jobs:
   build-image-and-push:
@@ -24,6 +24,7 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         IMAGE_NAME: ${{ secrets.DOCKER_IMAGE }}
         ADDITIONAL_TAG: ${{ steps.calver.outputs.version }}
+        MYBINDERORG_TAG: ${{ github.event.ref }} # This builds the container on mybinder.org
 
     - name: Also Push To quay.io
       id: push-to-quay
