@@ -459,6 +459,16 @@ const thebe_selector_output = ".output, .cell_output"
      3.2 Reading ATL11 data into a dictionary
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-atl11-measurement-locations">
+     3.3 Plotting ATL11 measurement locations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-atl11-heights">
+     3.4 Plotting ATL11 heights
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -560,6 +570,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#reading-atl11-data-into-a-dictionary">
      3.2 Reading ATL11 data into a dictionary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-atl11-measurement-locations">
+     3.3 Plotting ATL11 measurement locations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-atl11-heights">
+     3.4 Plotting ATL11 heights
     </a>
    </li>
   </ul>
@@ -717,7 +737,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">hax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">hax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.8e6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2e6</span><span class="p">])</span>
 <span class="n">hax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;polar-stereographic x&#39;</span><span class="p">)</span>
-<span class="n">hax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;polar-stereographic y&#39;</span><span class="p">)</span>
+<span class="n">hax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;polar-stereographic y&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">h_im</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;height-change rate, m/yr&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -850,7 +870,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>You’ll see the list of granules in the ‘files’ tab of jupyter.  Let’s see what these files look like.  An easy way to see what is in these granules is to use the ‘h5ls’ utility:</p>
+<p>Let’s see what these files look like.  An easy way to see what is in these granules is to use the ‘h5ls’ utility:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span> h5ls /tmp/ATL11_054803_0311_004_01.h5
@@ -899,6 +919,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="plotting-atl11-measurement-locations">
+<h3>3.3 Plotting ATL11 measurement locations<a class="headerlink" href="#plotting-atl11-measurement-locations" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> 
@@ -914,6 +937,26 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The granules extend well beyond our region of interest, but if you zoom in on the edge of the surge region, you’ll see that they all hit (or come close to hitting) the region we specified.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># zoomed-in version for rendered tutorial:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dhdt</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Spectral&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span><span class="p">,</span> <span class="n">D</span> <span class="ow">in</span> <span class="n">file_xyth</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">D</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">D</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">XR</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">YR</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-atl11-heights">
+<h3>3.4 Plotting ATL11 heights<a class="headerlink" href="#plotting-atl11-heights" title="Permalink to this headline">¶</a></h3>
 <p>Let’s find the points that are within our bounding box for one of the files:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -941,7 +984,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>We can see that on the left-hand side of the ice cap, the height has been constant in time, but the right-hand side of the track samples the region that is thinning rapidly.  Let’s find the data for a point in the thinning region and plot.</p>
+<p>We can see that on the left-hand side of the ice cap, the height has been constant in time, but the right-hand side of the track samples the region that is thinning rapidly.  Let’s find the data for a point in the thinning region and plot it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find the data close to x=1.036e6 </span>
