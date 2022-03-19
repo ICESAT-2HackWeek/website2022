@@ -37,6 +37,7 @@ parts:
           sections:
             - file: tutorials/DataVisualization/Visualization_geemap_use_examples.ipynb
         - file: tutorials/DataIntegration/dataintegration-2
+        - file: tutorials/DataVisualization/dataviz2d.py
 - caption: Projects
   chapters:
     - file: projects/index
