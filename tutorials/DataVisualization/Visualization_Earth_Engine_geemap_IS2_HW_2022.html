@@ -260,6 +260,14 @@ const thebe_selector_output = ".output, .cell_output"
      Data integration with ICESat-2 - Part II
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dataviz2d.html">
+     <strong>
+      Making nice maps for posters with Python
+     </strong>
+     🗺️+🐍
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -522,8 +530,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-image-colletion-info">
-     Get image colletion info
+    <a class="reference internal nav-link" href="#get-image-collection-info">
+     Get image collection info
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -686,8 +694,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#get-image-colletion-info">
-     Get image colletion info
+    <a class="reference internal nav-link" href="#get-image-collection-info">
+     Get image collection info
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1263,8 +1271,8 @@ Let’s start with only images that overlap with the center of our ground track.
 </div>
 </div>
 </div>
-<div class="section" id="get-image-colletion-info">
-<h3>Get image colletion info<a class="headerlink" href="#get-image-colletion-info" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="get-image-collection-info">
+<h3>Get image collection info<a class="headerlink" href="#get-image-collection-info" title="Permalink to this headline">¶</a></h3>
 <p>Again, we need to use <code class="docutils literal notranslate"><span class="pre">.getInfo()</span></code> to actually see any information on our end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1480,7 +1488,7 @@ From the print statements above we see that it’s id is <code class="docutils l
 </div>
 <div class="section" id="transform-the-ground-track-into-the-image-crs">
 <h3>transform the ground track into the image CRS<a class="headerlink" href="#transform-the-ground-track-into-the-image-crs" title="Permalink to this headline">¶</a></h3>
-<p>Because our plot is now in the Antarctic Polar Stereographic Coodrinate Reference System, we need to project the coordinates of the ground track from lon/lat values. The <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.warp.html"><code class="docutils literal notranslate"><span class="pre">rasterio.warp.transform</span></code></a> function has us covered. From then on, it’s just plotting in Matplotlib.</p>
+<p>Because our plot is now in the Antarctic Polar Stereographic Coordrinate Reference System, we need to project the coordinates of the ground track from lon/lat values. The <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.warp.html"><code class="docutils literal notranslate"><span class="pre">rasterio.warp.transform</span></code></a> function has us covered. From then on, it’s just plotting in Matplotlib.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gtx_x</span><span class="p">,</span> <span class="n">gtx_y</span> <span class="o">=</span> <span class="n">warp</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">src_crs</span><span class="o">=</span><span class="s1">&#39;epsg:4326&#39;</span><span class="p">,</span> <span class="n">dst_crs</span><span class="o">=</span><span class="n">myImage</span><span class="o">.</span><span class="n">crs</span><span class="p">,</span> <span class="n">xs</span><span class="o">=</span><span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">ys</span><span class="o">=</span><span class="n">mydata</span><span class="o">.</span><span class="n">atl08</span><span class="o">.</span><span class="n">lat</span><span class="p">)</span>

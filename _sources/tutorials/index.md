@@ -14,6 +14,8 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | Tutorial | Topics | Datasets |  Recording Link |
 | -  | - | - |  - |
 | [Open Science Tools](./jupyter.md) | Git, GitHub, JupyterHub | n/a | [Recording](https://youtu.be/rKhs5FLI5rc)  |
+| [Example Notebook](./example/tutorial-notebook.ipynb) | Jupyter Book formatting, ipyleaflet | n/a |  Not recorded |
+| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | ATL14, ATL11 | TODO |
 | About ICESat-2 Data | Standard products purpose and access | ATL-X |  TBD |
 | ICESat-2 Data Access | Programmatic and cloud access | ATL-X |  TBD |
 | Object-oriented Programming | Modular programming for collaboration | n/a | TBD |
