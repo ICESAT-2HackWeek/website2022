@@ -30,9 +30,6 @@ parts:
         - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
         - file: tutorials/DataProducts/DataProducts
-        - file: tutorials/ObjectOriented/OOP_tutorial
-          sections:
-            - file: tutorials/ObjectOriented/alien
         - file: tutorials/geospatial/geospatial-intro
           sections:
             - file: tutorials/geospatial/geospatial-advanced
