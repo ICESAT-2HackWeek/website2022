@@ -2,12 +2,6 @@ name: QualityContol
 
 on:
   pull_request:
-    paths:
-      - 'book/**'
-      - '{{ cookiecutter.repo_directory }}/**'
-      - 'scripts/**'
-      - '.github/workflows/qaqc.yaml'
-      - 'cookiecutter.yaml'
     branches:
       - main
 
@@ -37,8 +31,8 @@ jobs:
         check_filenames: true
         check_hidden: true
         only_warn: false
-        skip: '*.js'
-        ignore_words_list: slippy
+        skip: '*.js,qaqc.yml'
+        ignore_words_list: slippy,trough,thw
 
     # borrowed from https://github.com/ProjectPythia/pythia-foundations/blob/main/.github/workflows/link-checker.yaml
     - name: Disable Notebook Execution

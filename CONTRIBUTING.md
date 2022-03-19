@@ -11,12 +11,15 @@ Ready to contribute? Here's a quick guide
 
 ## Contributing website changes
 
-1. Fork this hackweek's website repo on GitHub.
+To build our website, we need specific Python packages which are managed with the `conda` and `mamba` tools. If you already do not already have those tools installed, we recommend using the [Mambaforge Installer](https://github.com/conda-forge/miniforge#mambaforge):
+
+
+1. Fork this hackweek's website repo on GitHub (https://github.com/ICESAT-2HackWeek/website2022).
 
 1. Clone your fork locally:
 
     ```sh
-    git clone https://github.com/ICESAT-2HackWeek/website2022.git
+    git clone https://github.com/YOUR_FORK/website2022.git
     cd website2022
     ```
 
@@ -28,22 +31,20 @@ Ready to contribute? Here's a quick guide
 
 1. Create and activate the "hackweek" conda environment.
 
-   __NOTE__: If you're running linux or Windows use `conda/conda-linux-64.lock`
-
+   __NOTE__: If you're running linux or Windows use `conda/conda-linux-64.lock.yml`
     ```sh
-    conda create --name hackweek --file conda/conda-osx-64.lock
-    conda activate hackweek
+    mamba env create --name hackweek --file conda/conda-osx-64.lock.yml
+    mamba activate hackweek
     ```
-    __NOTE__: If you want to add packages or change the environment,
-    first edit `environment.yml` in the 'conda' folder, and then generate
-    updated `.lock` files by executing `lock-environment.sh`. You can read more about this procedure in [this readme](./conda/README.md).
+   __NOTE__: If you want to add packages or change the environment,
+    you must follow the procedure outlined in [./conda/README.md](./conda/README.md).
 
 1. Make your desired changes and build the book locally
 
     ```sh
     ./scripts/build_resources.sh
     ```
-    NOTE: to preview the changes open `book/build/html/index.html`
+   __NOTE__: to preview the changes open `book/build/html/index.html`
 
 1. Push your branch to GitHub when you're ready:
 
@@ -57,6 +58,7 @@ Ready to contribute? Here's a quick guide
 
 
 ## Contributing tutorials
+
 If you're adding a new Jupyter Notebook Tutorial, please first take a look at [our guide on creating tutorials](https://uwhackweek.github.io/hackweeks-as-a-service/resources/tutorial-resources.html).
 
 When adding a new `.ipynb` file under `book/tutorials` be sure to:
@@ -64,4 +66,3 @@ When adding a new `.ipynb` file under `book/tutorials` be sure to:
   1. Add an entry to the table of contents `book/_toc.yml`
 
   1. "Clear all Outputs" before saving. This keeps the book source code small, but outputs are still built for the HTML webpage by Jupyter Book.
-

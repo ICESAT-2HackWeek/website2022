@@ -9,7 +9,7 @@ LOCK_ENV='CondaLock'
 conda env list | grep ${LOCK_ENV} > /dev/null
 
 if [[ $? -eq 1 ]]; then
-  conda create -q -y -n ${LOCK_ENV} -c conda-forge conda-lock=1 mamba=0.22
+  conda create -q -y -n ${LOCK_ENV} -c conda-forge conda-lock=1.0.3 mamba=0.22
 fi
 
 # https://github.com/conda/conda/issues/7980#issuecomment-492784093
@@ -32,11 +32,15 @@ printf "Generate environment.yml for BinderHub \n"
 conda-lock render -k env
 
 # Temporary fix for https://github.com/conda-incubator/conda-lock/issues/172
-sed -i.bak -r 's/--hash=md5:None//' conda-linux-64.lock.yml 
+sed -i.bak -r 's/--hash=md5:None//' conda-linux-64.lock.yml
 sed -i.bak -r 's/--hash=md5:None//' conda-osx-64.lock.yml
 rm *.yml.bak
 
-cp conda-linux-64.lock.yml ../binder/environment.yml
+# Temporary fix for https://github.com/conda-incubator/conda-lock/issues/171
+echo "    - git+https://github.com/fastice/nisardev.git@4fa6429a93b6716e4e7a6522d98340b9966d7d9d" >> conda-linux-64.lock.yml
+echo "    - git+https://github.com/fastice/nisardev.git@4fa6429a93b6716e4e7a6522d98340b9966d7d9d" >> conda-osx-64.lock.yml
+echo "    - git+https://github.com/fastice/grimpfunc.git@512a8d35731c83771e74cbd5b0ade273fff680bd" >> conda-linux-64.lock.yml
+echo "    - git+https://github.com/fastice/grimpfunc.git@512a8d35731c83771e74cbd5b0ade273fff680bd" >> conda-osx-64.lock.yml
 
 # Remove CondaLock environment when the last command was successful
 if [[ $? -eq 0 ]]; then
