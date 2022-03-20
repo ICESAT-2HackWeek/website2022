@@ -2,12 +2,6 @@ name: QualityContol
 
 on:
   pull_request:
-    paths:
-      - 'book/**'
-      - '{{ cookiecutter.repo_directory }}/**'
-      - 'scripts/**'
-      - '.github/workflows/qaqc.yaml'
-      - 'cookiecutter.yaml'
     branches:
       - main
 
