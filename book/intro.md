@@ -13,6 +13,8 @@
 
 💡 Learn more about hackweeks hosted by the [University of Washington eScience Institute](https://uwhackweek.github.io/hackweeks-as-a-service/intro.html), or check out our publication describing the hackweek educational model {cite:p}`Huppenkothen2018`.
 
+Another test
+
 ```{admonition} Quick links for the event
 :class: seealso
 * JupyterHub: {{ jupyterhub_url }}
