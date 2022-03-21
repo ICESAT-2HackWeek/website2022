@@ -14,7 +14,7 @@ dependencies:
   - dask
   - dask-labextension
   - datashader
-#  - earthdata
+  - earthdata
   - fsspec
   - geemap
   - gh
@@ -39,10 +39,10 @@ dependencies:
   - lxml
   - matplotlib-base
   - nbgitpuller
-  - numpy < 1.22
+  - numpy
   - pandas
   - panel
-  - param 
+  - param
   - pip
   - progressbar2
   - pygeos
