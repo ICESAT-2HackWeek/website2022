@@ -99,6 +99,16 @@ will be similar to the below:
 ```{attention}
 Use your personal GitHub username instead of the placeholder `<GitHub Username>`
 in the below sample output. For the password, paste your created token.
+
+The prompt for the `Password:` will not show any characters that are entered
+and stay blank. Make sure to only copy and paste your token once and then
+hit the enter key.
+```
+
+```{admonition} Browser context menu
+:class: tip
+The browser context menu that offers the copy and paste option via right-click
+of your mouse is accessible on the JupyterHub by using the 'Shift' key.
 ```
 
 ```shell
