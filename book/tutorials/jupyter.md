@@ -185,7 +185,7 @@ just went with a more descriptive label instead of the default value.
 # Change to the website folder, it was created with the `clone`
 cd website
 # Add the remote
-git remote add {{hackweek}} {{website_url}}.git
+git remote add Hackweek https://github.com/ICESAT-2HackWeek/website2022.git
 ```
 
 The command will not return any output. Instead, we verify by printing the
@@ -198,8 +198,8 @@ list of known remotes for this repository:
 
 ```shell
  git remote -v
- {{hackweek}}	{{website_url}}.git (fetch)
- {{hackweek}}	{{website_url}}.git (push)
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git (fetch)
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git (push)
  origin	https://github.com/<github-username>/website.git (fetch)
  origin	https://github.com/<github-username>/website.git (push)
 ```
@@ -216,7 +216,7 @@ source the changes will be queried from.
 
 Reading changes from the remote '{{hackweek}}':
 ```shell
-git fetch {{hackweek}}
+git fetch Hackweek
 ```
 
 To now also get and apply those changes, you need to issue a `pull` command.
@@ -233,7 +233,7 @@ output.
 
 Applying changes from the remote '{{hackweek}}':
 ```shell
-git pull {{hackweek}} main
+git pull Hackweek main
 ```
 
 ```{note}
