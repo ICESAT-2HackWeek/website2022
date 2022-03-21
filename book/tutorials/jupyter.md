@@ -94,18 +94,18 @@ state of the repository including the complete history.
       This should be replaced with your GitHub username.
       <br/><br/>
       This step will also create a folder in the current location of your
-      terminal. The folder will be called `website`, which originates from the
+      terminal. The folder will be called `website2022`, which originates from the
       name of the repository.
    ```
 
-   Your command should look like this before hitting the Enter key to execute it:
+   Your command should look similar to this before hitting the Enter key to execute it:
     ```shell
-    git clone https://github.com/<github-username>/website
+    git clone https://github.com/<github-username>/website2022
     ```
 
    Sample output:
    ```shell
-   Cloning into 'website'...
+   Cloning into 'website2022'...
    remote: Enumerating objects: 3295, done.
    remote: Counting objects: 100% (310/310), done.
    remote: Compressing objects: 100% (212/212), done.
@@ -125,7 +125,7 @@ state of the repository including the complete history.
    Sample output:
    ```shell
    total 4
-   drwxr-sr-x 6 jovyan users 4096 Jul  9 17:10 website
+   drwxr-sr-x 6 jovyan users 4096 Jul  9 17:10 website2022
    ```
 
    You will also see the folder on the left-hand side in the file explorer:
@@ -162,7 +162,7 @@ Commands for branches:
 
 By making a fork of the website, you are creating a copy of the website as
 of the date you clicked the 'Fork' button. This also means that your version will not
-get any updates automatically if the {{hackweek}} website repository is changed after
+get any updates automatically if the website repository is changed after
 your fork was created.
 
 To update your forked version with changes from the {{hackweek}} version, you need to
@@ -173,11 +173,11 @@ for a git repository.
 ### Add the {{hackweek}} organization repository as a remote
 
 A remote is defined with a label and a URL. In our case and command below,
-we are using `{{hackweek}}` as the label and `{{website_url}}.git`
+we are using Hackweek as the label and {{ '`{url}.git`'.format(url=website_url) }}
 as the URL.
 
 ```{Note}
-The chosen label `{{hackweek}}` is found in many projects as the `upstream`. Here we
+The chosen label Hackweek is found in many projects as the `upstream`. Here we
 just went with a more descriptive label instead of the default value.
 ```
 
@@ -185,7 +185,7 @@ just went with a more descriptive label instead of the default value.
 # Change to the website folder, it was created with the `clone`
 cd website
 # Add the remote
-git remote add {{hackweek}} {{website_url}}.git
+git remote add Hackweek https://github.com/ICESAT-2HackWeek/website2022.git
 ```
 
 The command will not return any output. Instead, we verify by printing the
@@ -198,8 +198,8 @@ list of known remotes for this repository:
 
 ```shell
  git remote -v
- {{hackweek}}	{{website_url}}.git (fetch)
- {{hackweek}}	{{website_url}}.git (push)
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git (fetch)
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git (push)
  origin	https://github.com/<github-username>/website.git (fetch)
  origin	https://github.com/<github-username>/website.git (push)
 ```
@@ -216,7 +216,7 @@ source the changes will be queried from.
 
 Reading changes from the remote '{{hackweek}}':
 ```shell
-git fetch {{hackweek}}
+git fetch Hackweek
 ```
 
 To now also get and apply those changes, you need to issue a `pull` command.
@@ -233,7 +233,7 @@ output.
 
 Applying changes from the remote '{{hackweek}}':
 ```shell
-git pull {{hackweek}} main
+git pull Hackweek main
 ```
 
 ```{note}

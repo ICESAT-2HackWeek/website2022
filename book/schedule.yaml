@@ -11,12 +11,18 @@ tabs:
           - Anthony Arendt
           - Charley Haley
           - Jessica Scheick
+        resources:
+        - title: "Welcome and Project Session Slides"
+          url: https://docs.google.com/presentation/d/13eMHSXoA8OlLyCCFpGZ_WJM_fEoO7ewmumu5WGxLtIk/edit?usp=sharing
       - time: 10:00 - 10:30
         location: Zoom
         title: Overview of ICESat-2 Mission
         description:
         leads:
           - Tom Neumann
+        resources:
+        - title: "ICESat-2 Mission Slides"
+          url: https://drive.google.com/file/d/1FreEymYptmOn5xs3wQ-BGF1xJocor7Ch/view?usp=sharing
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description: 
@@ -29,7 +35,7 @@ tabs:
           - Scott Henderson
           - Joachim Meyer
           - Daniel Shapero
-      - time: 11:30 - 12:15
+      - time: 11:30 - 12:00
         location: Zoom
         title: Project Ideation
         description: A chance to learn about existing project ideas and pitch new ones.
@@ -37,18 +43,18 @@ tabs:
           - Charley Haley
           - Axel Schweiger
           - Anthony Arendt
-      - time: 12:15 - 1:15
+      - time: 12:00 - 1:00
         title: Lunch
         description: 
         leads: [ ]
-      - time: 1:15 - 2:15
+      - time: 1:00 - 2:00
         location: Zoom
         title: Formation of Hacking Projects
         description: Time to breakout into small groups and find out which project is the best fit for you.
         leads:
           - Charley Haley
           - Anthony Arendt
-      - time: 2:15 - 3:00
+      - time: 2:00 - 3:00
         location: Zoom
         title: Project Set up and Logistics
         description: Meet your teammates, figure out how/when you want to meet and communicate.
