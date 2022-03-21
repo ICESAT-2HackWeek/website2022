@@ -29,6 +29,10 @@ parts:
       sections:
         - file: tutorials/jupyter
         - file: tutorials/DataProducts/DataProducts
+        - file: tutorials/data_access/data_access_1_intro
+          sections:
+            - file: tutorials/data_access/data_access_2_earthdata
+            - file: tutorials/data_access/data_access_3_icepyx
         - file: tutorials/geospatial/geospatial-intro
           sections:
             - file: tutorials/geospatial/geospatial-advanced
