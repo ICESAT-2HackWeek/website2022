@@ -14,14 +14,12 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | Tutorial | Topics | Datasets |  Recording Link |
 | -  | - | - |  - |
 | [Open Science Tools](./jupyter.md) | Git, GitHub, JupyterHub | n/a | [Recording](https://youtu.be/rKhs5FLI5rc)  |
-| [Example Notebook](./example/tutorial-notebook.ipynb) | Jupyter Book formatting, ipyleaflet | n/a |  Not recorded |
 | [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | ATL14, ATL11 | TODO |
-| About ICESat-2 Data | Standard products purpose and access | ATL-X |  TBD |
-| ICESat-2 Data Access | Programmatic and cloud access | ATL-X |  TBD |
-| Object-oriented Programming | Modular programming for collaboration | n/a | TBD |
+| About ICESat-2 Data | Standard products purpose and access | ATL-X |  TODO |
+| ICESat-2 Data Access | Programmatic and cloud access | ATL-X |  TODO |
+| Object-oriented Programming | Modular programming for collaboration | n/a | TODO |
 | [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python | ATL06, COP30 |  TBD |
-| Data Integration 1 | TBD | TBD |  TBD |
-| Visualization Tools | pyGMT, GEE | TBD |  TBD |
-| Cloud Computing Tools | TBD | TBD |  TBD |
-| Data Integration 2 | Slide Rule, GRIMP, Raster Data | TBD |  TBD |
-| Data Integration 3 | TBD | TBD |  TBD |
+| [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask | ATL08 |  TODO |
+| Data Integration 1 | TBD | TBD |  TODO |
+| Data Integration 2 | Slide Rule, GRIMP, Raster Data | TBD |  TODO |
+| Data Integration 3 | TBD | TBD |  TODO |
