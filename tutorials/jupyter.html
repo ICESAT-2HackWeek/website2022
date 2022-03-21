@@ -725,15 +725,15 @@ method that only requires a right click.</p>
 This should be replaced with your GitHub username.
 <br/><br/>
 This step will also create a folder in the current location of your
-terminal. The folder will be called <code class="docutils literal notranslate"><span class="pre">website</span></code>, which originates from the
+terminal. The folder will be called <code class="docutils literal notranslate"><span class="pre">website2022</span></code>, which originates from the
 name of the repository.</p>
 </div>
-<p>Your command should look like this before hitting the Enter key to execute it:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;github-username&gt;/website
+<p>Your command should look similar to this before hitting the Enter key to execute it:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;github-username&gt;/website2022
 </pre></div>
 </div>
 <p>Sample output:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Cloning into <span class="s1">&#39;website&#39;</span>...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Cloning into <span class="s1">&#39;website2022&#39;</span>...
 remote: Enumerating objects: <span class="m">3295</span>, <span class="k">done</span>.
 remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">310</span>/310<span class="o">)</span>, <span class="k">done</span>.
 remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">212</span>/212<span class="o">)</span>, <span class="k">done</span>.
@@ -750,7 +750,7 @@ Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span clas
 </div>
 <p>Sample output:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>total <span class="m">4</span>
-drwxr-sr-x <span class="m">6</span> jovyan users <span class="m">4096</span> Jul  <span class="m">9</span> <span class="m">17</span>:10 website
+drwxr-sr-x <span class="m">6</span> jovyan users <span class="m">4096</span> Jul  <span class="m">9</span> <span class="m">17</span>:10 website2022
 </pre></div>
 </div>
 <p>You will also see the folder on the left-hand side in the file explorer:
@@ -787,7 +787,7 @@ describes more behind this principle.</p>
 <h2>How do I keep up with changes to the initial forked repository?<a class="headerlink" href="#how-do-i-keep-up-with-changes-to-the-initial-forked-repository" title="Permalink to this headline">¶</a></h2>
 <p>By making a fork of the website, you are creating a copy of the website as
 of the date you clicked the ‘Fork’ button. This also means that your version will not
-get any updates automatically if the ICESat-2 Hackweek website repository is changed after
+get any updates automatically if the website repository is changed after
 your fork was created.</p>
 <p>To update your forked version with changes from the ICESat-2 Hackweek version, you need to
 do a one time setup. This process is also called
@@ -796,17 +796,17 @@ for a git repository.</p>
 <div class="section" id="add-the-icesat-2-hackweek-organization-repository-as-a-remote">
 <h3>Add the ICESat-2 Hackweek organization repository as a remote<a class="headerlink" href="#add-the-icesat-2-hackweek-organization-repository-as-a-remote" title="Permalink to this headline">¶</a></h3>
 <p>A remote is defined with a label and a URL. In our case and command below,
-we are using <code class="docutils literal notranslate"><span class="pre">{{hackweek}}</span></code> as the label and <code class="docutils literal notranslate"><span class="pre">{{website_url}}.git</span></code>
+we are using Hackweek as the label and <code class="docutils literal notranslate"><span class="pre">https://ICESAT-2HackWeek.github.io/website2022.git</span></code>
 as the URL.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The chosen label <code class="docutils literal notranslate"><span class="pre">{{hackweek}}</span></code> is found in many projects as the <code class="docutils literal notranslate"><span class="pre">upstream</span></code>. Here we
+<p>The chosen label Hackweek is found in many projects as the <code class="docutils literal notranslate"><span class="pre">upstream</span></code>. Here we
 just went with a more descriptive label instead of the default value.</p>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change to the website folder, it was created with the `clone`</span>
 <span class="nb">cd</span> website
 <span class="c1"># Add the remote</span>
-git remote add <span class="o">{{</span>hackweek<span class="o">}}</span> <span class="o">{{</span>website_url<span class="o">}}</span>.git
+git remote add Hackweek https://github.com/ICESAT-2HackWeek/website2022.git
 </pre></div>
 </div>
 <p>The command will not return any output. Instead, we verify by printing the
@@ -817,8 +817,8 @@ list of known remotes for this repository:</p>
 and should show your GitHub username.</p>
 </div>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span> git remote -v
- <span class="o">{{</span>hackweek<span class="o">}}</span>	<span class="o">{{</span>website_url<span class="o">}}</span>.git <span class="o">(</span>fetch<span class="o">)</span>
- <span class="o">{{</span>hackweek<span class="o">}}</span>	<span class="o">{{</span>website_url<span class="o">}}</span>.git <span class="o">(</span>push<span class="o">)</span>
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git <span class="o">(</span>fetch<span class="o">)</span>
+ Hackweek	https://github.com/ICESAT-2HackWeek/website2022.git <span class="o">(</span>push<span class="o">)</span>
  origin	https://github.com/&lt;github-username&gt;/website.git <span class="o">(</span>fetch<span class="o">)</span>
  origin	https://github.com/&lt;github-username&gt;/website.git <span class="o">(</span>push<span class="o">)</span>
 </pre></div>
@@ -833,7 +833,7 @@ the changes. A fetch is a pre-step that reads all the changes that need to
 be applied to your fork. The <code class="docutils literal notranslate"><span class="pre">{{hackweek}}</span></code> command options indicates from which
 source the changes will be queried from.</p>
 <p>Reading changes from the remote ‘ICESat-2 Hackweek’:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git fetch <span class="o">{{</span>hackweek<span class="o">}}</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git fetch Hackweek
 </pre></div>
 </div>
 <p>To now also get and apply those changes, you need to issue a <code class="docutils literal notranslate"><span class="pre">pull</span></code> command.
@@ -848,7 +848,7 @@ command should return <code class="docutils literal notranslate"><span class="pr
 output.</p>
 </div>
 <p>Applying changes from the remote ‘ICESat-2 Hackweek’:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git pull <span class="o">{{</span>hackweek<span class="o">}}</span> main
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git pull Hackweek main
 </pre></div>
 </div>
 <div class="admonition note">
