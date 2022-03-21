@@ -173,7 +173,7 @@ for a git repository.
 ### Add the {{hackweek}} organization repository as a remote
 
 A remote is defined with a label and a URL. In our case and command below,
-we are using Hackweek as the label and `https://github.com/ICESAT-2HackWeek/website2022.git`
+we are using Hackweek as the label and {{ '`{url}.git`'.format(url=website_url) }}
 as the URL.
 
 ```{Note}
