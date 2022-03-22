@@ -45,7 +45,7 @@ git config --global credential.helper store
 
 The third line is a configuration option that needs to be done with a first time
 setup. It specifies the strategy on how git will apply changes you pull from
-a remote git repository. 
+a remote git repository.
 More on strategies is [described here.](http://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
 The last line of the config will store your GitHub credentials and will save
@@ -69,12 +69,13 @@ credential.helper=store
 ### 4. Authenticating with GitHub
 In order to interact with GitHub via the `git` command inside the JupyterHub environment,
 you need to set up an authentication method. One way to do this is to use your GitHub password.
-However, a better, more secure practice is to use a GitHub Personal Access Token, which offers 
-more customizable permissions and can be revoked without affecting your main GitHub user 
+However, a better, more secure practice is to use a GitHub Personal Access Token, which offers
+more customizable permissions and can be revoked without affecting your main GitHub user
 account password.
 
 Take a moment to work through the instructions on the [GitHub personal access tokens](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) page. For this hackweek, you need to check the **repo**, **admin:org**, and **workflow** scope.
 
+Screenshot from github.com setting up the token:
 ![github-token](../img/github-token.png)
 
 Once you have created your token, be sure to save it on your computer in case
@@ -88,7 +89,7 @@ terminal on the JupyterHub. where you will be prompted for your GitHub username
 and the token.
 
 ```shell
-git clone {{github_org_url}}.github_setup_check.git
+git clone https://github.com/ICESAT-2HackWeek/github_setup_check.git
 ```
 
 Since this is the first time you are interacting from the JupyterHub with GitHub,
@@ -98,6 +99,16 @@ will be similar to the below:
 ```{attention}
 Use your personal GitHub username instead of the placeholder `<GitHub Username>`
 in the below sample output. For the password, paste your created token.
+
+The prompt for the `Password:` will not show any characters that are entered
+and stay blank. Make sure to only copy and paste your token once and then
+hit the enter key.
+```
+
+```{admonition} Browser context menu
+:class: tip
+The browser context menu that offers the copy and paste option via right-click
+of your mouse is accessible on the JupyterHub by using the 'Shift' key.
 ```
 
 ```shell
