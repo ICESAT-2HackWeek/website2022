@@ -408,9 +408,16 @@
 							{%- if 'resources' in content and content['resources'] is not none %}
 							<div>
 								<h6 class="mb-1 mt-2"> Resource(s)</h6>
-								{%- for resource in content['resources'] %}
-								<a href="{{resource['url']}}" target="_blank">{{resource['title']}}</a>
-								{%- endfor %}
+                                <ul>
+                                    {%- for resource in content['resources'] %}
+                                        <li>
+                                            <a href="{{resource['url']}}"
+                                               target="_blank">
+                                                {{resource['title']}}
+                                            </a>
+                                        </li>
+                                    {%- endfor %}
+                                </ul>
 							</div>
 							{%- endif -%}
 						</div>
