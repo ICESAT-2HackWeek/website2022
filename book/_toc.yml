@@ -36,11 +36,13 @@ parts:
         - file: tutorials/geospatial/geospatial-intro
           sections:
             - file: tutorials/geospatial/geospatial-advanced
-        - file: tutorials/DataIntegration/dataintegration-1
         - file: tutorials/DataVisualization/Visualization_Earth_Engine_geemap_IS2_HW_2022
           sections:
             - file: tutorials/DataVisualization/Visualization_geemap_use_examples.ipynb
-        - file: tutorials/DataIntegration/dataintegration-2
+        - file: tutorials/DataIntegration/dataintegration-1
+          sections:
+            - file: tutorials/DataIntegration/dataintegration-2
+            - file: tutorials/DataIntegration/data-applications
         - file: tutorials/cloud-computing/cloud-computing-tutorial
         - file: tutorials/DataVisualization/dataviz2d.py
 - caption: Projects
