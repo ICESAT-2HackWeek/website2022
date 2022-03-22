@@ -30,6 +30,6 @@ In the below command, replace `EARTHDATA_LOGIN` with your personal username and
 ```
 
 ```shell
-echo "machine urs.earthdata.nasa.gov login EARTHDATA_LOGIN password EARTHDATA_PASSWORD" > ~/.netrc
+echo 'machine urs.earthdata.nasa.gov login "EARTHDATA_LOGIN" password "EARTHDATA_PASSWORD"' > ~/.netrc
 chmod 0600 ~/.netrc
 ```
