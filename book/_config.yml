@@ -35,8 +35,6 @@ parse:
 execute:
   execute_notebooks: 'cache'
   exclude_patterns:
-    - "**/dataintegration-1.ipynb"
-    - "**/dataintegration-2.ipynb"
     - "**/geospatial-advanced.ipynb"
     - "**/Visualization_Earth_Engine_geemap_IS2_HW_2022.ipynb"
     - "**/Visualization_geemap_use_examples.ipynb"
