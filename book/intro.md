@@ -17,4 +17,5 @@
 :class: seealso
 * JupyterHub: {{ jupyterhub_url }}
 * GitHub organization: {{ github_org_url}}
+* Projects Spreadsheet: {{ project_spreadsheet_url }}
 ```
