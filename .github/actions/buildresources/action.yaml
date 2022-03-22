@@ -37,7 +37,7 @@ runs:
     - name: Dump Build Logs
       shell: bash -l {0}
       run: |
-        cat ./book/_build/html/reports/*log 
+        if (test -a book/_build/html/reports/*log); then cat book/_build/html/reports/*log ; fi
 
     - name: Publish to GitHub Pages
       if: inputs.publish-to-gh == 'true'
