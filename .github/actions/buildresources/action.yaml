@@ -36,6 +36,7 @@ runs:
         
     - name: Dump Build Logs
       shell: bash -l {0}
+      continue-on-error: true
       run: |
         cat ./book/_build/html/reports/*log 
 
