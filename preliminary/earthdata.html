@@ -554,9 +554,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="configure-programmatic-access-to-nasa-servers">
 <h2>Configure programmatic access to NASA servers<a class="headerlink" href="#configure-programmatic-access-to-nasa-servers" title="Permalink to this headline">¶</a></h2>
-<p>If you use web interfaces to retrieve nasa data such as <a class="reference external" href="https://earthdata.nasa.gov/">Earthdata Search</a> you are prompted to login. We will be using software to retrieve data from NASA Servers during the hackweek, so you must store your credentials on the JupyterHub as explained in <a class="reference external" href="https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget">this documentation</a>. Run the following commands on the JupyterHub in a terminal replacing your Earthdata login username and password:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;machine urs.earthdata.nasa.gov login EARTHDATA_LOGIN password EARTHDATA_PASSWORD&quot;</span> &gt; ~/.netrc
-chmod <span class="m">0600</span> .netrc
+<p>If you use web interfaces to retrieve nasa data such as
+<a class="reference external" href="https://earthdata.nasa.gov/">Earthdata Search</a> you are prompted to login.
+We will be using software to retrieve data from NASA Servers during the hackweek,
+so you must store your credentials on the JupyterHub as explained in
+<a class="reference external" href="https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget">this documentation</a>.</p>
+<p>Run the following commands on the JupyterHub:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In the below command, replace <code class="docutils literal notranslate"><span class="pre">EARTHDATA_LOGIN</span></code> with your personal username and
+<code class="docutils literal notranslate"><span class="pre">EARTHDATA_PASSWORD</span></code> with your password</p>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;machine urs.earthdata.nasa.gov login &quot;EARTHDATA_LOGIN&quot; password &quot;EARTHDATA_PASSWORD&quot;&#39;</span> &gt; ~/.netrc
+chmod <span class="m">0600</span> ~/.netrc
 </pre></div>
 </div>
 </div>
