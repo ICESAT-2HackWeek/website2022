@@ -22,9 +22,11 @@ import ftplib
 import shutil
 import base64
 import socket
+import getpass
 import inspect
 import hashlib
 import logging
+import builtins
 import datetime
 import warnings
 import posixpath
@@ -462,6 +464,53 @@ def from_http(HOST,timeout=None,context=ssl.SSLContext(),local=None,hash='',
         # return the bytesIO object
         remote_buffer.seek(0)
         return remote_buffer
+    
+# PURPOSE: attempt to build an opener with netrc
+def attempt_login(urs, context=ssl.SSLContext(),
+    password_manager=True, get_ca_certs=False, redirect=False,
+    authorization_header=False, **kwargs):
+    # set default keyword arguments
+    kwargs.setdefault('username', os.environ.get('EARTHDATA_USERNAME'))
+    kwargs.setdefault('password', os.environ.get('EARTHDATA_PASSWORD'))
+    kwargs.setdefault('retries', 5)
+    # default netrc file
+    kwargs.setdefault('netrc', os.path.expanduser('~/.netrc'))
+    try:
+        # only necessary on jupyterhub
+        os.chmod(kwargs['netrc'], 0o600)
+        # try retrieving credentials from netrc
+        username, _, password = netrc.netrc(kwargs['netrc']).authenticators(urs)
+    except Exception as e:
+        # try retrieving credentials from environmental variables
+        username, password = (kwargs['username'], kwargs['password'])
+        pass
+    # if username or password are not available
+    if not username:
+        username = builtins.input('Username for {0}: '.format(urs))
+    if not password:
+        prompt = 'Password for {0}@{1}: '.format(username,urs)
+        password = getpass.getpass(prompt=prompt)
+    # for each retry
+    for retry in range(kwargs['retries']):
+        # build an opener for urs
+        opener = build_opener(username, password, context=context,
+            password_manager=password_manager,
+            get_ca_certs=get_ca_certs,
+            redirect=redirect,
+            authorization_header=authorization_header,
+            urs=urs)
+        # try logging in by check credentials
+        try:
+            check_credentials()
+        except Exception as e:
+            pass
+        else:
+            return opener
+        # reattempt login
+        username = builtins.input('Username for {0}: '.format(urs))
+        password = getpass.getpass(prompt=prompt)
+    # reached end of available retries
+    raise RuntimeError('End of Retries: Check NASA Earthdata credentials')
 
 # PURPOSE: "login" to NASA Earthdata with supplied credentials
 def build_opener(username, password, context=ssl.SSLContext(),
