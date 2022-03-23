@@ -17,6 +17,6 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [About ICESat-2 Data](./DataProducts/DataProducts.ipynb) | Standard products purpose and access |  [Recording](https://youtu.be/pL9psogF_LQ) |
 | [ICESat-2 Data Access](./data_access/data_access_1_intro.ipynb) | Programmatic and cloud access | [Recording](https://youtu.be/UpXGZLlO76w) |
 | Object-oriented Programming | Modular programming for collaboration | [Recording](https://youtu.be/dhLkCX0OWYs) |
-| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | TODO |
-| [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python |  TBD |
-| [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask |  TODO |
+| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT |  |
+| [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python |  |
+| [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask |  |
