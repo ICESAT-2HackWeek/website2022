@@ -16,7 +16,7 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [Open Science Tools](./jupyter.md) | Getting Started on Technology | [Recording](https://www.youtube.com/watch?v=mFaM41fRRcY) |
 | [About ICESat-2 Data](./DataProducts/DataProducts.ipynb) | Standard products purpose and access |  [Recording](https://youtu.be/pL9psogF_LQ) |
 | [ICESat-2 Data Access](./data_access/data_access_1_intro.ipynb) | Programmatic and cloud access | [Recording](https://youtu.be/UpXGZLlO76w) |
-| Object-oriented Programming | Modular programming for collaboration | [Recording](https://youtu.be/dhLkCX0OWYs) |
+| [Object-oriented Programming](./ObjectOriented/index.md) | Modular programming for collaboration | [Recording](https://youtu.be/dhLkCX0OWYs) |
 | [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT |  |
 | [Data Integration](./DataIntegration/dataintegration-1.ipynb) | pandas, xarray, dask, COGs |  |
 | [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python |  |

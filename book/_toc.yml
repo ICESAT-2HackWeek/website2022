@@ -33,6 +33,11 @@ parts:
           sections:
             - file: tutorials/data_access/data_access_2_earthdata
             - file: tutorials/data_access/data_access_3_icepyx
+        - file: tutorials/ObjectOriented/index
+          sections:
+            - file: tutorials/ObjectOriented/OOP_tutorial_live
+            - file: tutorials/ObjectOriented/OOP_tutorial
+            - file: tutorials/ObjectOriented/alien
         - file: tutorials/geospatial/geospatial-intro
           sections:
             - file: tutorials/geospatial/geospatial-advanced
