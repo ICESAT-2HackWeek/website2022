@@ -75,12 +75,18 @@ tabs:
         description: A description of ICESat-2 data products, where to find information and how to access data.
         leads:
           - Ben Smith
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/pL9psogF_LQ
       - time: 10:00 - 10:30
         location: Zoom
         title: Best Practices for Effective Teamwork
         description: This tutorial focuses on the social and organizational aspects of working together effectively in groups.
         leads:
           - Naomi Alterman
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/4tarSai5Ato
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description:
@@ -91,6 +97,10 @@ tabs:
         description: Learning how to access ICESat-2 data using web mapping interfaces and programmatic methods.
         leads:
           - Mikala Beig
+          - Jessica Scheick
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/UpXGZLlO76w
       - time: 12:00 - 12:45
         title: Lunch
         description:
@@ -103,6 +113,9 @@ tabs:
           - working together
         leads:
           - Romina Piunno
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/dhLkCX0OWYs
       - time: 2:00 - 3:00
         location: Zoom
         title: Project Hacking Time
