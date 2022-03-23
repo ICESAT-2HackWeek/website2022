@@ -12,7 +12,7 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 
 
 | Tutorial | Topics | Recording Link |
-| -  | - | - |  - |
+| -  | - | - |
 | [Open Science Tools](./jupyter.md) | Getting Started on Technology | [Recording](https://www.youtube.com/watch?v=mFaM41fRRcY) |
 | About ICESat-2 Data | Standard products purpose and access |  [Recording](https://youtu.be/pL9psogF_LQ) |
 | ICESat-2 Data Access | Programmatic and cloud access | [Recording](https://youtu.be/UpXGZLlO76w) |
