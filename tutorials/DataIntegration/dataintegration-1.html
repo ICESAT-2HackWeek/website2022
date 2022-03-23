@@ -486,47 +486,42 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#needed-libraries">
-   Needed libraries:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computing-environment">
    Computing environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#identify-and-acquire-the-icesat2-product-s-of-interest">
-   Identify and acquire the ICESat2 product(s) of interest
+   1. Identify and acquire the ICESat2 product(s) of interest
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-icesat-2-atl03-data-from-desired-region">
-     Download ICESat-2 ATL03 data from desired region
+    <a class="reference internal nav-link" href="#download-icesat-2-atl06-data-from-desired-region">
+     Download ICESat-2 ATL06 data from desired region
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#identify-other-products-of-interest-and-their-space-time-boundaries">
-   Identify other products of interest, and their space/time boundaries
+  <a class="reference internal nav-link" href="#identify-other-products-of-interest">
+   2. Identify other products of interest
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-data-are-needed-to-supplement-and-enhance-is2-observations">
-     What data are needed to supplement and enhance IS2 observations?
+    <a class="reference internal nav-link" href="#question-respond-in-slack">
+     Question - Respond in Slack
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#where-are-the-other-data-sets-stored">
-     Where are the other data sets stored?
+    <a class="reference internal nav-link" href="#where-are-other-data-sets-stored">
+     Where are other data sets stored?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#acquire-non-cloud-data-and-open-atm-data-access">
-   Acquire non-cloud data and open: ATM data access
+   3. Acquire non-cloud data and open:  ATM data access
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -558,52 +553,65 @@ const thebe_selector_output = ".output, .cell_output"
      Multi-indexing
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#download-landsat-images-from-the-cloud">
-   Download (Landsat) images from the cloud:
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-data-in-the-cloud-from-s3-buckets">
-     Using data in the cloud from S3 buckets:
+    <a class="reference internal nav-link" href="#co-register-icesat-2-with-atm-data">
+     Co-register ICESat-2 with ATM data
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-and-open-landsat-images-in-the-cloud">
-   Find and open Landsat images in the cloud
+  <a class="reference internal nav-link" href="#search-and-open-landsat-raster-imagery-from-the-cloud">
+   3.  Search and open (Landsat) raster imagery from the cloud
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cloud-optimized-approaches">
+     Cloud optimized approaches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-for-landsat-imagery">
+     Search for Landsat imagery
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#intake-all-scenes-using-the-intake-stac-library">
      Intake all scenes using the intake-STAC library
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#should-i-keep-next-cell">
-   Should I keep next cell?
-  </a>
-  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-and-visualize-each-image-using-rasterio">
+     Open and visualize each image using RasterIO
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#manipulating-data-in-xarray">
      Manipulating data in Xarray
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rasterio-and-rioxarray">
+       RasterIO and RioXarray
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dask">
+       Dask
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-multi-dimensional-read-ins-manipulation-and-visualization">
+     Advanced multi-dimensional read-ins, manipulation and visualization
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+   4. Summary
   </a>
  </li>
 </ul>
@@ -627,47 +635,42 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#needed-libraries">
-   Needed libraries:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computing-environment">
    Computing environment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#identify-and-acquire-the-icesat2-product-s-of-interest">
-   Identify and acquire the ICESat2 product(s) of interest
+   1. Identify and acquire the ICESat2 product(s) of interest
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-icesat-2-atl03-data-from-desired-region">
-     Download ICESat-2 ATL03 data from desired region
+    <a class="reference internal nav-link" href="#download-icesat-2-atl06-data-from-desired-region">
+     Download ICESat-2 ATL06 data from desired region
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#identify-other-products-of-interest-and-their-space-time-boundaries">
-   Identify other products of interest, and their space/time boundaries
+  <a class="reference internal nav-link" href="#identify-other-products-of-interest">
+   2. Identify other products of interest
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-data-are-needed-to-supplement-and-enhance-is2-observations">
-     What data are needed to supplement and enhance IS2 observations?
+    <a class="reference internal nav-link" href="#question-respond-in-slack">
+     Question - Respond in Slack
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#where-are-the-other-data-sets-stored">
-     Where are the other data sets stored?
+    <a class="reference internal nav-link" href="#where-are-other-data-sets-stored">
+     Where are other data sets stored?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#acquire-non-cloud-data-and-open-atm-data-access">
-   Acquire non-cloud data and open: ATM data access
+   3. Acquire non-cloud data and open:  ATM data access
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -699,52 +702,65 @@ const thebe_selector_output = ".output, .cell_output"
      Multi-indexing
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#download-landsat-images-from-the-cloud">
-   Download (Landsat) images from the cloud:
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-data-in-the-cloud-from-s3-buckets">
-     Using data in the cloud from S3 buckets:
+    <a class="reference internal nav-link" href="#co-register-icesat-2-with-atm-data">
+     Co-register ICESat-2 with ATM data
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#find-and-open-landsat-images-in-the-cloud">
-   Find and open Landsat images in the cloud
+  <a class="reference internal nav-link" href="#search-and-open-landsat-raster-imagery-from-the-cloud">
+   3.  Search and open (Landsat) raster imagery from the cloud
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cloud-optimized-approaches">
+     Cloud optimized approaches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-for-landsat-imagery">
+     Search for Landsat imagery
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#intake-all-scenes-using-the-intake-stac-library">
      Intake all scenes using the intake-STAC library
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#should-i-keep-next-cell">
-   Should I keep next cell?
-  </a>
-  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-and-visualize-each-image-using-rasterio">
+     Open and visualize each image using RasterIO
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#manipulating-data-in-xarray">
      Manipulating data in Xarray
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rasterio-and-rioxarray">
+       RasterIO and RioXarray
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dask">
+       Dask
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-multi-dimensional-read-ins-manipulation-and-visualization">
+     Advanced multi-dimensional read-ins, manipulation and visualization
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+   4. Summary
   </a>
  </li>
 </ul>
@@ -758,46 +774,39 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-integration-with-icesat-2-part-i">
 <h1>Data integration with ICESat-2 - Part I<a class="headerlink" href="#data-integration-with-icesat-2-part-i" title="Permalink to this headline">¶</a></h1>
+<p><strong>Credits</strong></p>
+<ul class="simple">
+<li><p>Zach Fair</p></li>
+<li><p>Ian Joughin</p></li>
+<li><p>Tasha Snow</p></li>
+</ul>
 <div class="admonition-learning-objectives admonition">
 <p class="admonition-title">Learning Objectives</p>
 <p><strong>Goals</strong></p>
 <ul class="simple">
 <li><p>Identify and locate non-ICESat-2 data sets</p></li>
-<li><p>Acquiring data from the cloud or via download</p></li>
-<li><p>Open data in Pandas and Xarray and basic functioning of DataFrames</p></li>
+<li><p>Acquire data from the cloud or via download</p></li>
+<li><p>Open data in <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and basic functioning of DataFrames</p></li>
 </ul>
 </div>
-<p>☝️ This formatting is a Jupyter Book <a class="reference external" href="https://jupyterbook.org/content/content-blocks.html#notes-warnings-and-other-admonitions">admonition</a>, that uses a custom version of Markdown called <a class="reference internal" href="../../reference/glossary.html#term-MyST"><span class="xref std std-term">MyST</span></a></p>
-<div class="section" id="needed-libraries">
-<h2>Needed libraries:<a class="headerlink" href="#needed-libraries" title="Permalink to this headline">¶</a></h2>
-<p>satsearch <br />
-boto</p>
-<p>matplotlib widget extension</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sat</span><span class="o">-</span><span class="n">search</span>
-</pre></div>
+<div class="admonition-key-takeaway admonition">
+<p class="admonition-title">Key Takeaway</p>
+<p>By the end of this tutorial, you will be able to visualize Cloud Optimized Geotiffs with ICESat-2 and ATM data.</p>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">boto3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">intake</span><span class="o">-</span><span class="n">stac</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+<p>For this tutorial, feel free to run the code along with us as we live code by downsizing the zoom window and splitting your screen (or using two screens). Or you can simply watch the zoom walkthrough. Don’t worry if you fall behind on the code. The notebook is standalone and you can easily run the code at your own pace another time to catch anything you missed.</p>
+<p>We will have one exercise you can type into a notebook, or figure out in a separate document. We will also ask some questions that you can responsd to in the tutorial Slack channel.</p>
 <div class="section" id="computing-environment">
 <h2>Computing environment<a class="headerlink" href="#computing-environment" title="Permalink to this headline">¶</a></h2>
 <p>We’ll be using the following open source Python libraries in this notebook:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suppress library deprecation warnings</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipyleaflet</span>
@@ -829,28 +838,25 @@ boto</p>
 <span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
 <span class="kn">from</span> <span class="nn">rasterio.session</span> <span class="kn">import</span> <span class="n">AWSSession</span>
 <span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">show</span>
+<span class="kn">import</span> <span class="nn">rioxarray</span> <span class="k">as</span> <span class="nn">rxr</span>
 <span class="kn">from</span> <span class="nn">dask.utils</span> <span class="kn">import</span> <span class="n">SerializableLock</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">hvplot.xarray</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span><span class="p">,</span> <span class="n">transform</span>
-
-<span class="c1"># Suppress library deprecation warnings</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="identify-and-acquire-the-icesat2-product-s-of-interest">
-<h2>Identify and acquire the ICESat2 product(s) of interest<a class="headerlink" href="#identify-and-acquire-the-icesat2-product-s-of-interest" title="Permalink to this headline">¶</a></h2>
+<h2>1. Identify and acquire the ICESat2 product(s) of interest<a class="headerlink" href="#identify-and-acquire-the-icesat2-product-s-of-interest" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>What is the application of this product?</p></li>
 <li><p>What region and resolution is needed?</p></li>
 </ul>
-<div class="section" id="download-icesat-2-atl03-data-from-desired-region">
-<h3>Download ICESat-2 ATL03 data from desired region<a class="headerlink" href="#download-icesat-2-atl03-data-from-desired-region" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-icesat-2-atl06-data-from-desired-region">
+<h3>Download ICESat-2 ATL06 data from desired region<a class="headerlink" href="#download-icesat-2-atl06-data-from-desired-region" title="Permalink to this headline">¶</a></h3>
 <p>Remember icepyx? We are going to use that again to download some ICESat-2 ATL06 data over our region of interest.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -917,8 +923,8 @@ boto</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set Earthdata credentials</span>
-<span class="n">uid</span> <span class="o">=</span> <span class="s1">&#39;zhfair&#39;</span>
-<span class="n">email</span> <span class="o">=</span> <span class="s1">&#39;zhfair@umich.edu&#39;</span>
+<span class="n">uid</span> <span class="o">=</span> <span class="s1">&#39;uwhackweek&#39;</span>
+<span class="n">email</span> <span class="o">=</span> <span class="s1">&#39;hackweekadmin@gmail.com&#39;</span>
 <span class="n">region</span><span class="o">.</span><span class="n">earthdata_login</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span>
 
 <span class="c1"># Order the granules</span>
@@ -930,7 +936,7 @@ boto</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download the data</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/home/jovyan/website2022/book/tutorials/DataIntegration/&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/tmp/DataIntegration/&#39;</span>
 <span class="n">region</span><span class="o">.</span><span class="n">download_granules</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -955,30 +961,29 @@ boto</p>
 </div>
 </div>
 </div>
-<div class="section" id="identify-other-products-of-interest-and-their-space-time-boundaries">
-<h2>Identify other products of interest, and their space/time boundaries<a class="headerlink" href="#identify-other-products-of-interest-and-their-space-time-boundaries" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-data-are-needed-to-supplement-and-enhance-is2-observations">
-<h3>What data are needed to supplement and enhance IS2 observations?<a class="headerlink" href="#what-data-are-needed-to-supplement-and-enhance-is2-observations" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Satellite or in situ data sets?</p></li>
-<li><p>We will show ATM (non-AWS) and Landsat (AWS)</p></li>
-</ul>
+<div class="section" id="identify-other-products-of-interest">
+<h2>2. Identify other products of interest<a class="headerlink" href="#identify-other-products-of-interest" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-respond-in-slack">
+<h3>Question - Respond in Slack<a class="headerlink" href="#question-respond-in-slack" title="Permalink to this headline">¶</a></h3>
+<p>What research problems have you wanted to address that require more than one dataset?</p>
 </div>
-<div class="section" id="where-are-the-other-data-sets-stored">
-<h3>Where are the other data sets stored?<a class="headerlink" href="#where-are-the-other-data-sets-stored" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="where-are-other-data-sets-stored">
+<h3>Where are other data sets stored?<a class="headerlink" href="#where-are-other-data-sets-stored" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Cloud datasets in AWS
 <a class="reference external" href="https://registry.opendata.aws/">https://registry.opendata.aws/</a></p></li>
-<li><p>EarthData
+<li><p>NASA EarthData
 <a class="reference external" href="https://search.earthdata.nasa.gov/search/">https://search.earthdata.nasa.gov/search/</a></p></li>
+<li><p>ESA Copernicus Hub
+<a class="reference external" href="https://scihub.copernicus.eu">https://scihub.copernicus.eu</a></p></li>
+<li><p>Etc.</p></li>
 </ul>
-<p>ATM: <a class="reference external" href="https://search.earthdata.nasa.gov/search/granules?p=C1000000062-NSIDC_ECS&amp;pg%5B0%5D%5Bv%5D=f&amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;sb%5B0%5D=-50.56835%2C68.83371%2C-49.00139%2C69.56591&amp;fi=ATM&amp;as%5Binstrument%5D%5B0%5D=ATM&amp;tl=1646767454.667%213%21%21&amp;m=67.08956509568404%21-48.11572265625%216%211%210%210%2C2">https://search.earthdata.nasa.gov/search/granules?p=C1000000062-NSIDC_ECS&amp;pg[0][v]=f&amp;pg[0][gsk]=-start_date&amp;sb[0]=-50.56835,68.83371,-49.00139,69.56591&amp;fi=ATM&amp;as[instrument][0]=ATM&amp;tl=1646767454.667!3!!&amp;m=67.08956509568404!-48.11572265625!6!1!0!0,2</a> <br />
-Sentinel-2: <a class="reference external" href="https://registry.opendata.aws/sentinel-2/">https://registry.opendata.aws/sentinel-2/</a> <br />
-Landsat: <a class="reference external" href="https://registry.opendata.aws/usgs-landsat/">https://registry.opendata.aws/usgs-landsat/</a></p>
+<p>More on this in the Cloud Computing Tools tutorial</p>
+<p>Today, we will show ATM (non-AWS) and Landsat (AWS)</p>
 </div>
 </div>
 <div class="section" id="acquire-non-cloud-data-and-open-atm-data-access">
-<h2>Acquire non-cloud data and open: ATM data access<a class="headerlink" href="#acquire-non-cloud-data-and-open-atm-data-access" title="Permalink to this headline">¶</a></h2>
+<h2>3. Acquire non-cloud data and open:  ATM data access<a class="headerlink" href="#acquire-non-cloud-data-and-open-atm-data-access" title="Permalink to this headline">¶</a></h2>
 <p>Why did we choose April 2019 and RGT 338? In Spring 2019, an airborne campaign called Operation IceBridge was flown across Jakobshavan as validation for ICESat-2. Onboard was the Airborne Topographic Mapper, a lidar that works at both 532 nm (like ICESat-2) and 1064 nm (near-infrared). More information about Operation IceBridge and ATM may be found here: <a class="reference external" href="https://nsidc.org/data/icebridge">https://nsidc.org/data/icebridge</a></p>
 <p>Here, we are going to try and co-register ATM spot measurements with ICESat-2. Because both data sets are rather large, this can be computationally expensive, so we will only consider one flight track with the ATM 532 nm beam.</p>
 <p>Operation IceBridge data is not available on the cloud, so this data was downloaded directly from NSIDC. If you are interested in using IceBridge data, NSIDC has a useful data portal here: <a class="reference external" href="https://nsidc.org/icebridge/portal/map">https://nsidc.org/icebridge/portal/map</a></p>
@@ -993,20 +998,11 @@ Landsat: <a class="reference external" href="https://registry.opendata.aws/usgs-
 </div>
 </div>
 </div>
+<p>We opened this data into a Pandas DataFrame, which is a handy tool for Earth data exploration and analysis. The column names derive automatically from the first row of the csv and each row corresponds to an ATM measurement.</p>
 <div class="section" id="opening-and-manipulating-data-in-pandas">
 <h3>Opening and manipulating data in Pandas<a class="headerlink" href="#opening-and-manipulating-data-in-pandas" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="p">[</span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># Change the longitudes to be consistent with ICESat-2</span>
-<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Longitude(deg)&#39;</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">360</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Pandas excels at helping you explore, clean, and process tabular data, such as data stored in spreadsheets or databases. In pandas, a Series is a 1-D data table and the 2-D data table is called a DataFrame, which we saw just above.</p>
-<p>Read csv is the easiest way to open a csv data file into a pandas DataFrame. We can specify formatting, data selection, indexing and much more when reading any data into a pandas DataFrame. Here I specify different headers, assign the first column as the index, and the first column as the header (even though we are renaming it, so that it doesn’t get read in with data).</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> excels at helping you explore, clean, and process tabular data, such as data stored in spreadsheets or databases. In <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, a Series is a 1-D data table and a DataFrame is the 2-D data table, which we just saw above.</p>
+<p><code class="docutils literal notranslate"><span class="pre">read_csv</span></code>, the function we used above, is the easiest way to open a csv data file into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. We can specify formatting, data selection, indexing, and much more when reading any data into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. Below we read in the data again, specifying different headers, assigning the first column as the index, and assigning the first column as the header (even though we are renaming it, so that it doesn’t mistake the first row in the csv as data).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load data with specific headers</span>
@@ -1015,12 +1011,296 @@ Landsat: <a class="reference external" href="https://registry.opendata.aws/usgs-
        <span class="s1">&#39;West-to-East_Slope&#39;</span><span class="p">,</span> <span class="s1">&#39;RMS_Fit&#39;</span><span class="p">,</span> <span class="s1">&#39;Number_Measurements&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Number_Measurements_Removed&#39;</span><span class="p">,</span>
        <span class="s1">&#39;Distance_Of_Block_To_The_Right_Of_Aircraft&#39;</span><span class="p">,</span> <span class="s1">&#39;Track_Identifier&#39;</span><span class="p">]</span>
-<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">atm_file</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">atm_file</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now we can explore the data and DataFrame functions…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find out the names of the columns</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show data in only one of those columns</span>
+<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same thing, but another way</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">Lat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want something more intuitive for our index, we can create a column of datetime objects that uses the date from the ATM file name and seconds_of_day column as date and time information.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reset the index</span>
+<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Use the date in the string of the file name to create a datetime of the date</span>
+<span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">atm_file</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">15</span><span class="p">])</span>
+
+<span class="c1"># Use UTC seconds_of_day column to calculate time of day that we will use to add time to the datetime</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">atm_l2</span><span class="o">.</span><span class="n">UTC</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add the time to date and set as index</span>
+<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date</span> <span class="o">+</span> <span class="n">time</span>
+<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DateTime&#39;</span><span class="p">)</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can easily slice data by date, month, day, etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;2019-05-06&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or by a range of dates</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;2019-05-06&#39;</span><span class="p">:</span><span class="s1">&#39;2019-05-07&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing">
+<h4>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h4>
+<p>Two methods for slicing:</p>
+<ul class="simple">
+<li><p>.loc for label-based indexing</p></li>
+<li><p>.iloc for positional indexing</p></li>
+</ul>
+<p>Use loc to slice specific indices</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Select indices and columns</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lon&#39;</span><span class="p">,</span> <span class="s1">&#39;Height&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use iloc to select by row and column number</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="statistical-manipulations">
+<h4>Statistical manipulations<a class="headerlink" href="#statistical-manipulations" title="Permalink to this headline">¶</a></h4>
+<p>Say we want to know the mean ATM height for the data…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Number_Measurements&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to know the mean of each column grouped for each Track Identifier…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group rows together by a column and take the mean of each group</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Groupby is pretty complex. You can dive deeper here:
+<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html</a></p>
+<p>You can also resample your data to get the mean of all measurements at 30 second intervals…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;30S&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To use your own functions, one might first try to use a for loop to iterate over rows or columns of data. <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> has made an easy and fast alternative, <strong>apply()</strong>. This function acts as a map() function in Python. It takes a function as an input and applies the function to an entire DataFrame.</p>
+<p>Something easy could be to take the median of each column of the data. We specify the np.median function and axis=0 to pass in all rows and iterate over each column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Say you want to use only specific rows or columns in your function. For instance, you want to know the total number of measurements (i.e. Number_Measurements + Number_Measurements_Removed). We already have a function that takes two columns and adds them together. Now we want to apply it to the data.</p>
+<p>First, we call the <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> method on the <code class="docutils literal notranslate"><span class="pre">atm_l2</span></code> dataframe. Then use the lambda function to iterate over the rows (or columns) of the dataframe. For every row, we grab the <code class="docutils literal notranslate"><span class="pre">Number_Measurements</span></code> and <code class="docutils literal notranslate"><span class="pre">Number_Measurements_Removed</span></code> columns and pass them to the <code class="docutils literal notranslate"><span class="pre">calc_total</span></code> function. Finally, we specify the <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> to tell the <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> method that we are passing in columns to apply the function to each row.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_total</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Total_Measurements&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">calc_total</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Number_Measurements&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Number_Measurements_Removed&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<p>Try making <code class="docutils literal notranslate"><span class="pre">.apply</span></code> work with this new function to create a new column, <code class="docutils literal notranslate"><span class="pre">Distance_to_Jakobshavn</span></code>, using the <code class="docutils literal notranslate"><span class="pre">Lat</span></code> and <code class="docutils literal notranslate"><span class="pre">Lon</span></code> columns as inputs. We’ve already supplied the function, which requires a latitude and longitude input to calculate the distance between the ATM measurement and a specified point on the Jakobshavn Glacier ice front (<code class="docutils literal notranslate"><span class="pre">jlat</span></code>/<code class="docutils literal notranslate"><span class="pre">jlon</span></code>). Complete the line that applies the function to those columns in the data to get the <code class="docutils literal notranslate"><span class="pre">Distance_to_Jakobshavn</span></code>.</p>
+<div class="cell tag_skip-execution docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">atan2</span><span class="p">,</span> <span class="n">radians</span>
+
+<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculate distance between a set point and a lat lon pair from the data</span>
+<span class="sd">    a = lat</span>
+<span class="sd">    b = lon</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">jlat</span><span class="p">,</span><span class="n">jlon</span> <span class="o">=</span> <span class="mf">69.2330</span><span class="p">,</span> <span class="o">-</span><span class="mf">49.2434</span>
+    
+    <span class="c1"># approximate radius of earth in km</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mf">6373.0</span>
+
+    <span class="n">lat1</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">jlat</span><span class="p">)</span>
+    <span class="n">lon1</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">jlon</span><span class="p">)</span>
+    <span class="n">lat2</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">lon2</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="n">dlon</span> <span class="o">=</span> <span class="n">lon2</span> <span class="o">-</span> <span class="n">lon1</span>
+    <span class="n">dlat</span> <span class="o">=</span> <span class="n">lat2</span> <span class="o">-</span> <span class="n">lat1</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">dlat</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">lat1</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">lat2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">dlon</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">atan2</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span>
+
+    <span class="n">distance</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">distance</span>
+
+<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Distance_to_Jakobshavn&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="o">.....</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great work! Now let’s reset the index to start fresh for multi-indexing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-indexing">
+<h3>Multi-indexing<a class="headerlink" href="#multi-indexing" title="Permalink to this headline">¶</a></h3>
+<p>Multi-level indexing opens the door to more sophisticated data analysis and manipulation, especially for working with higher dimensional data. In essence, it enables you to store and manipulate data with an arbitrary number of dimensions in lower dimensional data structures like Series (1d) and DataFrame (2d).</p>
+<p>Here, we will demonstrate a few basic things you can do with MultiIndexing. If we wanted to think about our data by DateTime and then by Track Identifier, we would set both columns as indices…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;DateTime&#39;</span><span class="p">,</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">atm_l2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For some terminology, the <code class="docutils literal notranslate"><span class="pre">levels</span></code> of a MultiIndex are the former column names (UTC, Track_Identifier). The <code class="docutils literal notranslate"><span class="pre">labels</span></code> are the actual values in a <code class="docutils literal notranslate"><span class="pre">level</span></code>, (2019-05-06 15:16:09.500, 0-3, …). <code class="docutils literal notranslate"><span class="pre">Levels</span></code> can be referred to by name or position, with 0 being the outermost level.</p>
+<p>Slicing the outermost index level is pretty easy, we just use our regular <code class="docutils literal notranslate"><span class="pre">.loc[row_indexer,</span> <span class="pre">column_indexer]</span></code> to grab a couple datetimes we want. We’ll select the columns Lat and Lon where the UTC was <code class="docutils literal notranslate"><span class="pre">2019-05-06</span> <span class="pre">15:16:09.500</span></code> and <code class="docutils literal notranslate"><span class="pre">2019-05-06</span> <span class="pre">15:16:09.750</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you wanted to select the rows whose track was <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">.loc</span></code> wants [row_indexer, column_indexer] so let’s wrap the two elements of our row indexer (the list of UTCs and the Tracks) in a tuple to make it a single unit:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]),[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now you want info from any UTC but for the specific tracks again (0,1). Below the <code class="docutils literal notranslate"><span class="pre">:</span></code> indicates all labels in this level.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can do a lot with groupby, pivoting, and reshaping, but I won’t dive into that in this tutorial. You can check out more here: <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html</a></p>
+<p>Now that we are oriented with the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame, let’s get back to the ATM data we have opened and co-register it with the ICESat-2 lines.</p>
+</div>
+<div class="section" id="co-register-icesat-2-with-atm-data">
+<h3>Co-register ICESat-2 with ATM data<a class="headerlink" href="#co-register-icesat-2-with-atm-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the ATM data into a DataFrame</span>
+<span class="n">atm_file</span> <span class="o">=</span> <span class="s1">&#39;ILATM2_20190506_151600_smooth_nadir3seg_50pt.csv&#39;</span>
+<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">atm_file</span><span class="p">)</span>
+
+<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The ATM L2 file contains plenty of information, including surface height estimates and slope of the local topography. It also contains a track identifier - ATM takes measurements from multiple parts of the aircraft, namely starboard, port, and nadir. To keep things simple, we will filter the DataFrame to only look at the nadir track (Track_Identifier = 0).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="p">[</span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Change the longitudes to be consistent with ICESat-2</span>
+<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Longitude(deg)&#39;</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">360</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">atm_l2</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a quick look at where ATM is relative to ICESat-2…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Subset the ICESat-2 data to the ATM latitudes</span>
@@ -1034,7 +1314,7 @@ Landsat: <a class="reference external" href="https://registry.opendata.aws/usgs-
 <span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span>
     <span class="n">basemap</span><span class="o">=</span><span class="n">basemap_to_tiles</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">Esri</span><span class="o">.</span><span class="n">WorldImagery</span><span class="p">),</span>
     <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">69.25</span><span class="p">,</span> <span class="mf">310.35</span><span class="o">-</span><span class="mi">360</span><span class="p">),</span>
-    <span class="n">zoom</span><span class="o">=</span><span class="mi">11</span>
+    <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span>
 <span class="p">)</span>
 
 <span class="n">gt2r_line</span> <span class="o">=</span> <span class="n">Polyline</span><span class="p">(</span>
@@ -1072,300 +1352,43 @@ Landsat: <a class="reference external" href="https://registry.opendata.aws/usgs-
 </div>
 </div>
 </div>
-<p><br />
-Now we can explore the data and DataFrame functions</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">Lat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><br />
-If we want something more intuitive as an index</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add datetime for index</span>
-<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">atm_file</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">15</span><span class="p">])</span>
-<span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">atm_l2</span><span class="o">.</span><span class="n">UTC</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
-<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date</span> <span class="o">+</span> <span class="n">time</span>
-<span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;DateTime&#39;</span><span class="p">)</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><br />
-Now we can easily slice data by date, month, day, etc.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;2019-05-06&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><br />
-Or by a range of dates</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;2019-05-06&#39;</span><span class="p">:</span><span class="s1">&#39;2019-05-07&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="slicing">
-<h4>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h4>
-<p>Two methods for slicing:</p>
-<ul class="simple">
-<li><p>.loc for label-based indexing</p></li>
-<li><p>.iloc for positional indexing</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use loc to slice specific indices</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-05-06 15:16:09.750&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select indices and columns</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,</span> <span class="s1">&#39;2019-05-06 15:16:09.750&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lon&#39;</span><span class="p">,</span> <span class="s1">&#39;Height&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use iloc to select by row and column number</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="statistical-manipulations">
-<h4>Statistical manipulations<a class="headerlink" href="#statistical-manipulations" title="Permalink to this headline">¶</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Height&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group rows together by a column and take the mean of each group</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;30S&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>One alternative to using a loop to iterate over a DataFrame is to use the pandas <strong>apply()</strong> method. This function acts as a map() function in Python. It takes a function as an input and applies this function to an entire DataFrame.If you are working with tabular data, you must specify an axis you want your function to act on (0 for columns; and 1 for rows). Much like the map() function, the apply() method can also be used with anonymous functions or lambda functions. Let’s look at some apply() examples using baseball data.</p>
-<p>First, you will call the .apply() method on the atm_l2 dataframe. Then use the lambda function to iterate over the rows of the dataframe. For every row, we grab the Number_Measurements and Number_Measurements_Removed columns and pass them to the calc_total function. Finally, you will specify the axis=1 to tell the .apply() method that we want to apply it on the rows instead of columns.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_total</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="k">return</span> <span class="n">total</span>
-
-<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Total_Measurements&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">calc_total</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Number_Measurements&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Number_Measurements_Removed&#39;</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<p>Try making apply work with this new function to create a new column, ‘Distance_to_Jakobshavn’, by using the Lat and Lon as inputs.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">atan2</span><span class="p">,</span> <span class="n">radians</span>
-
-<span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Calculate distance between a set point and a lat lon pair</span>
-<span class="sd">    a = lat</span>
-<span class="sd">    b = lon</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="n">jlat</span><span class="p">,</span><span class="n">jlon</span> <span class="o">=</span> <span class="mf">69.2330</span><span class="p">,</span> <span class="o">-</span><span class="mf">49.2434</span>
-    
-    <span class="c1"># approximate radius of earth in km</span>
-    <span class="n">R</span> <span class="o">=</span> <span class="mf">6373.0</span>
-
-    <span class="n">lat1</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">jlat</span><span class="p">)</span>
-    <span class="n">lon1</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">jlon</span><span class="p">)</span>
-    <span class="n">lat2</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-    <span class="n">lon2</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-
-    <span class="n">dlon</span> <span class="o">=</span> <span class="n">lon2</span> <span class="o">-</span> <span class="n">lon1</span>
-    <span class="n">dlat</span> <span class="o">=</span> <span class="n">lat2</span> <span class="o">-</span> <span class="n">lat1</span>
-
-    <span class="n">a</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">dlat</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">lat1</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">lat2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">dlon</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">atan2</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">a</span><span class="p">))</span>
-
-    <span class="n">distance</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">c</span>
-    <span class="k">return</span> <span class="n">distance</span>
-
-<span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Distance_to_Jakobshavn&#39;</span><span class="p">]</span> 
-<span class="c1"># = atm_l2.apply(lambda row: calc_distance(row[&#39;Lat&#39;], row[&#39;Lon&#39;]), axis=1)</span>
-<span class="c1"># atm_l2.head()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Reset index to start fresh for multi-indexing</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
-<span class="n">atm_l2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="multi-indexing">
-<h3>Multi-indexing<a class="headerlink" href="#multi-indexing" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span> <span class="o">=</span> <span class="n">atm_l2</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;DateTime&#39;</span><span class="p">,</span><span class="s1">&#39;Track_Identifier&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
-<span class="n">atm_l2</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>To clear up some terminology, the levels of a MultiIndex are the former column names (UTC, Track_Identifier). The labels are the actual values in a level, (54969.50, 0-?, …). Levels can be referred to by name or position, with 0 being the outermost level.</p>
-<p>Slicing the outermost index level is pretty easy, we just use our regular .loc[row_indexer, column_indexer]. We’ll select the columns Lat and Long where the UTC was —.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,</span><span class="s1">&#39;2019-05-06 15:16:09.750&#39;</span><span class="p">],[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>If you wanted to select the rows whose track was 0 or 1, .loc wants [row_indexer, column_indexer] so let’s wrap the two elements of our row indexer (the list of UTCs and the Tracks) in a tuple to make it a single unit:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[([</span><span class="s1">&#39;2019-05-06 15:16:09.500&#39;</span><span class="p">,</span><span class="s1">&#39;2019-05-06 15:16:09.750&#39;</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]),[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now you want info from any UTC but for the specific tracks again (0,1). Below the : indicates all labels in this level.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[</span><span class="s1">&#39;Lat&#39;</span><span class="p">,</span><span class="s1">&#39;Lon&#39;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Many attributes and functions to explore with pandas</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atm_l2</span><span class="o">.</span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="download-landsat-images-from-the-cloud">
-<h2>Download (Landsat) images from the cloud:<a class="headerlink" href="#download-landsat-images-from-the-cloud" title="Permalink to this headline">¶</a></h2>
-<p>An Amazon Web Services (AWS) account is required to directly access Landsat data in
-the cloud housed within the usgs-landsat S3 requester pays bucket. Users can also find
-all objects within the Landsat record by using either the SpatioTemporal Asset Catalog
-(STAC) Browser (s3) or Satellite (SAT) Application Programming Interface (API) (https).</p>
-<p>Scene location - <a class="reference external" href="https://landsat-pds.s3.amazonaws.com/c1/L8/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/">https://landsat-pds.s3.amazonaws.com/c1/L8/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/</a> <br />
-Scene band url for download - <a class="reference external" href="https://landsat-pds.s3.amazonaws.com/c1/L8/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/LC08_L1TP_202025_20190420_20190507_01_T1_B4.TIF">https://landsat-pds.s3.amazonaws.com/c1/L8/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/LC08_L1TP_202025_20190420_20190507_01_T1_B4.TIF</a></p>
-<p>***If you want to only open one Landsat band and not talk too much about COGs: <a class="reference external" href="http://www.acgeospatial.co.uk/cog-part-2-python/">http://www.acgeospatial.co.uk/cog-part-2-python/</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># landsatband = []</span>
-<span class="c1"># landsat_fp = &#39;http://landsat-pds.s3.amazonaws.com/c1/L8/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/LC08_L1TP_202025_20190420_20190507_01_T1_&#39;</span>
-<span class="c1"># bands=(&#39;4.TIF&#39;, &#39;3.TIF&#39;, &#39;2.TIF&#39;)</span>
-<span class="c1"># for i in range(1,11): ## 11 bands of Landsat</span>
-<span class="c1">#     band = landsat_fp+&#39;B&#39;+str(i)+&#39;.TIF&#39;</span>
-<span class="c1">#     if band.endswith((bands)):</span>
-<span class="c1">#         landsatband.append(band)</span>
-<span class="c1"># landsatband.sort(reverse=True)    ## because I want the order 4,3,2 (but change if you need to!)</span>
-<span class="c1"># print(landsatband)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="using-data-in-the-cloud-from-s3-buckets">
-<h3>Using data in the cloud from S3 buckets:<a class="headerlink" href="#using-data-in-the-cloud-from-s3-buckets" title="Permalink to this headline">¶</a></h3>
-<p>Landsat S3 User Manual: <a class="reference external" href="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-2032-Landsat-Commercial-Cloud-Direct-Access-Users-Guide-v2.pdf.pdf">https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-2032-Landsat-Commercial-Cloud-Direct-Access-Users-Guide-v2.pdf.pdf</a></p>
-<p>Scene band url for access - s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2020/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/LC08_L1TP_202025_20190420_20190507_01_T1_B4.TIF</p>
-</div>
-</div>
-<div class="section" id="find-and-open-landsat-images-in-the-cloud">
-<h2>Find and open Landsat images in the cloud<a class="headerlink" href="#find-and-open-landsat-images-in-the-cloud" title="Permalink to this headline">¶</a></h2>
-<p>How can data formats enable high-speed access?</p>
-<ol class="simple">
-<li><p>Web Object Storage (e.g., Simple Storage Service )</p></li>
-</ol>
-<ul class="simple">
-<li><p>Inexpensive storage, BUT…</p></li>
-<li><p>…access is via HTTP1, not random disk reads</p></li>
-<li><p>Does include HTTP “range-get” to retrieve a specific byte range</p></li>
-</ul>
-<ol class="simple">
-<li><p>Cloud optimized approaches</p></li>
-</ol>
+<p>Looks like ATM aligns very closely with the left beam (GT2L), so hopefully the two beams will agree. The terrain over this region is quite rough, so we may expect some differences between ATM and GT2R. ICESat-2 also flew over Jakobshavan 16 days before ATM, so there might be slight differences due to ice movement.</p>
+<p>We have looked at how we can quickly download ICESat-2 and airborne lidar data, and process them using <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. We will engage in a more thorough analysis in the Data Integration session tomorrow.</p>
+</div>
+</div>
+<div class="section" id="search-and-open-landsat-raster-imagery-from-the-cloud">
+<h2>3.  Search and open (Landsat) raster imagery from the cloud<a class="headerlink" href="#search-and-open-landsat-raster-imagery-from-the-cloud" title="Permalink to this headline">¶</a></h2>
+<p>Let’s now talk about cloud-optimized approaches that require no downloading to search and access the data.</p>
+<div class="section" id="cloud-optimized-approaches">
+<h3>Cloud optimized approaches<a class="headerlink" href="#cloud-optimized-approaches" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Organize data as an aggregation of small, independently retrievable objects (e.g., zarr, HDF2, Geotiff in the Cloud)</p></li>
-<li><p>Allow access to pieces of large objects (e.g., Cloud-Optimized GeoTIFF3,OPeNDAP4 in the Cloud)</p></li>
+<li><p>Allow access to pieces of large objects (e.g., Cloud-Optimized GeoTIFF3, OPeNDAP4 in the Cloud)</p></li>
 </ul>
-<p>We will be working with Cloud Optimized GeoTIFF (COG). A COG is a GeoTIFF file with an internal organization that enables more efficient workflows in the cloud environment.  It does this by leveraging the ability of clients issuing ​HTTP GET range requests to ask for just the parts of a file they need instead of having to open the entire image or data set.</p>
-<p>To explore and access COG’s easily we will use a SpatioTemporal Asset Catalog (STAC). The STAC specification provides a common, machine-readable (JSON) format for describing a wide range of geospatial datasets. STAC’s goal is to make it easier to index and discover any geospatial dataset that can be described by a spatial extent and time. STAC is the way geospatial asset metadata is structured and queried and it makes querrying S3 buckets easier. Learn more here: <a class="reference external" href="https://github.com/radiantearth/stac-spec">https://github.com/radiantearth/stac-spec</a>.</p>
+<p>We will be working with Cloud Optimized GeoTIFF (COG). A COG is a GeoTIFF file with an internal organization that enables more efficient workflows by allowing us to ask for just the parts of a file we need, instead of having to open the entire image or data set (see more at <a class="reference external" href="https://www.cogeo.org/">https://www.cogeo.org/</a>).</p>
+<p>Example url for accessing a band in the cloud from an S3 bucket:<br />
+s3://usgs-landsat/collection02/level-2/standard/oli-tirs/2020/202/025/LC08_L1TP_202025_20190420_20190507_01_T1/LC08_L1TP_202025_20190420_20190507_01_T1_B4.TIF</p>
+<p>User Manual for more information about accessing Landsat S3: <br />
+<a class="reference external" href="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-2032-Landsat-Commercial-Cloud-Direct-Access-Users-Guide-v2.pdf.pdf">https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/LSDS-2032-Landsat-Commercial-Cloud-Direct-Access-Users-Guide-v2.pdf.pdf</a></p>
+</div>
+<div class="section" id="search-for-landsat-imagery">
+<h3>Search for Landsat imagery<a class="headerlink" href="#search-for-landsat-imagery" title="Permalink to this headline">¶</a></h3>
+<p>To explore and access COG’s easily we will use a SpatioTemporal Asset Catalog (STAC). The STAC provides a common metadata format to make it easier to index and querrying S3 buckets for geospatial data. Learn more here: <a class="reference external" href="https://github.com/radiantearth/stac-spec">https://github.com/radiantearth/stac-spec</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sets up credentials for acquiring images through dask/xarray</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_REQUEST_PAYER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;requester&quot;</span>
 
-<span class="c1"># Need to set up proper credentials for acquiring data through rasterio</span>
+<span class="c1"># Sets up proper credentials for acquiring data through rasterio</span>
 <span class="n">aws_session</span> <span class="o">=</span> <span class="n">AWSSession</span><span class="p">(</span><span class="n">boto3</span><span class="o">.</span><span class="n">Session</span><span class="p">(),</span> <span class="n">requester_pays</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Extract geometry bounds from the ICESat-2 KML file used above so that we can perform the Landsat spatial search.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract geometry bounds for Landsat spatial bbox</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract geometry bounds</span>
 <span class="n">geom</span> <span class="o">=</span> <span class="n">jk</span><span class="o">.</span><span class="n">geometry</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
 </pre></div>
@@ -1378,7 +1401,7 @@ Scene band url for download - <a class="reference external" href="https://landsa
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search STAC API for Landsat images based on a bounding box, date and other metadata if desired</span>
 
-<span class="n">bbox</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">51.3229</span><span class="p">,</span> <span class="mf">68.840</span><span class="p">,</span> <span class="o">-</span><span class="mf">48.203</span><span class="p">,</span> <span class="mf">69.616</span><span class="p">)</span> <span class="c1">#(west, south, east, north) </span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">geom</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">geom</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">geom</span><span class="o">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="c1">#(west, south, east, north) </span>
 
 <span class="n">timeRange</span> <span class="o">=</span> <span class="s1">&#39;2019-05-06/2019-05-07&#39;</span>
     
@@ -1399,6 +1422,7 @@ Scene band url for download - <a class="reference external" href="https://landsa
 </div>
 </div>
 </div>
+<p>We can include property searches, such as path, row, cloud-cover, as well with the <code class="docutils literal notranslate"><span class="pre">properties</span></code> flag.</p>
 <p>We are given a satsearch collection of items (images)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1429,10 +1453,10 @@ Scene band url for download - <a class="reference external" href="https://landsa
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="intake-all-scenes-using-the-intake-stac-library">
 <h3>Intake all scenes using the intake-STAC library<a class="headerlink" href="#intake-all-scenes-using-the-intake-stac-library" title="Permalink to this headline">¶</a></h3>
-<p>Intake-STAC facilitates discovering, exploring, and loading spatio-temporal datasets.</p>
-<p>Intake-stac provides Intake Drivers for SpatioTemporal Asset Catalogs (STAC). It provides tools for opening STAC Catalogs, Collections, ItemCollections, and Items as Intake catalogs. By combining Intake and sat-stac, Intake-stac provides a simple toolkit for working with STAC catalogs and for loading STAC assets as Xarray objects.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Intake-STAC</span></code> facilitates discovering, exploring, and loading spatio-temporal datasets by providing Intake Drivers for STAC catalogs. This provides a simple toolkit for working with STAC catalogs and for loading STAC assets as <code class="docutils literal notranslate"><span class="pre">xarray</span></code> objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_stac_item_collection</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
@@ -1441,15 +1465,14 @@ Scene band url for download - <a class="reference external" href="https://landsa
 </div>
 </div>
 </div>
-<p><br />
-Let’s explore the metadata and keys for the first scene</p>
+<p>Let’s explore the metadata and keys for the first scene</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sceneid</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">catalog</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">item0</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneid</span><span class="p">]</span>
-<span class="n">item0</span><span class="o">.</span><span class="n">metadata</span>
-<span class="c1"># for keys in item0.keys():</span>
-<span class="c1">#     print (keys)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sceneids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">catalog</span><span class="p">)</span>
+<span class="n">item3</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneids</span><span class="p">[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="c1"># item3.metadata</span>
+<span class="k">for</span> <span class="n">keys</span> <span class="ow">in</span> <span class="n">item3</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">keys</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1457,7 +1480,7 @@ Let’s explore the metadata and keys for the first scene</p>
 <p>We can explore the metadata for any of these:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item0</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item3</span><span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span>
 </pre></div>
 </div>
 </div>
@@ -1465,23 +1488,24 @@ Let’s explore the metadata and keys for the first scene</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is the url needed to grab data from the S3 bucket</span>
-<span class="c1"># Using the satsearch catalog:</span>
-<span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">asset</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1"># can use item asset name or title (blue or B2)</span>
+<span class="c1"># From the satsearch catalog:</span>
+<span class="n">items</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">asset</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1"># can use item asset name or title (blue or B2)</span>
 
-<span class="c1"># Using the intake-STAC catalog</span>
-<span class="n">item0</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1"># must use item asset name (blue)</span>
+<span class="c1"># From the intake-STAC catalog</span>
+<span class="n">item3</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="c1"># must use item asset name (blue)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="should-i-keep-next-cell">
-<h2>Should I keep next cell?<a class="headerlink" href="#should-i-keep-next-cell" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="open-and-visualize-each-image-using-rasterio">
+<h3>Open and visualize each image using RasterIO<a class="headerlink" href="#open-and-visualize-each-image-using-rasterio" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve first scene using rio</span>
-<span class="n">item_url</span> <span class="o">=</span> <span class="n">item0</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span> <span class="k">as</span> <span class="nn">rio</span>
+
+<span class="c1"># Retrieve first scene using rio</span>
+<span class="n">item_url</span> <span class="o">=</span> <span class="n">item3</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
 
 <span class="c1"># Read and plot with grid coordinates </span>
 <span class="k">with</span> <span class="n">rio</span><span class="o">.</span><span class="n">Env</span><span class="p">(</span><span class="n">aws_session</span><span class="p">):</span>
@@ -1498,14 +1522,66 @@ Let’s explore the metadata and keys for the first scene</p>
 </div>
 </div>
 </div>
+<p>We can open directly into <code class="docutils literal notranslate"><span class="pre">xarray</span></code> using <code class="docutils literal notranslate"><span class="pre">rasterIO</span></code>…</p>
+</div>
 <div class="section" id="manipulating-data-in-xarray">
 <h3>Manipulating data in Xarray<a class="headerlink" href="#manipulating-data-in-xarray" title="Permalink to this headline">¶</a></h3>
-<p><strong>Tasha</strong></p>
-<p>Poll:
-*</p>
-<p>Pandas and Xarray have very similar structures and ways of manipulating data, but Pandas excels with 2-D data and Xarray is ideal for more dimensions. Xarray introduces labels in the form of dimensions, coordinates and attributes on top of Pandas-like DataFrames.</p>
-<p>Xarray doesn’t just keep track of labels on arrays – it uses them to provide a powerful and concise interface.</p>
-<p>Read in 3 bands of a scene to xarray</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">xarray</span></code> have very similar structures and ways of manipulating data, but <code class="docutils literal notranslate"><span class="pre">pandas</span></code> excels with 2-D data and <code class="docutils literal notranslate"><span class="pre">xarray</span></code> is ideal for higher dimension data. <code class="docutils literal notranslate"><span class="pre">Xarray</span></code> introduces labels in the form of dimensions, coordinates and attributes on top of Pandas-like DataFrames.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Xarray</span></code> has 2 fundamental data structures:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DataArray</span></code>, which holds single multi-dimensional variables and its coordinates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Dataset</span></code>, which holds multiple variables that potentially share the same coordinates</p></li>
+</ul>
+<a class="reference internal image-reference" href="https://xarray-contrib.github.io/xarray-tutorial/_images/xarray-data-structures.png"><img alt="https://xarray-contrib.github.io/xarray-tutorial/_images/xarray-data-structures.png" src="https://xarray-contrib.github.io/xarray-tutorial/_images/xarray-data-structures.png" style="width: 800px;" /></a>
+<p>We will only scratch the surface here on what <code class="docutils literal notranslate"><span class="pre">xarray</span></code> can do. To learn more, there are great <code class="docutils literal notranslate"><span class="pre">xarray</span></code> tutorials here: <a class="reference external" href="https://xarray-contrib.github.io/xarray-tutorial/online-tutorial-series/01_xarray_fundamentals.html">https://xarray-contrib.github.io/xarray-tutorial/online-tutorial-series/01_xarray_fundamentals.html</a></p>
+<div class="section" id="rasterio-and-rioxarray">
+<h4>RasterIO and RioXarray<a class="headerlink" href="#rasterio-and-rioxarray" title="Permalink to this headline">¶</a></h4>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">rasterIO</span></code> to easily open into an <code class="docutils literal notranslate"><span class="pre">xarray</span></code> <code class="docutils literal notranslate"><span class="pre">DataArray</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rastxr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataarray</span><span class="p">(</span><span class="n">item_url</span><span class="p">,</span><span class="n">engine</span><span class="o">=</span><span class="s1">&#39;rasterio&#39;</span><span class="p">)</span>
+<span class="n">rastxr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or a <code class="docutils literal notranslate"><span class="pre">DataSet</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rastxr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">item_url</span><span class="p">,</span><span class="n">engine</span><span class="o">=</span><span class="s1">&#39;rasterio&#39;</span><span class="p">)</span>
+<span class="n">rastxr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can open using rioxarray, which integrates <code class="docutils literal notranslate"><span class="pre">rasterIO</span></code> and <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and is the most efficient way of opening using <code class="docutils literal notranslate"><span class="pre">rasterIO</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rioxarray</span> <span class="k">as</span> <span class="nn">rxr</span>
+
+<span class="n">rastrxr</span> <span class="o">=</span> <span class="n">rxr</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">item_url</span><span class="p">)</span>
+<span class="n">rastrxr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can see <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> have been added to the Xarray using the same url.</p>
+<p>Beyond what <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and <code class="docutils literal notranslate"><span class="pre">rasterIO</span></code> provide, <code class="docutils literal notranslate"><span class="pre">rioxarray</span></code> has these added benefits (plus others):</p>
+<ul class="simple">
+<li><p>Supports multidimensional datasets such as netCDF</p></li>
+<li><p>Loads in the CRS, transform, and nodata metadata in standard CF &amp; GDAL locations</p></li>
+<li><p>Supports masking and scaling data</p></li>
+<li><p>Loads raster metadata into the attributes</p></li>
+</ul>
+<p>For more info: <a class="reference external" href="https://corteva.github.io/rioxarray/stable/index.html">https://corteva.github.io/rioxarray/stable/index.html</a></p>
+</div>
+<div class="section" id="dask">
+<h4>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h4>
+<p>Another convenient means for opening a lot of raster data into <code class="docutils literal notranslate"><span class="pre">xarray</span></code> is using <code class="docutils literal notranslate"><span class="pre">dask</span></code>. <code class="docutils literal notranslate"><span class="pre">Xarray</span></code> integrates with Dask to support parallel computations and streaming computation on datasets that don’t fit into memory. So this is perfect when you want to process a lot of data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Dask</span></code> divides arrays into many small pieces, called chunks, each of which is presumed to be small enough to fit into memory.</p>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>, which has eager evaluation, operations on <code class="docutils literal notranslate"><span class="pre">dask</span></code> arrays are lazy. Operations queue up a series of tasks mapped over blocks, and no computation is performed until you actually ask values to be computed (e.g., to print results to your screen or write to disk). At that point, data is loaded into memory and computation proceeds in a streaming fashion, block-by-block.</p>
+<p>More on Dask in the Cloud Computing Tools tutorial.</p>
+<p>To expand our <code class="docutils literal notranslate"><span class="pre">xarray</span></code> toolbox for working with larger data sets that we don’t necessarily want entirely in memory, we will start by reading in 3 bands of a Landsat scene to <code class="docutils literal notranslate"><span class="pre">xarray</span></code> using <code class="docutils literal notranslate"><span class="pre">dask</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sceneid</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneids</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
@@ -1517,8 +1593,8 @@ Let’s explore the metadata and keys for the first scene</p>
 
 <span class="c1"># Construct xarray for scene</span>
 <span class="k">for</span> <span class="n">band_name</span> <span class="ow">in</span> <span class="n">band_names</span><span class="p">:</span>
-    <span class="c1"># Specify chunk size (x,y), Landsat COG is in 512 chunks so can use this or a multiple</span>
-    <span class="n">band</span> <span class="o">=</span> <span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">](</span><span class="n">chunks</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">512</span><span class="p">),</span><span class="n">urlpath</span><span class="o">=</span><span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
+    <span class="c1"># Specify chunk size (x,y), Landsat COG is natively in 512 chunks so is best to use this or a multiple</span>
+    <span class="n">band</span> <span class="o">=</span> <span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">](</span><span class="n">chunks</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2048</span><span class="p">),</span><span class="n">urlpath</span><span class="o">=</span><span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
     <span class="n">band</span><span class="p">[</span><span class="s1">&#39;band&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">band_name</span><span class="p">]</span>
     <span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">band</span><span class="p">)</span>
 <span class="n">scene</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
@@ -1527,7 +1603,8 @@ Let’s explore the metadata and keys for the first scene</p>
 </div>
 </div>
 </div>
-<p>Similarly as with pandas, you can explore variables easily. This time you can work with coordinates (equivalent to indices in pandas):</p>
+<p>Typically, it’s best to align <code class="docutils literal notranslate"><span class="pre">dask</span></code> <code class="docutils literal notranslate"><span class="pre">chunks</span></code> with the way image chunks (typically called “tiles”) are stored on disk or cloud storage buckets. The landsat data is stored on AWS S3 in a tiled Geotiff format where tiles are 512x512, so we should pick some multiple of that, and typically aim for chunk sizes of ~100Mb (although this is subjective). You can read more about <code class="docutils literal notranslate"><span class="pre">dask</span></code> chunks here: <a class="reference external" href="https://docs.dask.org/en/latest/array-best-practices.html">https://docs.dask.org/en/latest/array-best-practices.html</a>.</p>
+<p>Similarly as with <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, we can explore variables easily in <code class="docutils literal notranslate"><span class="pre">xarray</span></code>. This time we can work with coordinates (equivalent to indices in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>). Here <code class="docutils literal notranslate"><span class="pre">x</span></code> might often be the longitude (it can be renamed to this actually):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">x</span>
@@ -1535,7 +1612,7 @@ Let’s explore the metadata and keys for the first scene</p>
 </div>
 </div>
 </div>
-<p>Or keep track of arbitrary metadata (called attributes) in the form of a Python dictionary:</p>
+<p>We can also keep track of arbitrary metadata (called attributes) in the form of a Python dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">attrs</span>
@@ -1550,7 +1627,7 @@ Let’s explore the metadata and keys for the first scene</p>
 </div>
 </div>
 </div>
-<p>You can apply operations over dimensions by name:</p>
+<p>We can apply operations over dimensions by name. Here, if we want to slice the data to only have the blue band:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
@@ -1558,72 +1635,53 @@ Let’s explore the metadata and keys for the first scene</p>
 </div>
 </div>
 </div>
-<p>Mathematical operations (e.g., x - y) vectorize across multiple dimensions (array broadcasting) based on dimension names, not shape.</p>
+<p>Notice that instead of <code class="docutils literal notranslate"><span class="pre">loc</span></code> (from <code class="docutils literal notranslate"><span class="pre">pandas</span></code>) we are using <code class="docutils literal notranslate"><span class="pre">sel</span></code>, but they function synonymously.</p>
+<p>Mathematical operations (e.g., x - y) vectorize across multiple dimensions (array broadcasting) based on dimension names. Let’s determine the mean reflectance for the blue band:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="c1">#.values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="c1">#.values </span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Easily use the split-apply-combine paradigm with groupby:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scene</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;band&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
+<p>And you can easily use the split-apply-combine paradigm with groupby, which we won’t show here.</p>
 </div>
 </div>
-</div>
-<p>Database-like alignment based on coordinate labels that smoothly handles missing values:</p>
-<p>The N-dimensional nature of xarray’s data structures makes it suitable for dealing with multi-dimensional scientific data, and its use of dimension names instead of axis labels (dim=’time’ instead of axis=0) makes such arrays much more manageable than the raw numpy ndarray: with xarray, you don’t need to keep track of the order of an array’s dimensions or insert dummy dimensions of size 1 to align arrays (e.g., using np.newaxis).</p>
-<p>The immediate payoff of using xarray is that you’ll write less code. The long-term payoff is that you’ll understand what you were thinking when you come back to look at it weeks or months later.</p>
-<p><br />
-Now let’s open all the bands and multiple days together into an xarray</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load dask, suppress warnings, each worker needs to run as requester pays</span>
-<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
-                <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                <span class="n">silence_logs</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
-<span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_REQUEST_PAYER&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;requester&quot;</span> <span class="p">)</span>
-<span class="n">client</span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="advanced-multi-dimensional-read-ins-manipulation-and-visualization">
+<h3>Advanced multi-dimensional read-ins, manipulation and visualization<a class="headerlink" href="#advanced-multi-dimensional-read-ins-manipulation-and-visualization" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s open all the bands and multiple days together into an <code class="docutils literal notranslate"><span class="pre">xarray</span></code>. This will be a more complex <code class="docutils literal notranslate"><span class="pre">xarray</span></code> with an extra <code class="docutils literal notranslate"><span class="pre">'time'</span></code> dimension. Since the catalog we have has a combination of Level 1 and 2 data, let’s keep only the scene IDs for Level 1 data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sceneids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">catalog</span><span class="p">)</span>
+<span class="n">sceneids</span> <span class="o">=</span> <span class="p">[</span><span class="n">sceneid</span> <span class="k">for</span> <span class="n">sceneid</span> <span class="ow">in</span> <span class="n">sceneids</span> <span class="k">if</span> <span class="n">sceneid</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;_T1&#39;</span><span class="p">)]</span>
 <span class="n">sceneids</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><br />
-Let’s create the time variable first for the xarray time dimension</p>
+<p>Let’s create the time variable first for the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> time dimension. This finds the desired scene IDs in the <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> dataframe we have above and extracts their ‘datetime’ information. These datetimes get recorded into an <code class="docutils literal notranslate"><span class="pre">xarray</span></code> variable object for ‘time’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create time variable for time dim</span>
-<span class="n">time_var</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">gf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gf</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">sceneid</span> <span class="k">for</span> <span class="n">sceneid</span> <span class="ow">in</span> <span class="n">sceneids</span> <span class="k">if</span> <span class="n">sceneid</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;_T1&#39;</span><span class="p">)])][</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+<span class="n">time_var</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">gf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gf</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">sceneids</span><span class="p">)][</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
+<span class="n">time_var</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now we will search and collect band names for grabbing each desired band. We will just grab the bands that have 30 m pixels.</p>
+<p>Now we will search and collect band names for grabbing each desired band. We will just grab the bands that have 30 m pixels. This provides and example of how you can search data in the STAC catalog.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">band_names</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="c1"># Get band names</span>
-<span class="n">sceneid</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneids</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">sceneid</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneids</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">sceneid</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="n">M</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sceneid</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span><span class="o">.</span><span class="n">metadata</span>
     <span class="k">if</span> <span class="s1">&#39;eo:bands&#39;</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
         <span class="n">resol</span> <span class="o">=</span> <span class="n">M</span><span class="p">[</span><span class="s1">&#39;eo:bands&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;gsd&#39;</span><span class="p">]</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">resol</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">resol</span> <span class="o">&gt;=</span> <span class="mi">30</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">resol</span> <span class="o">==</span> <span class="mi">30</span><span class="p">:</span> 
             <span class="n">band_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
             
 <span class="c1"># Add qa band</span>
@@ -1632,102 +1690,98 @@ Let’s create the time variable first for the xarray time dimension</p>
 </div>
 </div>
 </div>
+<p>And now open all of it…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import to xarray</span>
-<span class="c1"># In xarray dataframe nans are in locations where concat of multiple scenes has expanded the grid</span>
-
+<span class="c1"># In xarray dataframe nans are in locations where concat of multiple scenes has expanded the grid (i.e. different path/rows).</span>
 <span class="n">scenes</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">sceneid</span> <span class="ow">in</span> <span class="n">sceneids</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">sceneid</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;_T1&#39;</span><span class="p">):</span>
-        <span class="n">sceneid</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneid</span><span class="p">]</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="n">sceneid</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        
-        <span class="n">bands</span> <span class="o">=</span> <span class="p">[]</span>
-        
-        <span class="c1"># Construct xarray for scene</span>
-        <span class="k">for</span> <span class="n">band_name</span> <span class="ow">in</span> <span class="n">band_names</span><span class="p">:</span>
-            <span class="n">band</span> <span class="o">=</span> <span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">](</span><span class="n">chunks</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2048</span><span class="p">),</span><span class="n">urlpath</span><span class="o">=</span><span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span> <span class="c1"># Specify chunk size, landsat is prob in 512 chunks so used multiple</span>
-            <span class="n">band</span><span class="p">[</span><span class="s1">&#39;band&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">band_name</span><span class="p">]</span>
-            <span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">band</span><span class="p">)</span>
-        <span class="n">scene</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
-        <span class="n">scenes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
+    <span class="n">sceneid</span> <span class="o">=</span> <span class="n">catalog</span><span class="p">[</span><span class="n">sceneid</span><span class="p">]</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">sceneid</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-<span class="c1"># Concatenate scenes with time variable ***This is the slowest</span>
+    <span class="n">bands</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Construct xarray for scene, open each band, append and concatenate together to create a scene, </span>
+    <span class="c1"># then append and concatenate each scene to create the full dataframe </span>
+    <span class="k">for</span> <span class="n">band_name</span> <span class="ow">in</span> <span class="n">band_names</span><span class="p">:</span>
+        <span class="n">band</span> <span class="o">=</span> <span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">](</span><span class="n">chunks</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2048</span><span class="p">),</span><span class="n">urlpath</span><span class="o">=</span><span class="n">sceneid</span><span class="p">[</span><span class="n">band_name</span><span class="p">]</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;alternate&#39;</span><span class="p">][</span><span class="s1">&#39;s3&#39;</span><span class="p">][</span><span class="s1">&#39;href&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
+        <span class="n">band</span><span class="p">[</span><span class="s1">&#39;band&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">band_name</span><span class="p">]</span>
+        <span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">band</span><span class="p">)</span>
+    <span class="n">scene</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
+    <span class="n">scenes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
+
+<span class="c1"># Concatenate scenes with time variable</span>
 <span class="n">ls_scenes</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">scenes</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">time_var</span><span class="p">)</span>
-
-<span class="n">pix</span> <span class="o">=</span> <span class="n">ls_scenes</span><span class="o">.</span><span class="n">transform</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">epsg</span> <span class="o">=</span> <span class="n">ls_scenes</span><span class="o">.</span><span class="n">crs</span>
 
 <span class="n">ls_scenes</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>We now have 2 Landsat scenes with all of the bands we are interested in stored in an xarray.</p>
-<p>We can also easily subset and visualize:</p>
+<p>We now have 2 Landsat scenes with all of the bands we are interested in stored in an <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, but you can imagine that this exact code can scale to years worth of data and bands.</p>
+<p>From here, we easily subset one image at a time or the entire <code class="docutils literal notranslate"><span class="pre">xarray</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sbands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;nir08&#39;</span><span class="p">,</span> <span class="s1">&#39;swir16&#39;</span><span class="p">,</span><span class="s1">&#39;cirrus&#39;</span><span class="p">,</span> <span class="s1">&#39;lwir11&#39;</span><span class="p">]</span>
-<span class="n">sub_box</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sbands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;nir08&#39;</span><span class="p">,</span> <span class="s1">&#39;swir16&#39;</span><span class="p">]</span>
 
-<span class="c1"># for t in thw.time.values:</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">ls_scene</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="c1"># Further subset to polynya location if desired </span>
-<span class="n">pulx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1590700</span>
-<span class="n">puly</span> <span class="o">=</span> <span class="o">-</span><span class="mi">428200</span>
-<span class="n">plrx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1584000</span>
-<span class="n">plry</span> <span class="o">=</span> <span class="o">-</span><span class="mi">433600</span>
-
-<span class="n">image</span> <span class="o">=</span> <span class="n">ls_scene</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span><span class="n">band</span><span class="o">=</span><span class="n">sbands</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">plry</span><span class="p">,</span><span class="n">puly</span><span class="p">),</span><span class="n">x</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">pulx</span><span class="p">,</span><span class="n">plrx</span><span class="p">))</span>
-
-<span class="c1"># For use at the end for coordinates</span>
-<span class="n">pol_y</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">y</span>
-<span class="n">pol_x</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">x</span>
-
-<span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">notnull</span><span class="p">(),</span><span class="mi">0</span><span class="p">))</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">moveaxis</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">n_band</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="c1"># Select the first datetime</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">ls_scenes</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># Upper left and lower right coordinates for subsetting to Jakobshavn area</span>
+<span class="n">ulx</span> <span class="o">=</span> <span class="mi">300000</span>
+<span class="n">uly</span> <span class="o">=</span> <span class="mi">7695000</span>
+<span class="n">lrx</span> <span class="o">=</span> <span class="mi">330000</span>
+<span class="n">lry</span> <span class="o">=</span> <span class="mi">7670000</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">ls_scenes</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span><span class="n">band</span><span class="o">=</span><span class="n">sbands</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">lry</span><span class="p">,</span><span class="n">uly</span><span class="p">),</span><span class="n">x</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">ulx</span><span class="p">,</span><span class="n">lrx</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">ax1</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Subset window&#39;</span><span class="p">)</span>
-<span class="p">(</span><span class="n">thw</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">image</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Since this data is in UTM 22N, we can reproject to the standard lat/lon coordinate system (WGS-84) and map with the ICESat-2 and ATM lines.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">reproject</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span>
+
+<span class="n">ISlats</span> <span class="o">=</span> <span class="p">[</span><span class="n">is2_gt2r</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">is2_gt2r</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="c1"># ISlons = (is2_gt2r[&#39;lon&#39;].max(), is2_gt2r[&#39;lon&#39;].min())</span>
+<span class="n">ISlons</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">55.624</span><span class="p">,</span><span class="o">-</span><span class="mf">55.646</span><span class="p">]</span>
+
+<span class="n">ATMlats</span> <span class="o">=</span> <span class="p">[</span><span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Latitude(deg)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">atm_l2</span><span class="p">[</span><span class="s1">&#39;Latitude(deg)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="c1"># ATMlons = [atm_l2[&#39;Longitude(deg)&#39;].max(), atm_l2[&#39;Longitude(deg)&#39;].min()]</span>
+<span class="n">ATMlons</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">55.624</span><span class="p">,</span><span class="o">-</span><span class="mf">55.646</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">image</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ISlons</span><span class="p">,</span><span class="n">ISlats</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ATMlons</span><span class="p">,</span><span class="n">ATMlats</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The reprojection to WGS-84 calculated the longitudes to be 6 degrees off, so we shifted the IS2 and ATM data for ease of visualization. This issue only seems to arise with reprojections from some UTM projections and should not be an issue with most data.</p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>You have seen how we can search for non-ICESat_2 datasets, open them into pandas and xarray dataframes, and manipulate/explore the dataframes.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You may have noticed Jupyter Book adds some extra formatting features that do not necessarily render as you might expect when <em>executing</em> a noteook in Jupyter Lab. This “admonition” note is one such example.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Jupyter Book is very particular about <a class="reference external" href="https://jupyterbook.org/structure/sections-headers.html?highlight=headers#how-headers-and-sections-map-onto-to-book-structure">Markdown header ordering</a> to automatically create table of contents on the website. In this tutorial we are careful to use a single main header (#) and sequential subheaders (#, ##, ###, etc.)</p>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p>To further explore the topics of this tutorial see the following detailed documentation:</p>
+<h2>4. Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Congratulations! You’ve completed the tutorial. In this tutorial you have gained the skills to:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://jupyterbook.org/file-types/notebooks.html">Jupyter Book rendering of .ipynb notebooks</a></p></li>
-<li><p><a class="reference external" href="https://jupyterbook.org/content/index.html">Jupyter Book guide on writing narrative content</a></p></li>
-<li><p><a class="reference external" href="https://ipyleaflet.readthedocs.io">ipyleaflet documentation</a></p></li>
+<li><p>Search for non-ICESat-2 datasets</p></li>
+<li><p>Open data into <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">xarray</span></code> dataframes/arrays, and</p></li>
+<li><p>Manipulate, visualize, and explore the data</p></li>
 </ul>
+<p>We have concluded by mapping the three data sets together. We will revisit the ICESat-2 and ATM data at Jakobshavn and integrate it with processed velocity data in Part II of this tutorial tomorrow!</p>
 </div>
 </div>
 
