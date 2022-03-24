@@ -16,9 +16,20 @@ If you do not already have an Earthdata login, then navigate to the [Earthdata L
 
 ## Configure programmatic access to NASA servers
 
-If you use web interfaces to retrieve nasa data such as [Earthdata Search](https://earthdata.nasa.gov/) you are prompted to login. We will be using software to retrieve data from NASA Servers during the hackweek, so you must store your credentials on the JupyterHub as explained in [this documentation](https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget). Run the following commands on the JupyterHub in a terminal replacing your Earthdata login username and password:
+If you use web interfaces to retrieve nasa data such as
+[Earthdata Search](https://earthdata.nasa.gov/) you are prompted to login.
+We will be using software to retrieve data from NASA Servers during the hackweek,
+so you must store your credentials on the JupyterHub as explained in
+[this documentation](https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget).
+
+Run the following commands on the JupyterHub:
+
+```{important}
+In the below command, replace `EARTHDATA_LOGIN` with your personal username and
+`EARTHDATA_PASSWORD` with your password
+```
 
 ```shell
-echo "machine urs.earthdata.nasa.gov login EARTHDATA_LOGIN password EARTHDATA_PASSWORD" > ~/.netrc
-chmod 0600 .netrc
+echo 'machine urs.earthdata.nasa.gov login "EARTHDATA_LOGIN" password "EARTHDATA_PASSWORD"' > ~/.netrc
+chmod 0600 ~/.netrc
 ```
