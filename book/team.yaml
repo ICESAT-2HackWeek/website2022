@@ -523,3 +523,25 @@ people:
     user_groups:
       - Tutorial Helper
   # =============
+  - title: Wilson Sauthoff
+    avatar: https://avatars.githubusercontent.com/u/63430469?v=4
+    role: Graduate Student
+    organizations:
+      - name: Colorado School of Mines
+    bio: > 
+      Wilson is a hydrology PhD student researhing Antarctic subglacial hydrology using ICESat-2 data. 
+      He is a proponent of open, reproducible science and excited to help other researchers incorporate ICESat-2 data into their work.
+    expertise:
+      - subglacial hydrology
+      - Python
+      - ICESat-2 ATL11 data product
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/wsauthoff
+      - icon: twitter
+        icon_pack: fab
+        link: https://twitter.com/wilsonsauthoff
+    user_groups:
+      - Tutorial Helper
+  # =============
