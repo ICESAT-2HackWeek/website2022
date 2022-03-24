@@ -76,6 +76,8 @@ tabs:
         leads:
           - Ben Smith
         resources:
+          - title: Slides
+            url: https://github.com/ICESAT-2HackWeek/website2022/raw/main/book/tutorials/DataProducts/ICESat-2_data_products_2022.pdf
           - title: 'Video Recording'
             url: https://youtu.be/pL9psogF_LQ
       - time: 10:00 - 10:30
@@ -131,12 +133,19 @@ tabs:
         leads:
           - Tyler Sutterley
           - Hannah Besso
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/vwoR0Blynvk
       - time: 9:30 - 10:30
         location: Zoom
         title: Data Integration - Tools and Techniques
         description: In this tutorial we'll describe how to acquire other satellite and in situ data for comparison with ICESat-2.
         leads:
           - Tasha Snow
+          - Zachary Fair
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/HWc9FJHjQPg
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description:
@@ -148,6 +157,9 @@ tabs:
         leads:
           - Philipp Arndt
           - Wei Ji Leong
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/fpcBFsy6Kso
       - time: 11:45 - 12:30
         title: Lunch
         description:
@@ -158,6 +170,9 @@ tabs:
         description: Helping you navigate the various sources and platforms for working with data hosted in the cloud.
         leads:
           - Aimee Barciauskas
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/mSklwuJ1onw
       - time: 1:30 - 2:00
         location: Zoom
         title: Detailed Dives
