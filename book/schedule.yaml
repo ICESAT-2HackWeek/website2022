@@ -76,6 +76,8 @@ tabs:
         leads:
           - Ben Smith
         resources:
+          - title: Slides
+            url: https://github.com/ICESAT-2HackWeek/website2022/raw/main/book/tutorials/DataProducts/ICESat-2_data_products_2022.pdf
           - title: 'Video Recording'
             url: https://youtu.be/pL9psogF_LQ
       - time: 10:00 - 10:30
