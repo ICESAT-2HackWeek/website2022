@@ -24,4 +24,5 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [Data Integration (Part I)](./DataIntegration/dataintegration-1.ipynb) | pandas, xarray, dask, COGs | [Recording](https://youtu.be/HWc9FJHjQPg) |
 | [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | [Recording](https://youtu.be/fpcBFsy6Kso) |
 | [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask | [Recording](https://youtu.be/mSklwuJ1onw)  |
+| _Day 4_ |
 | |
