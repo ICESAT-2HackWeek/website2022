@@ -12,12 +12,16 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 
 
 | Tutorial | Topics | Recording Link |
-| -  | - | - |
+| ---  | --- | --- |
+| _Day 1_ |
 | [Open Science Tools](./jupyter.md) | Getting Started on Technology | [Recording](https://www.youtube.com/watch?v=mFaM41fRRcY) |
+| _Day 2_ |
 | [About ICESat-2 Data](./DataProducts/DataProducts.ipynb) | Standard products purpose and access |  [Recording](https://youtu.be/pL9psogF_LQ) |
 | [ICESat-2 Data Access](./data_access/data_access_1_intro.ipynb) | Programmatic and cloud access | [Recording](https://youtu.be/UpXGZLlO76w) |
 | [Object-oriented Programming](./ObjectOriented/index.md) | Modular programming for collaboration | [Recording](https://youtu.be/dhLkCX0OWYs) |
-| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT |  |
-| [Data Integration](./DataIntegration/dataintegration-1.ipynb) | pandas, xarray, dask, COGs |  |
-| [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python |  |
-| [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask |  |
+| _Day 3_ |
+| [Geospatial Transforms](./geospatial/geospatial-intro.ipynb) | 2D & 3D reprojection of geospatial data with Python | [Recording](https://youtu.be/vwoR0Blynvk) |
+| [Data Integration (Part I)](./DataIntegration/dataintegration-1.ipynb) | pandas, xarray, dask, COGs | [Recording](https://youtu.be/HWc9FJHjQPg) |
+| [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | [Recording](https://youtu.be/fpcBFsy6Kso) |
+| [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask | [Recording](https://youtu.be/mSklwuJ1onw)  |
+| |
