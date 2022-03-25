@@ -194,6 +194,9 @@ tabs:
           - Tyler Sutterley
           - Ian Joughin
           - Zheng Liu
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/4BkGvjPXvlo
       - time: 10:00 - 10:15
         title: Movement and coffee break
         description:
@@ -211,6 +214,9 @@ tabs:
         description: In this tutorial we'll integrate ICESat-2 data with airborne products, terminus position and other datasets.
         leads:
           - Tasha Snow
+        resources:
+          - title: 'Video Recording'
+            url: https://youtu.be/JW_S8_qyUA8
       - time: 12:15 - 1:00
         title: Lunch
         description:
