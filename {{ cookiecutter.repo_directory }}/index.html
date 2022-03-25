@@ -322,17 +322,23 @@
 			<!-- Nav tabs -->
 			<ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
 				{% for tab in cookiecutter.schedule["tabs"] %}
+                {%- set link_class = '' %}
+                {%- set link_state = 'false' %}
 				{%- if loop.index == 1 %}
-				{%- set link_class = 'active' %}
-				{%- set link_state = 'true' %}
-				{%- else %}
-				{%- set link_class = '' %}
-				{%- set link_state = 'false' %}
+                    {%- set link_class = 'active' %}
+                    {%- set link_state = 'true' %}
 				{%- endif %}
 				<li class="nav-item me-2">
-					<a class="nav-link {{ link_class }}" id="tab-{{ loop.index }}" data-bs-toggle="tab"
-						href="#tab-{{ loop.index }}-content" role="tab" aria-controls="tab-{{ loop.index }}-content"
-						aria-selected="{{ link_state }}">
+					<a class="nav-link {{ link_class }}"
+                       id="schedule-tab-{{ loop.index }}"
+                       data-bs-toggle="tab"
+                       data-bs-target="#schedule-{{ loop.index }}-content"
+                       href="#tab-{{ loop.index }}-content"
+                       role="tab"
+                       aria-controls="schedule-tab-{{ loop.index }}-content"
+                       aria-selected="{{ link_state }}"
+                       data-schedule-day="{{ tab['date'] }}"
+                    >
 						<span class="heading">{{ tab['title'] }}</span>
 						<span class="meta">({{ tab['date'] }})</span>
 					</a>
@@ -357,8 +363,10 @@
 				{%- else %}
 				{%- set tab_class = 'no-timeline' %}
 				{%- endif %}
-				<div class="tab-pane {{ tab_class }}" id="tab-{{ loop.index }}-content" role="tabpanel"
-					aria-labelledby="tab-{{ loop.index }}">
+				<div class="tab-pane {{ tab_class }}"
+                     id="schedule-{{ loop.index }}-content"
+                     role="tabpanel"
+                     aria-labelledby="schedule-tab-{{ loop.index }}">
 					{%- if 'no-timeline' in tab_class %}
 					<h4 class="text-center py-5 text-muted">{{ tab['title'] }} Agenda Coming Soon...</h4>
 					{%- else %}
