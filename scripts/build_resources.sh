@@ -36,6 +36,6 @@ check_success
 
 echo "Building the Jupyter Book"
 cd ../
-jupyter-book build book/
+jupyter-book build book/ --warningiserror --keep-going
 
 check_success
