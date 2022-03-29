@@ -25,6 +25,6 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [Data Visualization 2D](./DataVisualization/dataviz2d.py) | Map making, PyGMT | [Recording](https://youtu.be/fpcBFsy6Kso) |
 | [Cloud Computing Tools](./cloud-computing/cloud-computing-tutorial.ipynb) | earthdata, rioxarray, dask | [Recording](https://youtu.be/mSklwuJ1onw)  |
 | _Day 4_ |
-| [Geospatial Transforms](./DataVisualization/data-applications.ipynb) | GrIMP and NISAR tools, SlideRule| [Recording](https://youtu.be/4BkGvjPXvlo) |
-| [Data Integration (Part II)](./DataIntegration/dataintegration-2.ipynb) | Integrating, analyzing, and visualizing multiple kinds of data sets with ICESat-2 | [Recording](https://youtu.be/JW_S8_qyUA8) |
+| [Data Integration (Part II)](./DataIntegration/data-applications.ipynb) | GrIMP and NISAR tools, SlideRule| [Recording](https://youtu.be/4BkGvjPXvlo) |
+| [Data Integration (Part III)](./DataIntegration/dataintegration-2.ipynb) | Integrating, analyzing, and visualizing multiple kinds of data sets with ICESat-2 | [Recording](https://youtu.be/JW_S8_qyUA8) |
 | |
