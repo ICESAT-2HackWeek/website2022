@@ -2,6 +2,7 @@ import yaml
 import nb_clean as nbc
 from pathlib import Path
 import nbformat
+import sys
 
 with open('./book/_config.yml') as f:
   data = yaml.safe_load(f)
@@ -26,6 +27,7 @@ for notebook in exclude_notebooks:
 all_ipynbs = [path.as_posix() for path in Path('book/tutorials').rglob('*.ipynb')]
 ipynbs = [p for p in all_ipynbs if not '.ipynb_checkpoints' in p]
 
+results = []
 for notebook in ipynbs:
     #if not notebook in exclude_notebooks:
     print(f'Checking {notebook}...')
@@ -33,3 +35,6 @@ for notebook in ipynbs:
     result = nbc.check_notebook(nb, 
                                 remove_empty_cells=True, 
                                 preserve_cell_metadata=True)
+
+if False in results:
+    sys.exit(1)
