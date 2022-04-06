@@ -23,7 +23,7 @@ jobs:
 
     - name: Ensure clean notebooks
       run: |
-        python ensure_clean_notebooks.py
+        python .github/workflows/ensure_clean_notebooks.py
 
     # NOTE: this isn't a comprehensive spellcheck, just common typos
     - name: Spellcheck
