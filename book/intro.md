@@ -2,6 +2,7 @@
 
 ![banner](img/banner.png)
 
+https://badurl
 
 ```{note}
 {{hackweek}} will be offered virtually March 21 - 25. The purpose of the event is to coalesce people and resources around exploring, creating, and promoting effective computation and analysis workflows that utilize NASA's ICESat-2 mission.
