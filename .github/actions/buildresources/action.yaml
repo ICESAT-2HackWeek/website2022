@@ -35,6 +35,7 @@ runs:
         ./scripts/build_resources.sh
         
     - name: Dump Build Logs
+      if: always()
       shell: bash -l {0}
       run: |
         if (test -a book/_build/html/reports/*log); then cat book/_build/html/reports/*log ; fi
@@ -49,7 +50,7 @@ runs:
         cname: icesat-2.hackweek.io
 
     - name: Save Build
-      if: inputs.jb-save == 'true'
+      if: ${{ always() && inputs.jb-save == 'true'}} 
       uses: actions/upload-artifact@v2
       with:
         name: build
