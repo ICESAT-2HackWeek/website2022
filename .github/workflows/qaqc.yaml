@@ -51,5 +51,6 @@ jobs:
 
     - name: Check External Links
       if: always()
+      continue-on-error: true
       run: |
         jb build book --builder linkcheck
