@@ -1,28 +1,90 @@
 cff-version: 1.2.0
-message: "If you use this book, please cite it as below."
-title: "[Event Name] Hackweek JupyterBook Tutorials"
-version: 2021.??.??
-date-released: "2021-??-??"
+message: If you use this book, please cite it as below.
+title: ICESat-2 Hackweek Website
+version: 2022.04.15
+date-released: 2022-04-15
 identifiers:
-- description: "collection of archived snapshots of all versions"
+- description: collection of archived snapshots of all versions
   type: doi
   value: TODO
   license: MIT
-  repository-code: TODO
+  repository-code: https://github.com/ICESAT-2HackWeek/website2022
 authors:
-- family-names: Henderson
-  given-names: Scott
-  orcid: "https://orcid.org/0000-0003-0624-4965"
-  affiliation: University of Washington
-- family-names: Arendt
-  given-names: Anthony
-  orcid: "https://orcid.org/0000-0003-0429-6905"
-  affiliation: University of Washington
 - family-names: Scheick
   given-names: Jessica
   affiliation: University of New Hampshire
-  orcid: "https://orcid.org/0000-0002-3421-4459"
-
+- family-names: Arendt
+  given-names: Anthony
+  affiliation: eScience Institute
+- family-names: Haley
+  given-names: Charley
+  affiliation: Collaboration Architect at eScience Institute
+- family-names: Henderson
+  given-names: Scott
+  affiliation: eScience Institute
+- family-names: Koh
+  given-names: Jane
+  affiliation: eScience Institute
+- family-names: Setiawan
+  given-names: Don
+  affiliation: School of Oceanography
+- family-names: Alterman
+  given-names: Naomi
+  affiliation: eScience Institute
+- family-names: Meyer
+  given-names: Joachim
+  affiliation: University of Utah
+- family-names: Cristea
+  given-names: Nicoleta
+  affiliation: eScience Institute
+- family-names: Schweiger
+  given-names: Axel
+  affiliation: Polar Science Center/APL/UW
+- family-names: Barciauskas
+  given-names: Aimee
+  affiliation: Development Seed
+- family-names: Smith
+  given-names: Ben
+  affiliation: University of Washington APL
+- family-names: Piunno
+  given-names: Romina
+  affiliation: University of Toronto
+- family-names: Shapero
+  given-names: Daniel
+  affiliation: UW Applied Physics Laboratory
+- family-names: Fair
+  given-names: Zachary
+  affiliation: NASA GSFC
+- family-names: Arndt
+  given-names: Philipp
+  affiliation: Scripps Polar Center, UC San Diego
+- family-names: Leong
+  given-names: Wei Ji
+  affiliation: Byrd Polar and Climate Research Center
+- family-names: Sutterley
+  given-names: Tyler
+  affiliation: UW Applied Physics Laboratory
+- family-names: Snow
+  given-names: Tasha
+  affiliation: Colorado School of Mines
+- family-names: Beig
+  given-names: Mikala
+  affiliation: National Snow and Ice Data Center NASA DAAC
+- family-names: Besso
+  given-names: Hannah
+  affiliation: University of Washington
+- family-names: Liu
+  given-names: Zheng
+  affiliation: Polar Science Center/APL/UW
+- family-names: Joughin
+  given-names: Ian
+  affiliation: Polar Science Center/APL/UW
+- family-names: Bisson
+  given-names: Kelsey
+  affiliation: Oregon State University
+- family-names: Sauthoff
+  given-names: Wilson
+  affiliation: Colorado School of Mines
 keywords:
 - NASA
 - Hackweek
