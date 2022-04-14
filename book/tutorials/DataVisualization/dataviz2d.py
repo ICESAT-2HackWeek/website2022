@@ -15,7 +15,7 @@
 # ---
 
 # %% [markdown]
-# # **Making nice maps for posters with Python** 🗺️+🐍
+# # Making nice maps for posters with Python 🗺️+🐍
 #
 # To communicate your results effectively to people 🧑‍🤝‍🧑,
 # you may come to a point where making maps are needed.
@@ -152,7 +152,7 @@ print(region_iceland.product_version)
 # Login to Earthdata and download the ATL14 NetCDF file using icepyx
 region_iceland.earthdata_login(
     uid="uwhackweek",  # EarthData username, e.g. penguin123
-    email="hackweekadmin@uw.edu",  # e.g. penguin123@southpole.net
+    email="hackweekadmin@gmail.com",  # e.g. penguin123@southpole.net
     s3token=False, # Change to True if you signed up for preliminary access
 )
 region_iceland.download_granules(path="/tmp")
@@ -433,7 +433,7 @@ region_iceland.download_granules(path="/tmp")
 
 # %%
 dataset: xr.Dataset = xr.open_dataset(
-    filename_or_obj="/tmp/processed_ATL11_135803_0311_004_01.h5",
+    filename_or_obj="/tmp/processed_ATL11_135803_0313_005_01.h5",
     group="pt2",  # take the middle pair track out of pt1, pt2 & pt3
 )
 dataset
