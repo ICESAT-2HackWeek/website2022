@@ -334,10 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dataviz2d.html">
-     <strong>
-      Making nice maps for posters with Python
-     </strong>
-     🗺️+🐍
+     Making nice maps for posters with Python 🗺️+🐍
     </a>
    </li>
   </ul>
@@ -856,7 +853,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We’ll be using the following Python libraries in this notebook:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget 
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 <span class="kn">import</span> <span class="nn">geemap</span>
@@ -877,6 +874,11 @@ If you are interested in how this works, you can find the code in <code class="d
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils.oa</span> <span class="kn">import</span> <span class="n">dataCollector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*** Earth Engine *** Python client initialized
 </pre></div>
 </div>
 </div>
@@ -928,6 +930,16 @@ We also need to specify which beam we would like to look at. The <strong>GT2R</s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OpenAltimetry API URL: http://openaltimetry.org/data/api/icesat2/atlXX?date=2020-01-16&amp;minx=12.107692195781404&amp;miny=-70.34956862465471&amp;maxx=12.426364789894341&amp;maxy=-70.2449105354736&amp;trackId=312&amp;outputFormat=json&amp;beamName=gt2r&amp;client=jupyter
+Date: 2020-01-16
+Track: 312
+Beam: gt2r
+Latitude limits: [-70.34956862465471, -70.2449105354736]
+Longitude limits: [12.107692195781404, 12.426364789894341]
+</pre></div>
+</div>
+</div>
 </div>
 <p>Alternatively, we could use a date, track number, beam, and lat/lon bounding box as input to the <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code>.</p>
 <div class="cell docutils container">
@@ -938,6 +950,16 @@ We also need to specify which beam we would like to look at. The <strong>GT2R</s
 <span class="n">gtx</span> <span class="o">=</span> <span class="s1">&#39;gt2r&#39;</span>
 <span class="n">date</span> <span class="o">=</span> <span class="s1">&#39;2020-01-16&#39;</span>
 <span class="n">is2data</span> <span class="o">=</span> <span class="n">dataCollector</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">latlims</span><span class="o">=</span><span class="n">latlims</span><span class="p">,</span> <span class="n">lonlims</span><span class="o">=</span><span class="n">lonlims</span><span class="p">,</span> <span class="n">track</span><span class="o">=</span><span class="n">rgt</span><span class="p">,</span> <span class="n">beam</span><span class="o">=</span><span class="n">gtx</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OpenAltimetry API URL: https://openaltimetry.org/data/api/icesat2/atlXX?date=2020-01-16&amp;minx=12.10769&amp;miny=-70.34957&amp;maxx=12.42636&amp;maxy=-70.24491&amp;trackId=312&amp;beamName=gt2r&amp;outputFormat=json&amp;client=jupyter
+Date: 2020-01-16
+Track: 312
+Beam: gt2r
+Latitude limits: [-70.34957, -70.24491]
+Longitude limits: [12.10769, 12.42636]
 </pre></div>
 </div>
 </div>
@@ -953,11 +975,70 @@ We also need to specify which beam we would like to look at. The <strong>GT2R</s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>---&gt; requesting ATL03 data... Done.
+---&gt; requesting ATL06 data... Done.
+---&gt; requesting ATL08 data... Done.
+</pre></div>
+</div>
+</div>
 </div>
 <p>The data are now stored as data frames in our <code class="docutils literal notranslate"><span class="pre">dataCollector</span></code> object. To verify this, we can run the cell below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">vars</span><span class="p">(</span><span class="n">is2data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;url&#39;: &#39;https://openaltimetry.org/data/api/icesat2/atlXX?date=2020-01-16&amp;minx=12.10769&amp;miny=-70.34957&amp;maxx=12.42636&amp;maxy=-70.24491&amp;trackId=312&amp;beamName=gt2r&amp;outputFormat=json&amp;client=jupyter&#39;,
+ &#39;date&#39;: &#39;2020-01-16&#39;,
+ &#39;track&#39;: 312,
+ &#39;beam&#39;: &#39;gt2r&#39;,
+ &#39;latlims&#39;: [-70.34957, -70.24491],
+ &#39;lonlims&#39;: [12.10769, 12.42636],
+ &#39;atl03&#39;:              lat        lon           h   conf
+ 0     -70.244852  12.299888  248.103740  Noise
+ 1     -70.244859  12.299886  261.201020  Noise
+ 2     -70.244865  12.299884  243.059620  Noise
+ 3     -70.244862  12.299884  118.523254  Noise
+ 4     -70.244859  12.299884    9.918441  Noise
+ ...          ...        ...         ...    ...
+ 46111 -70.349453  12.260788   44.356140   High
+ 46112 -70.349459  12.260786   45.128857   High
+ 46113 -70.349472  12.260782   44.818504   High
+ 46114 -70.349472  12.260782   45.072422   High
+ 46115 -70.349478  12.260779   44.981472   High
+ 
+ [46116 rows x 4 columns],
+ &#39;atl06&#39;:            lat        lon          h
+ 0   -70.245025  12.299825  45.887184
+ 1   -70.245202  12.299762  45.831590
+ 2   -70.245379  12.299698  45.780262
+ 3   -70.245556  12.299635  45.789750
+ 4   -70.245734  12.299571  45.816616
+ ..         ...        ...        ...
+ 551 -70.348776  12.261042  45.261272
+ 552 -70.348953  12.260975  45.195520
+ 553 -70.349130  12.260908  45.111626
+ 554 -70.349307  12.260842  45.032890
+ 555 -70.349484  12.260777  44.909203
+ 
+ [556 rows x 3 columns],
+ &#39;atl08&#39;:            lat        lon          h  canopy
+ 0   -70.244942  12.299856  45.952724     NaN
+ 1   -70.245827  12.299538  45.829370     NaN
+ 2   -70.246712  12.299207  45.801440     NaN
+ 3   -70.247597  12.298869  45.538710     NaN
+ 4   -70.248482  12.298537  45.521446     NaN
+ ..         ...        ...        ...     ...
+ 114 -70.345856  12.262139  44.866875     NaN
+ 115 -70.346741  12.261814  45.039540     NaN
+ 116 -70.347626  12.261489  45.212303     NaN
+ 117 -70.348511  12.261144  45.314110     NaN
+ 118 -70.349396  12.260809  44.973244     NaN
+ 
+ [119 rows x 4 columns]}
 </pre></div>
 </div>
 </div>
@@ -974,6 +1055,10 @@ We also need to specify which beam we would like to look at. The <strong>GT2R</s
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "74846ca6d55944ea99431f604805d32c", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>Let’s plot ATL06 elevation versus latitude on these axes above.</p>
 <div class="cell docutils container">
@@ -1009,6 +1094,11 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(23.0, 47.0)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Have you ever lost points on a problem set because you didn’t label your axes? Let’s label them axes!<br />
 …and let’s throw in a fun title for good measure too.</p>
@@ -1020,11 +1110,21 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Some ICESat-2 data I found on OpenAltimetry!&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>To know what we’re looking at, we need a legend as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f37c2f33e50&gt;
 </pre></div>
 </div>
 </div>
@@ -1060,6 +1160,9 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Visualization_Earth_Engine_geemap_IS2_HW_2022_38_0.png" src="../../_images/Visualization_Earth_Engine_geemap_IS2_HW_2022_38_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="saving-the-plot-to-a-file">
@@ -1086,6 +1189,10 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c29e5486e37c4f84b03fd47562789f80", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>Let’s wrap this all into a function!</p>
 <div class="cell docutils container">
@@ -1133,6 +1240,10 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "fee32837320946538112c095958afd32", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 <div class="section" id="ground-track-stats">
@@ -1159,6 +1270,11 @@ We can do this interactively on the plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ground track is about 11.7 kilometers long.
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="google-earth-engine">
@@ -1178,6 +1294,10 @@ But since we all seem to be using python, it would be nice to have these capabil
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "df57055a372d4ced92e2c60cfc6a22ca", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>Now we need to add our ICESat-2 gound track to that map. Let’s use the lon/lat coordinates of the ATL08 data product for this.<br />
 We also need to specify which <strong>Coordinate Reference System (CRS)</strong> our data is in. The longitude/latitude system that we are all quite familiar with is referenced by <a class="reference external" href="https://epsg.io/4326"><code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code></a>. To add the ground track to the map we need to turn it into an <a class="reference external" href="https://developers.google.com/earth-engine/guides/feature_collections">Earth Engine “Feature Collection”</a>.</p>
@@ -1189,6 +1309,11 @@ We also need to specify which <strong>Coordinate Reference System (CRS)</strong>
                                       <span class="n">proj</span><span class="o">=</span><span class="n">ground_track_projection</span><span class="p">,</span> 
                                       <span class="n">geodesic</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="n">gtx_feature</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ee.featurecollection.FeatureCollection at 0x7f37b836edc0&gt;
 </pre></div>
 </div>
 </div>
@@ -1259,12 +1384,22 @@ You can find all collections here: <a class="reference external" href="https://d
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ee.imagecollection.ImageCollection at 0x7f37b86b3c70&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Can we find out how many images there are in total?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_scenes</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
 <span class="n">number_of_scenes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ee.ee_number.Number at 0x7f37c3650f40&gt;
 </pre></div>
 </div>
 </div>
@@ -1275,6 +1410,11 @@ You can find all collections here: <a class="reference external" href="https://d
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_scenes</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()</span>
 <span class="n">number_of_scenes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>897557
 </pre></div>
 </div>
 </div>
@@ -1305,6 +1445,11 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 527 images in the spatially filtered collection.
+</pre></div>
+</div>
+</div>
 </div>
 <p>Much better! Now let’s only look at images that were taken soon before or after ICESat-2 passed over this spot.</p>
 <div class="cell docutils container">
@@ -1324,6 +1469,11 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Search for imagery from 2020-01-01 to 2020-01-31.
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1335,6 +1485,11 @@ Let’s start with only images that overlap with the center of our ground track.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are </span><span class="si">{number:d}</span><span class="s1"> images in the spatially filtered collection.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="n">collection</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">getInfo</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 10 images in the spatially filtered collection.
 </pre></div>
 </div>
 </div>
@@ -1365,11 +1520,21 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict
+</pre></div>
+</div>
+</div>
 </div>
 <p>Let’s see what’s inside!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;type&#39;, &#39;bands&#39;, &#39;id&#39;, &#39;version&#39;, &#39;properties&#39;, &#39;features&#39;])
 </pre></div>
 </div>
 </div>
@@ -1381,10 +1546,20 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
 </pre></div>
 </div>
 </div>
@@ -1397,10 +1572,20 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;type&#39;, &#39;bands&#39;, &#39;id&#39;, &#39;version&#39;, &#39;properties&#39;])
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="n">feature_number</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;LANDSAT/LC08/C01/T2/LC08_166109_20200105&#39;
 </pre></div>
 </div>
 </div>
@@ -1413,11 +1598,21 @@ Let’s start with only images that overlap with the center of our ground track.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, BQA, 
+</pre></div>
+</div>
+</div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">'properties'</span></code> could be useful too!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;properties&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;RADIANCE_MULT_BAND_5&#39;, &#39;RADIANCE_MULT_BAND_6&#39;, &#39;RADIANCE_MULT_BAND_3&#39;, &#39;RADIANCE_MULT_BAND_4&#39;, &#39;RADIANCE_MULT_BAND_1&#39;, &#39;RADIANCE_MULT_BAND_2&#39;, &#39;K2_CONSTANT_BAND_11&#39;, &#39;K2_CONSTANT_BAND_10&#39;, &#39;system:footprint&#39;, &#39;REFLECTIVE_SAMPLES&#39;, &#39;SUN_AZIMUTH&#39;, &#39;CPF_NAME&#39;, &#39;DATE_ACQUIRED&#39;, &#39;ELLIPSOID&#39;, &#39;STATION_ID&#39;, &#39;FALSE_NORTHING&#39;, &#39;RESAMPLING_OPTION&#39;, &#39;ORIENTATION&#39;, &#39;WRS_ROW&#39;, &#39;RADIANCE_MULT_BAND_9&#39;, &#39;TARGET_WRS_ROW&#39;, &#39;RADIANCE_MULT_BAND_7&#39;, &#39;RADIANCE_MULT_BAND_8&#39;, &#39;FALSE_EASTING&#39;, &#39;IMAGE_QUALITY_TIRS&#39;, &#39;TRUNCATION_OLI&#39;, &#39;CLOUD_COVER&#39;, &#39;COLLECTION_CATEGORY&#39;, &#39;GRID_CELL_SIZE_REFLECTIVE&#39;, &#39;CLOUD_COVER_LAND&#39;, &#39;COLLECTION_NUMBER&#39;, &#39;IMAGE_QUALITY_OLI&#39;, &#39;LANDSAT_SCENE_ID&#39;, &#39;WRS_PATH&#39;, &#39;PANCHROMATIC_SAMPLES&#39;, &#39;PANCHROMATIC_LINES&#39;, &#39;REFLECTIVE_LINES&#39;, &#39;TIRS_STRAY_LIGHT_CORRECTION_SOURCE&#39;, &#39;system:asset_size&#39;, &#39;system:index&#39;, &#39;REFLECTANCE_ADD_BAND_1&#39;, &#39;REFLECTANCE_ADD_BAND_2&#39;, &#39;DATUM&#39;, &#39;REFLECTANCE_ADD_BAND_3&#39;, &#39;REFLECTANCE_ADD_BAND_4&#39;, &#39;RLUT_FILE_NAME&#39;, &#39;REFLECTANCE_ADD_BAND_5&#39;, &#39;REFLECTANCE_ADD_BAND_6&#39;, &#39;REFLECTANCE_ADD_BAND_7&#39;, &#39;REFLECTANCE_ADD_BAND_8&#39;, &#39;BPF_NAME_TIRS&#39;, &#39;DATA_TYPE&#39;, &#39;TRUE_SCALE_LAT&#39;, &#39;system:time_end&#39;, &#39;LANDSAT_PRODUCT_ID&#39;, &#39;REFLECTANCE_ADD_BAND_9&#39;, &#39;GRID_CELL_SIZE_PANCHROMATIC&#39;, &#39;VERTICAL_LON_FROM_POLE&#39;, &#39;RADIANCE_ADD_BAND_4&#39;, &#39;REFLECTANCE_MULT_BAND_7&#39;, &#39;system:time_start&#39;, &#39;RADIANCE_ADD_BAND_5&#39;, &#39;REFLECTANCE_MULT_BAND_6&#39;, &#39;RADIANCE_ADD_BAND_6&#39;, &#39;REFLECTANCE_MULT_BAND_9&#39;, &#39;PROCESSING_SOFTWARE_VERSION&#39;, &#39;RADIANCE_ADD_BAND_7&#39;, &#39;REFLECTANCE_MULT_BAND_8&#39;, &#39;RADIANCE_ADD_BAND_1&#39;, &#39;RADIANCE_ADD_BAND_2&#39;, &#39;RADIANCE_ADD_BAND_3&#39;, &#39;REFLECTANCE_MULT_BAND_1&#39;, &#39;RADIANCE_ADD_BAND_8&#39;, &#39;REFLECTANCE_MULT_BAND_3&#39;, &#39;RADIANCE_ADD_BAND_9&#39;, &#39;REFLECTANCE_MULT_BAND_2&#39;, &#39;REFLECTANCE_MULT_BAND_5&#39;, &#39;REFLECTANCE_MULT_BAND_4&#39;, &#39;THERMAL_LINES&#39;, &#39;TIRS_SSM_POSITION_STATUS&#39;, &#39;GRID_CELL_SIZE_THERMAL&#39;, &#39;NADIR_OFFNADIR&#39;, &#39;RADIANCE_ADD_BAND_11&#39;, &#39;REQUEST_ID&#39;, &#39;EARTH_SUN_DISTANCE&#39;, &#39;TIRS_SSM_MODEL&#39;, &#39;FILE_DATE&#39;, &#39;SCENE_CENTER_TIME&#39;, &#39;SUN_ELEVATION&#39;, &#39;BPF_NAME_OLI&#39;, &#39;RADIANCE_ADD_BAND_10&#39;, &#39;ROLL_ANGLE&#39;, &#39;K1_CONSTANT_BAND_10&#39;, &#39;SATURATION_BAND_1&#39;, &#39;SATURATION_BAND_2&#39;, &#39;SATURATION_BAND_3&#39;, &#39;SATURATION_BAND_4&#39;, &#39;SATURATION_BAND_5&#39;, &#39;MAP_PROJECTION&#39;, &#39;SATURATION_BAND_6&#39;, &#39;SENSOR_ID&#39;, &#39;SATURATION_BAND_7&#39;, &#39;K1_CONSTANT_BAND_11&#39;, &#39;SATURATION_BAND_8&#39;, &#39;SATURATION_BAND_9&#39;, &#39;TARGET_WRS_PATH&#39;, &#39;RADIANCE_MULT_BAND_11&#39;, &#39;RADIANCE_MULT_BAND_10&#39;, &#39;SPACECRAFT_ID&#39;, &#39;ELEVATION_SOURCE&#39;, &#39;THERMAL_SAMPLES&#39;])
 </pre></div>
 </div>
 </div>
@@ -1427,6 +1622,20 @@ Let’s start with only images that overlap with the center of our ground track.
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">info</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;LANDSAT_PRODUCT_ID&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LC08_L1GT_166109_20200105_20200113_01_T2
+LC08_L1GT_166110_20200105_20200113_01_T2
+LC08_L1GT_164110_20200107_20200114_01_T2
+LC08_L1GT_167109_20200112_20200127_01_T2
+LC08_L1GT_165110_20200114_20200127_01_T2
+LC08_L1GT_166109_20200121_20200128_01_T2
+LC08_L1GT_166110_20200121_20200128_01_T2
+LC08_L1GT_164110_20200123_20200128_01_T2
+LC08_L1GT_167109_20200128_20200210_01_T2
+LC08_L1GT_165110_20200130_20200211_01_T2
 </pre></div>
 </div>
 </div>
@@ -1441,6 +1650,14 @@ Let’s start with only images that overlap with the center of our ground track.
 <span class="nb">print</span><span class="p">(</span><span class="n">this_id</span><span class="p">)</span>
 <span class="n">myImage</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">this_id</span><span class="p">)</span>
 <span class="n">myImage</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LANDSAT/LC08/C01/T2/LC08_166109_20200105
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ee.image.Image at 0x7f37b83784c0&gt;
 </pre></div>
 </div>
 </div>
@@ -1494,6 +1711,22 @@ Let’s start over with a new map, and add all the images we have as different l
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00: LANDSAT/LC08/C01/T2/LC08_166109_20200105
+01: LANDSAT/LC08/C01/T2/LC08_166110_20200105
+02: LANDSAT/LC08/C01/T2/LC08_164110_20200107
+03: LANDSAT/LC08/C01/T2/LC08_167109_20200112
+04: LANDSAT/LC08/C01/T2/LC08_165110_20200114
+05: LANDSAT/LC08/C01/T2/LC08_166109_20200121
+06: LANDSAT/LC08/C01/T2/LC08_166110_20200121
+07: LANDSAT/LC08/C01/T2/LC08_164110_20200123
+08: LANDSAT/LC08/C01/T2/LC08_167109_20200128
+09: LANDSAT/LC08/C01/T2/LC08_165110_20200130
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "791206d471044995ae0506da40b8ae3c", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p><strong>The fifth image looks good!</strong> Let’s go ahead and download that one.<br />
 From the print statements above we see that it’s id is <code class="docutils literal notranslate"><span class="pre">LANDSAT/LC08/C01/T2/LC08_165110_20200114</span></code></p>
@@ -1526,6 +1759,11 @@ From the print statements above we see that it’s id is <code class="docutils l
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/10be189e2f2f4712240dd3fdd0a532aa-67b5dd02e06ce4d2444a73e6236322d2:getPixels&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can save the content of the download URL with the <a class="reference external" href="https://docs.python-requests.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a> library.</p>
 <div class="cell docutils container">
@@ -1549,6 +1787,11 @@ From the print statements above we see that it’s id is <code class="docutils l
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;open DatasetReader name=&#39;my-satellite-image.tif&#39; mode=&#39;r&#39;&gt;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="plot-a-geotiff-in-matplotlib">
@@ -1561,6 +1804,13 @@ From the print statements above we see that it’s id is <code class="docutils l
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c59e5f95e80b4137b81ad92e982ca666", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 <div class="section" id="transform-the-ground-track-into-the-image-crs">
@@ -1574,6 +1824,9 @@ From the print statements above we see that it’s id is <code class="docutils l
 <span class="n">fig</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/Visualization_Earth_Engine_geemap_IS2_HW_2022_123_0.png" src="../../_images/Visualization_Earth_Engine_geemap_IS2_HW_2022_123_0.png" />
 </div>
 </div>
 </div>
@@ -1592,6 +1845,33 @@ We can now do everything we did in this tutorial in a few lines!</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ground track is 11707 meters long.
+Search for imagery from 2019-12-22 to 2020-02-10.
+--&gt; Number of scenes found within +/- 25 days of ICESat-2 overpass: 26
+----&gt; This is too many. Narrowing it down...
+Search for imagery from 2020-01-02 to 2020-01-30.
+--&gt; Number of scenes found within +/- 14 days of ICESat-2 overpass: 15
+00: 2020-01-05 ( 11 days before ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_166109_20200105
+01: 2020-01-05 ( 11 days before ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_166110_20200105
+02: 2020-01-06 ( 10 days before ICESat-2 overpass): COPERNICUS/S2_SR/20200106T080919_20200106T080922_T32DPH
+03: 2020-01-06 ( 10 days before ICESat-2 overpass): COPERNICUS/S2_SR/20200106T080919_20200106T080922_T32DPG
+04: 2020-01-07 (  9 days before ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_164110_20200107
+05: 2020-01-12 (  4 days before ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_167109_20200112
+06: 2020-01-14 (  2 days before ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_165110_20200114
+07: 2020-01-16 (  0 days after ICESat-2 overpass): COPERNICUS/S2_SR/20200116T080919_20200116T080921_T32DPH
+08: 2020-01-16 (  0 days after ICESat-2 overpass): COPERNICUS/S2_SR/20200116T080919_20200116T080921_T32DPG
+09: 2020-01-21 (  5 days after ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_166109_20200121
+10: 2020-01-21 (  5 days after ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_166110_20200121
+11: 2020-01-23 (  7 days after ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_164110_20200123
+12: 2020-01-26 ( 10 days after ICESat-2 overpass): COPERNICUS/S2_SR/20200126T080919_20200126T080920_T32DPH
+13: 2020-01-26 ( 10 days after ICESat-2 overpass): COPERNICUS/S2_SR/20200126T080919_20200126T080920_T32DPG
+14: 2020-01-28 ( 12 days after ICESat-2 overpass): LANDSAT/LC08/C01/T2/LC08_167109_20200128
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "b9104c1cc5c14f9a9a92dbe8cbf15749", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1600,6 +1880,14 @@ We can now do everything we did in this tutorial in a few lines!</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This file already exists, not downloading again: downloads/LANDSAT-LC08-C01-T2-LC08_165110_20200114-8bitRGB.tif
+Saved plot to: plots/LANDSAT-LC08-C01-T2-LC08_165110_20200114-8bitRGB-plot.jpg
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "64cdce0cd0ec4d3fbf801ab8b4f80797", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 </div>
 <div class="section" id="exercise-2">
