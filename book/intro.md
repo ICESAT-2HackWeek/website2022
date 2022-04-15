@@ -13,9 +13,11 @@
 
 💡 Learn more about hackweeks hosted by the [University of Washington eScience Institute](https://uwhackweek.github.io/hackweeks-as-a-service/intro.html), or check out our publication describing the hackweek educational model {cite:p}`Huppenkothen2018`.
 
+For the recommended citation for the content on this website see our Zenodo record:
+[![DOI](https://zenodo.org/badge/452775913.svg)](https://zenodo.org/badge/latestdoi/452775913)
+
 ```{admonition} Quick links for the event
 :class: seealso
 * JupyterHub: {{ jupyterhub_url }}
 * GitHub organization: {{ github_org_url}}
-* Projects Spreadsheet: {{ project_spreadsheet_url }}
 ```
