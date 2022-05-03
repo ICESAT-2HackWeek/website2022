@@ -14,7 +14,7 @@ dependencies:
   - dask
   - dask-labextension
   - datashader
-  - earthdata
+  - earthdata>=0.3
   - fsspec
   - geemap
   - gh
